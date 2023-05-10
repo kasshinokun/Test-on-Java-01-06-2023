@@ -1,0 +1,34 @@
+package Quiz_2_1;//Nome do Projeto
+
+import java.util.Locale;//biblioteca para padrões regionais
+import java.util.Scanner;//biblioteca para entrada de dados
+
+import Quiz_2_1.Act_2 ;//Importa a classe para a pergunta 2
+import Quiz_2_1.Act_3 ;//Importa a classe para a pergunta 3
+
+import java.lang.Math;//biblioteca para calculos como potencia e afins
+
+public class Act_1 {//Declaração da Classe principal
+
+	public static void main(String[] args) {//declaração do metodo Main
+		//Codigo base alterado para exercicio 9 do quiz 3
+		Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+		System.out.print("Digite um numero para a base:--------------------------");//solicita o valor ao usuario
+	    double a = input.nextDouble();//Armazenamento do Valor
+	    System.out.print("Digite um numero para a razão:-------------------------");//solicita o valor ao usuario
+	    double b = input.nextDouble();//Armazenamento do Valor
+	    System.out.print("Digite um numero n para os primeiros termos:-----------");//solicita o valor ao usuario
+	    int n = input.nextInt();//Armazenamento do Valor
+	    somatorio_Pa(a,b,n);
+	    // fecha o  objeto scanner
+	 	input.close();
+	}
+	public static double somatorio_Pa(double a, double b,int n) {
+		if(n==0) {
+			return 1;
+		}
+		else{
+			return a + somatorio_Pa(a + b,b, n--);
+		}
+	}
+}

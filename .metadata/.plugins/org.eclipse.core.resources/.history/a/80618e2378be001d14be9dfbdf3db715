@@ -1,0 +1,11 @@
+package Quiz_2_1;//Nome do Projeto
+
+import java.util.Locale;//biblioteca para padrões regionais
+import java.util.Scanner;//biblioteca para entrada de dados
+import java.lang.Math;//biblioteca para calculos como potencia e afins
+public class Act_1 {//Declaração da Classe principal
+
+	public static void main(String[] args) {//declaração do metodo Main
+		System.out.println("Ola mundo");
+	}
+}

@@ -1,0 +1,60 @@
+package Aula_07;
+//Simplificação para importação de Bibliotecas necessárias
+import java.util.*;
+
+public class Principal {//Declaração da Classe Principal
+    
+    public static void main(String[] args){//Declaração do Main
+        int op;//Variavel de escolha
+        
+        //Objeto para coleta de dados do teclado
+        Scanner reader = new Scanner(System.in);
+        
+        do{//Laço de repetição do Menu
+            System.out.println("Calculos de Perimetro e Area de Circunferencia");//Enunciado
+            System.out.println("Calculos Padrao e pelo Metodo de Monte Carlo");//Enunciado
+            System.out.println("=============Menu de opcoes:===========");//Opçoes
+            System.out.println("1) Circunferencia");
+            
+            System.out.println("0) para encerrar\n");
+            System.out.println("===========Escolha uma opcao:==========\n");//Solicitação ao Usuario
+            op=reader.nextInt();//Armazenamento do valor
+            switch(op){//Analise do termo digitado
+	            case 1://Chama o procedimento
+	            	MostraCircunferencia();
+	                break;//Chama o procedimento
+                
+                default://tratamento de exceções e despedida
+                    if(op==0){//despedida do usuario e agradecimento
+                        System.out.println("Calculos de Perimetro e Area de Figuras");
+                        System.out.println("Muito Obrigado, por usar nossos servicos.");
+                        System.out.println("\t   Programa Encerrado");
+                        System.exit(0);//Encerra o programa
+                    }
+                    else{//Se não estiver no intervalo, informa ao usuario
+                        //e reapresenta o menu
+                        System.out.println("\tOpcao Invalida.");
+                        System.out.println("\nTente novamente por gentileza!!\n");
+                    }
+                    
+            }
+        }while(op!=0);//Condição de Parada do Main
+    }
+    public static void MostraCircunferencia(){//Procedimento para a MostraCircunferencia
+    	double Raio1 = 5;//Valor baseado no ultimo numero da Matricula
+    	Circunferencia C1 = new Circunferencia();//Instancia um objeto do tipo Circunferencia
+    	double A1,//Para Area
+    		   A2,//Para Area(Monte Carlo)
+    		   P1,//Para Perimetro
+    		   P2,//Para Perimetro(Monte Carlo)
+    		   B1,//Para L=50
+    		   B2,//Para L=500
+    		   B3,//Para L=1000
+    		   B4;//Para L=10000
+    	
+    	System.out.println(C1.toString());
+    	System.out.println("\nCalculos Padrao:\n"+A1+"\t"+P1);
+    	System.out.println("\nCalculos por Monte Carlo:\n"+A2+"\t"+P2);
+    }
+
+}

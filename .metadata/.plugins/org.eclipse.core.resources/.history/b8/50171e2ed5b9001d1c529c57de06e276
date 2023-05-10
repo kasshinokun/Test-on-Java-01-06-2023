@@ -1,0 +1,36 @@
+package Aula_02;//Nome do Projeto
+import java.util.Locale;//biblioteca para padrões regionais
+import java.util.Scanner;
+import java.lang.Math;
+public class Analise {//Nome da classe
+
+	public static void main(String[] args) {//Classe Main do programa
+		int[]V= {1,3,1,8,6,7};//Valores para o Array
+		Dados D1 = new Dados(V);//Instancia a variavel para o Array e atribui valores e tamanho
+		D1.ImprimirArray();//Executa a impressão do Array
+		System.out.println("\nA média é "+D1.CalculaMedia());//Exibe a media do Array
+		//D1.Ordenar();//Executa a ordenação do Array
+		//D1.ImprimirArray();  //Verifcação da ordenação
+		D1.selection_sort();//Executa seleção por ordenação do Array(Selection Sort)
+		D1.ImprimirArray();  //Verifcação da ordenação
+		System.out.println("\nA mediana é "+D1.CalculaMediana());//Exibe a mediana do Array
+		somatorio();
+	}
+
+private static void somatorio() {
+	Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+	
+    System.out.print("Digite um numero:");
+    int k = input.nextInt();//Armazenamento do Valor
+    System.out.println("O numero digitado eh-----------" + k);
+    int soma=0;//variavel para soma
+	for(int i= 1; i <=k;i++) {
+		soma+=i;//soma
+		System.out.println(soma);//exibe soma
+	}
+	System.out.println("\nO valor do somatorio eh:-------"+soma+"\n");//Exibe a soma dos inteiros
+    // fecha o  objeto scanner
+    input.close();
+}
+
+}

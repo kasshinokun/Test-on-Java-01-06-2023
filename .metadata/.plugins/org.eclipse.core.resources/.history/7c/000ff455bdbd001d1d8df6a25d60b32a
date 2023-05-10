@@ -1,0 +1,33 @@
+package Quiz_2_1;//Nome do Projeto
+
+import java.util.Locale;//biblioteca para padrões regionais
+import java.util.Scanner;//biblioteca para entrada de dados
+
+import Quiz_2_1.Act_2 ;//Importa a classe para a pergunta 2
+import Quiz_2_1.Act_3 ;//Importa a classe para a pergunta 3
+
+import java.lang.Math;//biblioteca para calculos como potencia e afins
+
+public class Act_1 {//Declaração da Classe principal
+
+	public static void main(String[] args) {//declaração do metodo Main
+		
+		System.out.println("Progressão Aritmetica");
+		Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+		System.out.print("Digite um numero:-----------");//solicita o valor ao usuario
+	    int k = input.nextInt();//Armazenamento do Valor
+	    int Sn=pa(k);//chama o procedimento
+	    System.out.println("\nO valor do somatorio eh:-------"+Sn+"\n");//Exibe a soma total dos inteiros
+		// fecha o  objeto scanner
+		input.close();
+	}
+	public static int pa(int n) {
+		int soma=0;
+		for(int i=0;i<=n;i++) {
+			soma+=i;
+			System.out.println(soma);//exibe soma
+		}
+		return soma;
+
+	}
+}

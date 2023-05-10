@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\1364339\Downloads\AEDS_II_200323\.metadata\.plugins\org.eclipse.jdt.core
+2449712988.index
+4017441320.index
+1865797976.index
+1987845010.index
+1637591910.index

@@ -1,0 +1,8 @@
+package Quiz_2_1;
+
+import Quiz_2_1.Act_1;//Importa a classe para a pergunta 1
+import Quiz_2_1.Act_2;//Importa a classe para a pergunta 2
+
+public class Act_3 {
+
+}

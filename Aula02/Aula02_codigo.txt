@@ -1,0 +1,74 @@
+package Aula_02;//Nome do Projeto
+import java.util.Locale;//biblioteca para padrões regionais
+public class Dados {//declaração da classe Dados
+	private int Array[];//Instancia a variavel para o Array
+	private int N;//Tamanho do Array
+	public Dados() {//constructor default
+		Array= new int[10];//tipo e tamanho do Array
+		N=Array.length;//Variavel para análise de tamanho
+	}
+	public Dados(int[] array) {//construtor com atribuições
+		Array=array;//Instancia a nova variavel para o Array baseada no constructor default
+		N=Array.length;//Variavel para análise de tamanho
+	}
+	public void ImprimirArray() {//Impressão dos componentes do Array
+		for(int i=0;i<N;i++) {//laço para percorrer o Array
+			System.out.println("Posição "+i+": "+Array[i]);//executa a impressão do Array
+		}
+	}
+	public double CalculaMedia() {//Media dos componentes do Array
+		//double M;//Simplificação de código
+		int Soma=0;//Variavel para a soma de componentes do Array
+		for(int i=0;i<N;i++) {//laço para percorrer o Array
+			Soma+=Array[i];//soma de componentes do Array
+		}
+		//M=Soma/N;//Simplificação de código
+		return Soma/N;//retorna a media(divide soma pelo tamanho) 
+	}
+	public void Ordenar() {//Ordenação dos componentes do Array
+		int index;//variavel para posição de menor valor
+		for (int i = 0; i <Array.length; i++){//laço para percorrer o Array
+			index = i;//Atribuição de valor da variavel i a index
+			for (int j = i ; j <= Array.length-1; j++){//laço para percorrer o Array a partir de i
+				if (Array[j] < Array[index]){//compraração
+					index = j;//se menor, atribui o valor da variavel j a index
+				}
+			}
+			int temp = Array[i];//Atribuição de valor de Array[i] a temp
+			Array[i] = Array[index];//Atribuição de valor de Array[index] a Array[i] 
+			Array[index] = temp;//Atribuição de valor de Array[index] a temp
+		}
+	}
+	public double CalculaMediana() {//Mediana dos componentes do Array
+		//double Y;//Simplificação de código
+		int k;//variavel para posição no Array
+		
+		if(N%2==0) {//se o tamanho for par
+			k=(N/2);//Atribui a metade do tamanho a k
+			//Y=((Array[k]+Array[k-1])/2.0);//Simplificação de código
+			return ((Array[k]+Array[k-1])/2.0);//Retorna a mediana(soma Array[k] e Array[k-1] e divide por 2)
+		}
+		else {//se não for par.....
+			k=(N/2);//Atribui a metade do tamanho a k
+			//Y=Array[k];//Simplificação de código
+			return Array[k];//Retorna a mediana(Array na posição k)
+		}
+		//return Y;//Simplificação de código
+	}
+}
+============================================================================================================================================
+package Aula_02;//Nome do Projeto
+import java.util.Locale;//biblioteca para padrões regionais
+public class Analise {//declaração da classe Analise
+
+	public static void main(String[] args) {//Classe Main do programa
+		int[]V= {1,3,1,8,6,7};//Valores para o Array
+		Dados D1 = new Dados(V);//Instancia a variavel para o Array e atribui valores e tamanho
+		D1.ImprimirArray();//Executa a impressão do Array
+		System.out.println("A média é "+D1.CalculaMedia());//Exibe a media do Array
+		D1.Ordenar();//Executa a ordenação do Array
+		//D1.ImprimirArray();  Verifcação da ordenação
+		System.out.println("A mediana é "+D1.CalculaMediana());//Exibe a mediana do Array
+	}
+
+}

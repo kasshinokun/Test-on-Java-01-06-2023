@@ -1,0 +1,7 @@
+
+7
+teste.c,2\1\213b05ad7c09fa565d1f1080f4e5eb9a12e7c152
+A
+AllinOne/AllinOne,a\8\a89a3d102ca94dc929b5a94853a687ca7839b8fb
+6
+Main.c,6\c\6ca870586d9dc471008f72e1193257a54098c2a4

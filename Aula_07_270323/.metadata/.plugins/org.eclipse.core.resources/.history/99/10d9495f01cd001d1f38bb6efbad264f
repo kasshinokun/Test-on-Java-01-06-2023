@@ -1,0 +1,51 @@
+package Aula_06;
+//Aula de 27/03/2023 - Exercicio Pratico 7
+public class Circunferencia extends Figura{//Declaração da Classe Filha
+    double R;//Variavel para Raio
+    
+    public Circunferencia() {//Construtor Default
+
+    }
+    public Circunferencia(int x0,int y0, double r) {//Sobrecarga
+        super(x0,y0);//Atributos da Classe Mae
+        //Atribuição de Variaveis
+        R= r;
+        
+    }
+    //Get e Set do Raio
+    public double getRaio() {
+        return R;
+    }
+    public void setRaio(double r) {
+        R = r;
+    }
+    
+    //Calculo pelo Metodo de Monte-Carlo
+    //calcula o valor PI
+    public double CalculaPI(int L) {
+    	
+    	return L;
+    }
+    public double GetAreaMonteCarlo(int L){
+    	
+    	return L;
+    }
+    public double GetPerimetroMonteCarlo(int L){
+    	
+    	return L;
+    }
+    
+    //Calculos Padrao
+    //Area
+    public double  getArea() {//Calculo da Area do Retangulo
+        return R;
+    }
+    //Perimetro
+    public double getPerimetro() {//Calculo de Perimetro do Retangulo
+        return R;
+    }
+    
+    public String toString( ) {//Exibição em tela das medidas principais do Retangulo
+        return "Circunferencia(" + x0 + " : " + y0 +" : "+ R +")";
+    }
+}

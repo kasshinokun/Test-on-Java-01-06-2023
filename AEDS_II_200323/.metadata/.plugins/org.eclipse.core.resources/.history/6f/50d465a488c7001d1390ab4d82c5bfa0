@@ -1,0 +1,16 @@
+package Aula_06;
+
+public class Retangulo extends Figura{
+	public Retangulo() {
+		
+	}
+	public Retangulo(int x0,int y0) {
+		super(x0,y0);
+	}
+	public double  getArea() {
+		return x0*y0;
+	}
+	public double getPerimetro() {
+		return 2*(x0+y0);
+	}
+}

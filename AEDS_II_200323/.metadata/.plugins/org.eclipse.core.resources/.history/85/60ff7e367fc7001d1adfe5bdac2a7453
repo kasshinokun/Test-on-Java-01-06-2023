@@ -1,0 +1,30 @@
+package Aula_05_Natal;
+import java.util.*;
+
+import Aula_05_Natal.Duende;
+
+/*Observação:
+
+    Após testes sem sucesso, 
+    reaproveitei um codigo 
+    baseado em ArrayLista 
+    que criei semestre passado
+    e adaptei algumas partes    
+    
+*/
+//Bibliotecas para execução
+import java.util.*;//Simplificação das bibliotecas necessarias
+
+//Classe para o Array
+public class Principal_05_Lista {//declaração da classe
+	
+	private Duende[] Lista = new Duende[30];
+    //Declaração do ArrayList
+    //List<Duende>Lista = new Arrays.asList<Duende>(Lista);
+
+    //Metodo de retorno do ArrayList
+    /*public List<Duende> getLista() {
+        return lista;
+    }*/
+
+}

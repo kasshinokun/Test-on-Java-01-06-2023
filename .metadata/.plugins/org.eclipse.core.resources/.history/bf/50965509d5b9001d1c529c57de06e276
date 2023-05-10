@@ -1,0 +1,29 @@
+package Aula_02;
+//Nome do Projeto
+import java.util.Locale;//biblioteca para padrões regionais
+import java.lang.Math;//biblioteca para potencia e afins
+import java.util.Scanner;//coletar informação digitada
+public class act1 {
+	public act1(){
+		
+	}
+	public void somatorio() {
+		Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+    	
+        System.out.print("Digite um numero:");
+        int k = input.nextInt();//Armazenamento do Valor
+        System.out.println("O numero digitado eh-----------" + k);
+        int soma=0;//variavel para soma
+		for(int i= 1; i <=k;i++) {
+			soma+=i;//soma
+			System.out.println(soma);//exibe soma
+		}
+		System.out.println("\nO valor do somatorio eh:-------"+soma+"\n");//Exibe a soma dos inteiros
+        // fecha o  objeto scanner
+        input.close();
+	}
+	public void Somatorio2() {
+		
+		
+	}
+}

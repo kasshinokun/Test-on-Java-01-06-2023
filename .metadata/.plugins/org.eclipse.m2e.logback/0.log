@@ -1,0 +1,90 @@
+2023-04-18 17:31:08,720 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-24 13:30:03,900 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-24 13:32:29,906 [Worker-4: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-24 13:32:32,111 [Worker-4: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.teste:preview_Aula_11:1.0-SNAPSHOT @ D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\pom.xml.
+2023-04-24 13:32:32,970 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:32:32,970 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:32:32,972 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:32:32,972 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 13:32:33,082 [Worker-4: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /preview_Aula_11/src/main/java
+2023-04-24 13:32:33,087 [Worker-4: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /preview_Aula_11/src/test/java
+2023-04-24 13:32:33,218 [Worker-4: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 2,00 sec, update config takes 0,00 sec 
+2023-04-24 13:32:34,143 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:32:34,143 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:32:34,144 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:32:34,145 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 13:33:58,187 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:33:58,187 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:33:58,190 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:33:58,190 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 13:34:29,703 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:34:29,703 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:34:29,706 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:34:29,706 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 13:39:41,222 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:39:41,222 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:39:41,224 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:39:41,224 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 13:40:28,936 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:40:28,937 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 13:40:28,938 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 13:40:28,938 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 14:48:56,545 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 14:48:56,552 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 14:48:56,557 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 14:48:56,557 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 17:11:54,750 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-24 17:18:04,405 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:18:04,411 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 17:18:04,413 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:18:04,413 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 17:18:21,346 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:18:21,346 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 17:18:21,347 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:18:21,347 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 17:21:50,397 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:21:50,397 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 17:21:50,399 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:21:50,399 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 17:33:29,703 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:33:29,705 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 17:33:29,707 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:33:29,707 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 17:59:27,685 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:59:27,688 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 17:59:27,690 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 17:59:27,690 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 18:01:48,488 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 18:01:48,488 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-24 18:01:48,490 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-24 18:01:48,490 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-24 18:12:42,332 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-25 12:24:48,242 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-25 12:39:13,246 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-25 12:39:13,296 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-25 12:39:13,298 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-25 12:39:13,298 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-25 14:18:45,263 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-25 16:36:52,271 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-26 12:45:49,676 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-26 16:36:42,466 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-26 16:50:05,081 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-26 16:51:09,533 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-26 17:24:43,927 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:24:43,929 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-26 17:24:43,931 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:24:43,931 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-26 17:25:00,926 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:25:00,926 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-26 17:25:00,927 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:25:00,927 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-26 17:55:32,493 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:55:32,493 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-26 17:55:32,494 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 17:55:32,494 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-04-26 18:05:36,764 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 18:05:36,765 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-04-26 18:05:36,765 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-26 18:05:36,766 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-05-10 13:21:30,781 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-10 13:48:28,741 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

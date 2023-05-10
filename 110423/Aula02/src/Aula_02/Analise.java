@@ -1,0 +1,44 @@
+package Aula_02;//Nome do Projeto
+import java.util.Locale;//biblioteca para padrões regionais
+import java.util.Scanner;//biblioteca para entrada de dados
+import java.lang.Math;//biblioteca para calculos como potencia e afins
+public class Analise {//Nome da classe
+	public static void main(String[] args) {//Classe Main do programa
+		int[]V= {1,3,1,8,6,7};//Valores para o Array
+		Dados D1 = new Dados(V);//Instancia a variavel para o Array e atribui valores e tamanho
+		D1.ImprimirArray();//Executa a impressão do Array
+		System.out.println("A média é "+D1.CalculaMedia());//Exibe a media do Array
+		//D1.Ordenar();//Executa a ordenação do Array
+		D1.selection_sort();//Executa a ordenação do Array
+		
+		System.out.println("A mediana é "+D1.CalculaMediana());//Exibe a mediana do Array
+		
+		somatorio();//chama o procedimento
+	}
+
+	private static void somatorio() {//declaração do procedimento
+		Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+		
+	    System.out.print("Digite um numero:-----------");//solicita o valor ao usuario
+	    int k = input.nextInt();//Armazenamento do Valor
+	    System.out.println("\nO numero digitado eh--------" + k+"\n");//exibe o valor digitado
+	    System.out.println("Somatorio executado por FOR\n");//Enunciado
+	    int soma=0;//variavel para soma
+		
+	    for(int i= 1; i <=k;i++) {//laço para o calculo de somatorio
+			soma+=i;//soma
+			System.out.println(soma);//exibe soma
+		}
+		System.out.println("\nO valor do somatorio eh:-------"+soma);//Exibe a soma total dos inteiros
+		System.out.println("\nSomatorio executado via FORMULA Sn=((a1+an)n)/2");//Enunciado
+		//Processo em etapas
+		int Sn=1;//etapa 1 a1
+		Sn+=k;//etapa 2 a1+n
+		Sn*=k;//etapa 3 (a1+n)n
+		Sn/=2;//etapa 4 ((a1+n)n)/2
+		System.out.println("\nO valor do somatorio eh:-------"+Sn+"\n");//Exibe a soma total dos inteiros
+		// fecha o  objeto scanner
+		input.close();
+	}
+
+}

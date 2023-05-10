@@ -1,0 +1,46 @@
+package Quiz_3;
+
+import java.util.Scanner;
+
+public class Act_7 {
+
+	public static void main(String[] args) {//declaração do metodo Main
+			
+			System.out.println("Progressão Aritmetica");
+			
+			Scanner input = new Scanner(System.in);//objeto para coleta de dados digitados
+			System.out.print("Digite um numero:-----------");//solicita o valor ao usuario
+		    int k = input.nextInt();//Armazenamento do Valor
+		    System.out.print("Somatorio executado via Formula Proposta:\n");
+		    int Sn=pa(k);//chama o procedimento
+		    System.out.println("O valor do somatorio eh:-------"+Sn+"\n");//Exibe a soma total dos inteiros
+		    System.out.println("Somatorio executado via Formula Sn=(n(n+1)/2)= "+Sn_Pa(k));//Enunciado
+		    // fecha o  objeto scanner
+			input.close();
+		}
+		public static void enviaSomatorioPA() {
+			
+		}
+		public static int pa(int n) {//declaração da função proposta
+			int soma=0;
+			for(int i=1;i<=n;i++) {//laço de repetição para a soma
+				soma+=i;//Executa a soma
+				System.out.println(soma);//exibe soma
+			}
+			return soma;//retorna a soma
+	
+		}
+		public static int Sn_Pa(int n) {//declaração da função otimizada
+		
+			//Processo em etapas Sn=(n(a1+an))/2
+			//int Sn=1;//etapa 1 a1
+			//Sn+=n;//etapa 2 a1+n
+			//Sn*=n;//etapa 3 (a1+n)n
+			//Sn/=2;//etapa 4 ((a1+n)n)/2
+			return (n*(n+1)/2);//retorna a soma----Formula Direta
+		}
+		public static int somatorioPA(double a, double b, int n) {
+			
+		}
+	
+}
