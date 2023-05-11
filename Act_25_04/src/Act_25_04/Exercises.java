@@ -226,9 +226,9 @@ public class Exercises {//Classe para Execução dos Exercícios
         System.out.println("\n=========Retornando ao Menu Inicial==========\n");//Enunciado
     }
     public static void Exercise_10(SQ PP_10) {
-        //Apenas logica aplicada, não foi testado
-        System.out.println("===10 - Sistema de Gestao de Deposito========");//Enunciado
         
+        System.out.println("===10 - Sistema de Gestao de Deposito========");//Enunciado
+        Pilha A=new Pilha();//Pilha de Armazenamento Aleatorio
         Pilha B=new Pilha();//Pilha de 5 toneladas
         Pilha C=new Pilha();//Pilha de 3 toneladas
         
@@ -239,52 +239,115 @@ public class Exercises {//Classe para Execução dos Exercícios
         caixa= Integer.parseInt(reader.nextLine());//Armazena o valor
         System.out.println("============Gerenciando Pilhas===============");//Enunciado
         
-        //Deposito vazio
-        if(caixa==PP_10.Peek_PP()||PP_10.n==0){
-            PP_10.PP[0].P.Add(caixa);
-        }//Caixas de 7 e 3 toneladas
-        else if(caixa==7&&PP_10.Peek_PP()==5){
-            for(int i=0;i<B.pilha2.length;i++){
-                B.Add(PP_10.PP[0].P.Desempilhar());
+        //----------------------Deposito vazio----------------------------
+        if(PP_10.n==0&&(caixa==3||caixa==5||caixa==7)){
+            
+            A.Add(caixa);//Adiciona caixa
+            
+            PP_10.Add_PP(A);//Adiciona pilha de peso atual
+            
+        //=====================Editando pilhas internas==================    
+        }else if(caixa==PP_10.Peek_PP()&&PP_10.n!=0){
+            if(caixa==7){
+                A=PP_10.Remove_PP();//remove as caixas de 7 toneladas
+
+                A.Add(caixa);//Adiciona caixa
+
+                PP_10.Add_PP(A);//Adiciona pilha de 7 toneladas
+
             }
-            PP_10.PP[0].P.Add(caixa);
-            for(int i=0;i<PP_10.PP[1].P.pilha2.length;i++){
-                PP_10.PP[1].P.Add(B.Desempilhar());
+            if(caixa==5){
+                B=PP_10.Remove_PP();//remove as caixas de 5 toneladas
+                
+                B.Add(caixa);//Adiciona caixa
+                
+                PP_10.Add_PP(B);//Adiciona pilha de 5 toneladas
+                
             }
-        }//Caixas de 7 e 3 toneladas
-        else if(caixa==7&&PP_10.Peek_PP()==3){
-            for(int i=0;i<B.pilha2.length;i++){
-                C.Add(PP_10.PP[0].P.Desempilhar());
+            if(caixa==3){
+                C=PP_10.Remove_PP();//remove as caixas de 3 toneladas
+                
+                C.Add(caixa);//Adiciona caixa
+                
+                PP_10.Add_PP(C);//Adiciona pilha de 3 toneladas
             }
-            PP_10.PP[0].P.Add(caixa);
-            for(int i=0;i<PP_10.PP[1].P.pilha2.length;i++){
-                PP_10.PP[1].P.Add(C.Desempilhar());
+        //============Peso menor que a pilha de topo===================
+        }else if((caixa==3||caixa==5)&&caixa<PP_10.Peek_PP()){
+            //Caixas maiores no deposito
+            if(caixa==5){
+                B.Add(caixa);//Adiciona caixa
+                
+                PP_10.Add_PP(B);//Adiciona pilha de 5 toneladas
+                
+            }else{
+                C.Add(caixa);
+                
+                PP_10.Add_PP(C);//Adiciona pilha de 3 toneladas
+                
             }
-        }//Caixas de 7 e 5 toneladas
-        else if(caixa==5&&PP_10.Peek_PP()==7){
-            PP_10.PP[1].P.Add(caixa);
-        }//Caixas de 5 e 3 toneladas
-        else if(caixa==5&&PP_10.Peek_PP()==3){
-            for(int i=0;i<B.pilha2.length;i++){
-                C.Add(PP_10.PP[0].P.Desempilhar());
-            }
-            PP_10.PP[0].P.Add(caixa);
-            for(int i=0;i<PP_10.PP[1].P.pilha2.length;i++){
-                PP_10.PP[1].P.Add(C.Desempilhar());
-            }
-        }else if(caixa==3){//Para 3 toneladas
-            if(PP_10.Peek_PP()==5){
-                PP_10.PP[1].P.Add(caixa);
-            }
-            if(PP_10.Peek_PP()==7&&PP_10.n==1){
-                PP_10.PP[1].P.Add(caixa);
-            }
-            if(PP_10.Peek_PP()==7&&PP_10.n>1){
-                PP_10.PP[2].P.Add(caixa);
+        //============Peso maior que a pilha de topo===================
+        }else if(caixa>PP_10.Peek_PP()){//Caixas menores no deposito
+            
+            if(caixa==7){//3 e 7/5 e 7 toneladas no deposito
+               
+                if(PP_10.Peek_PP()==5){//5 e 7 toneladas
+                    
+                    B=PP_10.Remove_PP();//remove as caixas de 5 toneladas
+                    
+                    if(PP_10.Peek_PP()==caixa){
+                        
+                        A=PP_10.Remove_PP();//remove as caixas de 7 toneladas  
+                    
+                    }
+                    A.Add(caixa);//Adiciona caixa
+                    
+                    PP_10.Add_PP(A);//Adiciona pilha de 7 toneladas
+                    
+                    PP_10.Add_PP(B);//Adiciona pilha de 5 toneladas
+                }
+                if(PP_10.Peek_PP()==3){
+
+                    C=PP_10.Remove_PP();//remove as caixas de 3 toneladas 
+
+                    if(PP_10.Peek_PP()==5){
+
+                        B=PP_10.Remove_PP();//remove as caixas de 5 toneladas
+                        if(PP_10.Peek_PP()==caixa){
+                        
+                            A=PP_10.Remove_PP();//remove as caixas de 7 toneladas  
+                            
+                            
+                        }
+                    }
+                    A.Add(caixa);//Adiciona caixa
+                    
+                    PP_10.Add_PP(A);//Adiciona pilha de 3 toneladas
+                    
+                    if(B.n!=0){//se tiver caixas
+                        PP_10.Add_PP(B);//Adiciona pilha de 5 toneladas
+                    }
+                    
+                    PP_10.Add_PP(C);//Adiciona pilha de 3 toneladas
+                }
+               
+               
+                
+            }if(caixa==5){//3 e 7 toneladas no deposito
+                C=PP_10.Remove_PP();//remove as caixas de 3 toneladas
+                if(PP_10.Peek_PP()==caixa){
+                    B=PP_10.Remove_PP();//remove as caixas de 5 toneladas
+                    B.Add(caixa);//Adiciona a caixa
+                }else{
+                    B.Add(caixa);//Adiciona a caixa
+                }
+                //Refaz o empilhamento no deposito
+                PP_10.Add_PP(B);//Adiciona pilha de 5 toneladas
+                PP_10.Add_PP(C);//Adiciona pilha de 3 toneladas
             }
         }
+        
         System.out.println("==========Apos Gerenciamento de Pilhas=======");//Enunciad0
-        PP_10.To_Stack_PP();//Exibe a Pilha
+        PP_10.To_Stack_PP();//Exibe Pilha de Pilhas
         System.out.println("\n=========Retornando ao Menu Inicial==========\n");//Enunciado
     }
     

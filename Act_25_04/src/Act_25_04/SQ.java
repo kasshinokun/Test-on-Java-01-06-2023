@@ -174,7 +174,7 @@ public class SQ {
     public void To_Stack_PP(){//Procedimento para exibir Pilha de Objetos
         
         for(int i=n-1;i>=0;i--){
-            System.out.print("Pilha 0"+i+" ");//apenas indicar a fila em exibiçao
+            System.out.print("Pilha 0"+i+"\n");//apenas indicar a fila em exibiçao
             PP[i].P.Exibir_Pilha();//Chama o procedimento da classe
         }
     
