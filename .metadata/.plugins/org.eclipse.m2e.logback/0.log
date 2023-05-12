@@ -88,3 +88,22 @@
 2023-04-26 18:05:36,766 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
 2023-05-10 13:21:30,781 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2023-05-10 13:48:28,741 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-11 17:19:34,054 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-11 17:19:37,495 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-11 17:19:37,496 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-05-11 17:19:37,498 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-11 17:19:37,498 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-05-11 17:21:59,387 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 17.0.7+7
+2023-05-11 17:21:59,434 [Start Help Server] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2023-05-11 17:21:59,453 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@513d2c2b{/help,null,AVAILABLE}
+2023-05-11 17:21:59,470 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@322786fc{HTTP/1.1, (http/1.1)}{127.0.0.1:49790}
+2023-05-11 17:21:59,509 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started Server@7bb739fc{STARTING}[10.0.13,sto=0] @165777ms
+2023-05-11 17:33:45,208 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2023-05-11 17:33:48,470 [Worker-8: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2023-05-11 17:33:48,484 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-11 17:33:48,485 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\main\resources
+2023-05-11 17:33:48,487 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-11 17:33:48,487 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Manutenção 2023\eclipse-workspace\preview_Aula_11\src\test\resources
+2023-05-11 18:23:16,724 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped Server@7bb739fc{STOPPING}[10.0.13,sto=0]
+2023-05-11 18:23:16,738 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@322786fc{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2023-05-11 18:23:16,784 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@513d2c2b{/help,null,STOPPED}
