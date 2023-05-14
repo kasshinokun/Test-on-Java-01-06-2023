@@ -19,9 +19,9 @@ public class Matriz {
 
     }
     
-    public void Preencher(int[] arr) {
+    public void Preencher(int[] V) {
 
-        if(arr.length!=l*c) {
+        if(V.length!=l*c) {
 
             System.out.println("Parametros invalidos!!");
 
@@ -29,7 +29,7 @@ public class Matriz {
 
             Celula i, j;
             int cont=1;
-            this.Inicio=new Celula(arr[0]);
+            this.Inicio=new Celula(V[0]);
             j=this.Inicio;
 
             for(int k1=0;k1<l;k1++) {
@@ -38,11 +38,11 @@ public class Matriz {
 
                 for(int k2=0;k2<c-1;k2++) {
 
-                    Celula tmp=new Celula(arr[cont]);
+                    Celula tmp=new Celula(V[cont]);
                     cont++;
                     i.Dir=tmp;
                     tmp.Esq=i;
-                    this.Fim=i.Dir;
+                    this.Fim=i.Dir;//Marcação para o Final
                     
                     if(k1>0) {
 
@@ -57,7 +57,7 @@ public class Matriz {
                 }
                 if(k1<l-1) {
 
-                    Celula tmp=new Celula(arr[cont]);
+                    Celula tmp=new Celula(V[cont]);
                     cont++;
                     j.Inf=tmp;
                     tmp.Sup=j;
