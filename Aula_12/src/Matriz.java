@@ -3,7 +3,7 @@
 import java.util.*;//simplificação de Bibliotecas 
 public class Matriz {
 	
-    Celula Inicio;//Variavel para indica inicio da matriz
+    Celula Inicio, Fim;//Variavel para indica inicio e fim da matriz
     int l, c;//Variaveis de dimensões da matriz
 
     public Matriz() {//construtor default
@@ -18,6 +18,7 @@ public class Matriz {
         this.c=b;
 
     }
+    
     public void Preencher(int[] arr) {
 
         if(arr.length!=l*c) {
@@ -38,9 +39,11 @@ public class Matriz {
                 for(int k2=0;k2<c-1;k2++) {
 
                     Celula tmp=new Celula(arr[cont]);
+                    cont++;
                     i.Dir=tmp;
                     tmp.Esq=i;
-
+                    this.Fim=i.Dir;
+                    
                     if(k1>0) {
 
                         tmp.Sup=tmp.Esq.Sup.Dir;
@@ -50,7 +53,7 @@ public class Matriz {
 
                     i.Dir=tmp;
                     i=i.Dir;
-
+                    
                 }
                 if(k1<l-1) {
 
@@ -64,71 +67,92 @@ public class Matriz {
 
                 }
             }
+            
         }
     }
-    public void Imprimir() {
+    public void Imprimir(){
+        
+        //ponteiro para mover a Direita
+        Celula rPtr;
 
-        Celula tmp=new Celula();
-        tmp=this.Inicio;
+        //ponteiro para mover a Inferior
+        Celula dPtr = this.Inicio;
 
-        for(int i=0;i<l;i++){
+        //loop será executado emquanto Celula.Inf não for null
+        while (dPtr != null) {
 
-            //tmp=tmp.Inf;
+            rPtr = dPtr;
 
-            for(int j=0;j<c;j++){
-
-                //if(tmp!=null){
-                    //System.out.print(tmp.Dir.elemento1);
-                //}
-
+            //loop será executado emquanto Celula.Dir não for null
+            while (rPtr!=null) {
+                System.out.print(rPtr.elemento1+" ");
+                rPtr = rPtr.Dir;
             }
 
+            System.out.print("\n");
+            dPtr = dPtr.Inf;
         }
-
     }
     public int DiagonalPrincipal( ){  
 
         int k=0;
-        Celula tmp=new Celula();
-        tmp=this.Inicio;
+        
+        //ponteiro para mover a Direita
+        Celula rPtr;
 
-        for(int i=0;i<l;i++){
-            for(int j=i+1;j<c;j++){
+        //ponteiro para mover a Inferior
+        Celula dPtr = this.Inicio;
 
-                tmp=tmp.Inf;
+        //loop será executado emquanto Celula.Inf não for null
+        for(int i=0;i<l;i++) {
 
-                if(tmp!=null){
+            rPtr = dPtr;
 
-                    k+=tmp.Dir.elemento1;
-
+            //loop será executado emquanto Celula.Dir não for null
+            for(int j=0;j<c;j++) {
+                if(j==i){
+                    System.out.print(rPtr.elemento1+" ");
+                    k+=rPtr.elemento1;
                 }
+                rPtr = rPtr.Dir;
             }
+
+            System.out.print("\n");
+            dPtr = dPtr.Inf;
         }
 
         return k;
 
     }
-    public int DiagonalSecundária( ){ 
+    public int DiagonalSecundaria( ){ 
 
         int k=0;
-        Celula tmp=new Celula();
-        tmp=this.Inicio;
+        //ponteiro para mover a Direita
+        Celula rPtr;
 
-        for(int i=l-1;i>=0;i--){
+        //ponteiro para mover a Inferior
+        Celula dPtr = this.Inicio;
 
-            tmp=tmp.Sup;
+        //loop será executado emquanto Celula.Inf não for null
+        for(int i=0;i<l;i++) {
 
-            for(int j=i-1;j>=0;j--){
+            rPtr = dPtr;
 
-                if(tmp!=null){
-
-                    k+=tmp.Esq.elemento1;
-
+            //loop será executado emquanto Celula.Dir não for null
+            for(int j=0;j<c;j++) {
+                if(j==c-1-i){
+                    
+                    System.out.print(rPtr.elemento1+" ");
+                    k+=rPtr.elemento1;
                 }
+                rPtr = rPtr.Dir;
             }
 
+            System.out.print("\n");
+            dPtr = dPtr.Inf;
         }
 
+        
         return k;
 
     }
@@ -136,60 +160,86 @@ public class Matriz {
     public Matriz soma(Matriz B) {
 
         Matriz C=new Matriz(this.l,this.c);
-        int arr[]=new int[B.c*B.l];
-        C.Preencher(arr);
-        Celula iA,iB,jA,jB,iC,jC;
-        jA=this.Inicio;
-        jB=B.Inicio;
-        jC=C.Inicio;
-        for(int k1=0;k1<l;k1++){
-            iA=jA;
-            iB=jB;
-            iC=jC;
-            for(int k2=0;k2<c;k2++){
-                iC.elemento1=iA.elemento1+iB.elemento1;
-                iA=iA.Dir;
-                iB=iB.Dir;
-                iC=iC.Dir;
+        int[] arr=new int[this.l*this.c];
+        //ponteiro para mover a Direita
+        Celula rPtr;
+        Celula rPtr2;
+        
+        //ponteiro para mover a Inferior
+        Celula dPtr = this.Inicio;
+        Celula dPtr2 = B.Inicio;
+        
+        
+        int i=0;
+        
+        //loop será executado emquanto Celula.Inf não for null
+        while (dPtr != null) {
+
+            rPtr = dPtr;
+            rPtr2 = dPtr2;
+            
+            
+            //loop será executado emquanto Celula.Dir não for null
+            while (rPtr!=null) {
+                
+                arr[i]=rPtr.elemento1+rPtr2.elemento1;
+                
+                rPtr = rPtr.Dir;
+                rPtr2 = rPtr2.Dir;
+                i++;
             }
-            jA=jA.Inf;
-            jB=jB.Inf;
-            jC=jC.Inf;    
+
+            
+            dPtr = dPtr.Inf;
+            dPtr2 = dPtr2.Inf;
+            
         }
+        
+        C.Preencher(arr);
+        
         return C;
     }
     public Matriz Multiplicação(Matriz B) {
 
+        
         Matriz C=new Matriz(this.l,this.c);
-        int arr[]=new int[B.c*B.l];
-        C.Preencher(arr);
-        Celula iA,iB,jA,jB,iC,jC;
-        jA=this.Inicio;
-        jB=B.Inicio;
-        jC=C.Inicio;
+        int[] arr=new int[this.l*this.c];
+        //ponteiro para mover a Direita
+        Celula rPtr;
+        Celula rPtr2;
+        
+        //ponteiro para mover a Inferior
+        Celula dPtr = this.Inicio;
+        Celula dPtr2 = B.Inicio;
+        
+        
+        int i=0;
+        
+        //loop será executado emquanto Celula.Inf não for null
+        while (dPtr != null) {
 
-        for(int k1=0;k1<l;k1++){
-
-            iA=jA;
-            iB=jB;
-            iC=jC;
-
-            for(int k2=0;k2<c;k2++){
-
-                iC.elemento1=iA.elemento1*iB.elemento1;
-                iA=iA.Dir;
-                iB=iB.Dir;
-                iC=iC.Dir;
-
+            rPtr = dPtr;
+            rPtr2 = dPtr2;
+            
+            
+            //loop será executado emquanto Celula.Dir não for null
+            while (rPtr!=null) {
+                
+                arr[i]=rPtr.elemento1*rPtr2.elemento1;
+                
+                rPtr = rPtr.Dir;
+                rPtr2 = rPtr2.Dir;
+                i++;
             }
 
-            jA=jA.Inf;
-            jB=jB.Inf;
-            jC=jC.Inf;    
-
+            
+            dPtr = dPtr.Inf;
+            dPtr2 = dPtr2.Inf;
+            
         }
-
+        
+        C.Preencher(arr);
+        
         return C;
-
     }
 }

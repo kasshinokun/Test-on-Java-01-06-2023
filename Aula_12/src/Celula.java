@@ -17,11 +17,12 @@ public class Celula{
         this.elemento1=0;//inteiros
         this.elemento2=" ";//Strings
         this.elemento3=0;//caracteres
-        //Ponteiros
-        this.Dir=null;//Proximo e Direita
-        this.Esq=null;//Anterior e Esquerda
-        this.Inf=null;//Inferior
-        this.Sup=null;//Superior
+        
+        this.Dir = null;
+        this.Esq = null;
+        this.Sup = null;
+        this.Inf = null;
+       
     }
     //Sobrecarga da classe
     public Celula(int x) {
