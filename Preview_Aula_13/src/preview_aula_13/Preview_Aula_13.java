@@ -11,7 +11,7 @@ public class Preview_Aula_13 {
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
     do{
-            System.out.println("===== Atividade Teorica TADs Lineares =======\n");//Enunciado
+            System.out.println("\n===== Atividade Teorica TADs Lineares =======\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
@@ -37,7 +37,7 @@ public class Preview_Aula_13 {
                     break;//Condição de parada
                 case 2://Chama o procedimento
                     Lista_Simples.main(args);
-                    break;//Condição de parada
+                    break;//Condição de parada2
                 case 3://Chama o procedimento
                     
                     break;//Condição de parada
