@@ -11,7 +11,7 @@ public class Preview_Aula_13 {
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
     do{
-            System.out.println("\n===== Atividade Teorica TADs Lineares =======\n");//Enunciado
+            System.out.println("\n=Atividade Teorica TADs, TAFs e Testes=====\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
@@ -23,8 +23,8 @@ public class Preview_Aula_13 {
             System.out.println("===06 - Gestao de Pilha Flexivel Simples=====");//Enunciado
             System.out.println("===07 - Gestao de Pilha Flexivel Dupla=======");//Enunciado
             System.out.println("===08 - Gestao de Arvore Binaria=============");//Enunciado
-            System.out.println("===09 - =====================================");//Enunciado
-            System.out.println("===10 - =====================================");//Enunciado
+            System.out.println("===09 - Atividade Teorica de TAF=============");//Enunciado
+            System.out.println("===10 - Aula Pratica 13======================");//Enunciado
 
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
@@ -33,13 +33,13 @@ public class Preview_Aula_13 {
             switch(opcao){//Analise do que foi digitado
 
                 case 1://Chama o procedimento
-                    Principal.main(args);
+                    Exercises.gestao_matriz();
                     break;//Condição de parada
                 case 2://Chama o procedimento
-                    Lista_Simples.main(args);
+                	Exercises.gestao_lista();
                     break;//Condição de parada2
                 case 3://Chama o procedimento
-                    
+                    Sort.MergeSort.main();
                     break;//Condição de parada
                 case 4://Chama o procedimento
                     
@@ -57,10 +57,10 @@ public class Preview_Aula_13 {
                     
                     break;//Condição de parada
                 case 9://Chama o procedimento
-                    
+                    Principal.main(args);;
                     break;//Condição de parada
                 case 10://Chama o procedimento
-                    
+                    Exercises.Exercise_Tree();
                     break;//Condição de parada
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento

@@ -107,3 +107,5 @@
 2023-05-11 18:23:16,724 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped Server@7bb739fc{STOPPING}[10.0.13,sto=0]
 2023-05-11 18:23:16,738 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@322786fc{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
 2023-05-11 18:23:16,784 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@513d2c2b{/help,null,STOPPED}
+2023-05-17 14:46:42,308 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2023-05-17 14:46:44,857 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

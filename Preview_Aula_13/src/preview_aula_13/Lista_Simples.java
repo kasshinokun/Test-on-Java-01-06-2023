@@ -17,7 +17,7 @@ public class Lista_Simples {
     public void InserirInicio(int x){
         
         Celula tmp=new Celula(x);
-        tmp.Dir=primeiro;
+        tmp.Prox=primeiro;
         primeiro=tmp;
         
         n++;
@@ -34,8 +34,8 @@ public class Lista_Simples {
         }
         else{
             Celula tmp=new Celula(x);
-            tmp.Dir=null;
-            ultimo.Dir=tmp;
+            tmp.Prox=null;
+            ultimo.Prox=tmp;
             ultimo=tmp;
             n++;
             tmp=null;
@@ -65,14 +65,14 @@ public class Lista_Simples {
                 if(j==pos-1){
                     
                     Celula tmp=new Celula(x);
-                    tmp.Dir=i.Dir;
-                    i.Dir=tmp;
+                    tmp.Prox=i.Prox;
+                    i.Prox=tmp;
                     n++;
                     tmp=i=null;
                     break;
                 }
                 
-                i=i.Dir;
+                i=i.Prox;
                 
             } 
 
@@ -91,13 +91,13 @@ public class Lista_Simples {
         else{
             
             int elemento = primeiro.elemento1;
-            primeiro=primeiro.Dir;
+            primeiro=primeiro.Prox;
             
             n--;
             return elemento;
         }
     }
-    private int removerPos(int pos) {
+    public int removerPos(int pos) {
     	//Remoção de inteiros na posição designada do vetor
     	
     	if(n==0||pos<0||pos>=n){
@@ -120,17 +120,17 @@ public class Lista_Simples {
 
                 if(k==pos-1){
                     resp=i.elemento1;
-                    i.elemento1=i.Dir.elemento1;
-                    i=i.Dir;
-                    while(i.Dir!=null){
-                        i.elemento1=i.Dir.elemento1;
-                        i=i.Dir;
+                    i.elemento1=i.Prox.elemento1;
+                    i=i.Prox;
+                    while(i.Prox!=null){
+                        i.elemento1=i.Prox.elemento1;
+                        i=i.Prox;
                     }
                     n--;
                     
                     break;
                     
-                }i=i.Dir;
+                }i=i.Prox;
                   
                 }
                 
@@ -149,10 +149,10 @@ public class Lista_Simples {
             return -1;
         }
         Celula i;
-        for(i = primeiro; i.Dir != ultimo; i = i.Dir);
+        for(i = primeiro; i.Prox != ultimo; i = i.Prox);
             int elemento = ultimo.elemento1;
             ultimo = i;
-            i = ultimo.Dir = null;
+            i = ultimo.Prox = null;
             n--;
             return elemento;
         
@@ -165,39 +165,9 @@ public class Lista_Simples {
             //loop será executado emquanto Celula.Dir não for null
             for(int i=0;i<n;i++){
                 System.out.print(rPtr.elemento1+" ");
-                rPtr = rPtr.Dir;
+                rPtr = rPtr.Prox;
             }
     
     }
-    public static void main(String[] args) {//Main da classe
-        
-    }
-    public static void getstao_lista(){//Operações com lista simples
-        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
-        Lista_Simples lista=new Lista_Simples();
-        for(int i=0;i<arr.length;i++){
-            lista.InserirFim(arr[i]);
-        }
-        System.out.println("\n==Insercao===================================");//Enunciado
-        lista.mostrar();
-        System.out.println("\n==No Inicio==================================");//Enunciado
-        lista.InserirInicio(arr[4]);
-        lista.mostrar();
-        System.out.println("\n==Na Posicao=================================");//Enunciado
-        lista.InserirPos(arr[4], 4);
-        lista.mostrar();
-        System.out.println("\n==Remocao====================================");//Enunciado
-        int x=lista.removerInicio();
-        System.out.println("Deletado no Inicio: "+x);
-        lista.mostrar();
-        System.out.println("\n=============================================");//Enunciado
-        int y=lista.removerFim();
-        System.out.println("Deletado no Fim: "+y);
-        lista.mostrar();
-        System.out.println("\n=============================================");//Enunciado
-        int z=lista.removerPos(4);
-        System.out.println("Deletado na Posicao: "+z);
-        lista.mostrar();
-        System.out.println("\n=============================================");//Enunciado
-    }
+    
 }
