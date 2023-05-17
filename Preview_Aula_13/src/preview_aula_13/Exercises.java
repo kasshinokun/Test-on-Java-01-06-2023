@@ -66,23 +66,41 @@ public class Exercises {
     }
 	//Exercicios Atividade teorica 2 TAF
 	public static void Exercise_1() {
-		System.out.println("Analise Lexicografica de metodos de Ordenacao");//Enunciado
-		int []arr= {3, 4, 9, 2, 5, 8, 2, 1, 7, 4, 6, 2, 9, 8, 5, 1};
-		System.out.println("=Impressao do Vetor Base=====================");//Enunciado
-		Another vector=new Another(arr);
-		vector.ImprimirArray();
-		System.out.println("=No Selection Sort===========================");//Enunciado
-        System.out.println("Pior Caso");//Enunciado
-        vector.Selection_sort1();//Pior caso
-        System.out.println("Melhor Caso");//Enunciado
-        vector.Selection_sort1();//Pior caso       
-		System.out.println("\n=No Insertion Sort===========================");//Enunciado
-		System.out.println("=No Merge Sort===============================");//Enunciado
-		System.out.println("=No Quick Sort===============================");//Enunciado
-		System.out.println("=No Heap Sort================================");//Enunciado
-		System.out.println("=============================================");//Enunciado
-		System.out.println("=============================================");//Enunciado
-		System.out.println("=============================================\n");//Enunciado
+            System.out.println("Analise Lexicografica de metodos de Ordenacao");//Enunciado
+            int []arr= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
+            int []arr2= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
+            int []arr3= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
+            System.out.println("=Impressao do Vetor Base=====================");//Enunciado
+            Another vector=new Another(arr);
+            vector.ImprimirArray();
+            
+            System.out.println("=No Selection Sort===========================");//Enunciado
+            System.out.println("Pior Caso");//Enunciado
+            vector.Selection_sort1();//Pior caso
+            System.out.println("Melhor Caso");//Enunciado
+            vector.Selection_sort1();//Pior caso       
+            
+            System.out.println("\n=No Insertion Sort===========================");//Enunciado
+            Another vector2=new Another(arr2);
+            System.out.println("Pior Caso");
+	    vector2.Insertion_sort();//Pior caso 
+            System.out.println("Melhor Caso");
+            vector2.Insertion_sort();//Melhor caso   
+            
+            System.out.println("\n=No Merge Sort===============================");//Enunciado
+            MergeSort vector3 =new MergeSort(arr3);
+            System.out.println("Pior Caso");
+            vector3.Merge_sort();//Exceuta o Merge Sort e Mostra as Movimentações
+            System.out.println("Melhor Caso");
+            vector3.Merge_sort();//Exceuta o Merge Sort e Mostra as Movimentações
+            
+            System.out.println("\n=No Quick Sort===============================");//Enunciado
+            
+            System.out.println("\n=No Heap Sort================================");//Enunciado
+            
+            System.out.println("=============================================");//Enunciado
+            System.out.println("=============================================");//Enunciado
+            System.out.println("=============================================\n");//Enunciado
 	}
 	public static void Exercise_2() {}
 	public static void Exercise_3() {}

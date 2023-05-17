@@ -12,22 +12,22 @@ public static void main(String[] args) {//Main da classe
         int opcao;//Variavel de escolha
 
         do{
-            System.out.println("===== Atividade Teorica TAFs Lineares =======\n");//Enunciado
+            System.out.println("===== Atividade Teorica TAFs Flexiveis ======\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("===01 - Insercao de valores em Lista=========");//Enunciado
-            System.out.println("===02 - Remocao de valor em Lista e Retorno==");//Enunciado
-            System.out.println("===03 - Valores em Posicao Inversa na Lista==");//Enunciado
-            System.out.println("===04 - Gestao de Pilha Dupla em um Array====");//Enunciado
-            System.out.println("===05 - Insercao de valores em Pilhas========");//Enunciado
-            System.out.println("===06 - Gestao e Insercao de valores em Filas");//Enunciado
-            System.out.println("===07 - Pilha de Filas=======================");//Enunciado
-            System.out.println("===08 - Fila de Pilhas=======================");//Enunciado
-            System.out.println("===09 - Gestao de Fila com Pilhas Auxiliares=");//Enunciado
-            System.out.println("===10 - Sistema de Gestao de Deposito========");//Enunciado
-            System.out.println("===11 - Sistema de Gestao de Deposito========");//Enunciado
-            System.out.println("===12 - Sistema de Gestao de Deposito========");//Enunciado
+            System.out.println("===01 - =Comparacao de Metodos de Ordenacao==");//Enunciado
+            System.out.println("===02 - =====================================");//Enunciado
+            System.out.println("===03 - =====================================");//Enunciado
+            System.out.println("===04 - =====================================");//Enunciado
+            System.out.println("===05 - =====================================");//Enunciado
+            System.out.println("===06 - =====================================");//Enunciado
+            System.out.println("===07 - =====================================");//Enunciado
+            System.out.println("===08 - =====================================");//Enunciado
+            System.out.println("===09 - =====================================");//Enunciado
+            System.out.println("===10 - =====================================");//Enunciado
+            System.out.println("===11 - =====================================");//Enunciado
+            System.out.println("===12 - =====================================");//Enunciado
 
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
@@ -74,8 +74,9 @@ public static void main(String[] args) {//Main da classe
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento
                         System.out.println("\n===============Muito obrigado================");
-                        System.out.println("===== Atividade Teorica TAFs=================\n");//Enunciado
-                        System.exit(0);//Encerra o programa
+                        System.out.println("\n=Saindo de Atividade Teorica TAFs Flexiveis =");//Enunciado
+                        System.out.println("====E voltando para Atividade Teorica TADs,==");
+                        System.out.println("===============TAFs e Testes=================\n");//Enunciado
                     }
                     else{//Se não estiver no intervalo, informa ao usuario
                         //e reapresenta o menu

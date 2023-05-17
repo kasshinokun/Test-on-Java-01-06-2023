@@ -3,9 +3,9 @@ package Sort;
 import java.util.*;
 
 public class HeapSort {
-	int Array[];//Instancia a variavel para o Array
+    int Array[];//Instancia a variavel para o Array
     private int N;//Tamanho do Array
-
+    public int cont=0;//Exibe as contagens
     public HeapSort() {//constructor default
         Array= new int[10];//tipo e tamanho do Array
         N=Array.length;//Variavel para análise de tamanho
