@@ -1,4 +1,4 @@
-package preview_aula_13;
+package Aula_13;
 
 import java.util.*;//simplificação de Bibliotecas 
 
@@ -169,10 +169,7 @@ public class Lista_Simples {
             }
     
     }
-    public static void main(String[] args) {//Main da classe
-        
-    }
-    public static void getstao_lista(){//Operações com lista simples
+    public static void main(String[] args) {
         int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
         Lista_Simples lista=new Lista_Simples();
         for(int i=0;i<arr.length;i++){
