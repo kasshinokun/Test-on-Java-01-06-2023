@@ -16,11 +16,11 @@ public static void main(String[] args) {
             System.out.println("===01 - Gestao de Matriz Flexivel============");//Enunciado
             System.out.println("===02 - Gestao de Lista Flexivel Simples=====");//Enunciado
             System.out.println("===03 - Gestao de Lista Flexivel Dupla=======");//Enunciado
-            System.out.println("===04 - Gestao de Fila Flexivel Simples======");//Enunciado
-            System.out.println("===05 - Gestao de Fila Flexivel Dupla========");//Enunciado
-            System.out.println("===06 - Gestao de Pilha Flexivel Simples=====");//Enunciado
-            System.out.println("===07 - Gestao de Pilha Flexivel Dupla=======");//Enunciado
-            System.out.println("===08 - Gestao de Arvore Binaria=============");//Enunciado
+            System.out.println("===04 - =====================================");//Enunciado
+            System.out.println("===05 - =====================================");//Enunciado
+            System.out.println("===06 - =====================================");//Enunciado
+            System.out.println("===07 - =====================================");//Enunciado
+            System.out.println("===08 - =====================================");//Enunciado
             System.out.println("===09 - Atividade Teorica de TAF=============");//Enunciado
             System.out.println("===10 - Aula Pratica 13======================");//Enunciado
 
@@ -37,7 +37,7 @@ public static void main(String[] args) {
                 	Exercises.gestao_lista();
                     break;//Condição de parada2
                 case 3://Chama o procedimento
-                    Sort.MergeSort.main();
+                    Exercises.gestao_lista_dupla();
                     break;//Condição de parada
                 case 4://Chama o procedimento
                     

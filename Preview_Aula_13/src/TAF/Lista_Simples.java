@@ -5,7 +5,7 @@ public class Lista_Simples {
     
     private Celula primeiro,ultimo;
     
-    int n=0;//Variavel auxiliar de analise de tamanho
+    private int n=0;//Variavel auxiliar de analise de tamanho
     
     public Lista_Simples(){
         
@@ -13,67 +13,58 @@ public class Lista_Simples {
         ultimo=primeiro;
     
     }
-    public void InserirInicio(int x){
+    public void inserirInicio(int x){
         
         Celula tmp=new Celula(x);
-        tmp.prox=primeiro;
-        primeiro=tmp;
-        
-        n++;
-        if(n==1){
-            ultimo=primeiro;
+        tmp.prox=primeiro.prox;
+        primeiro.prox=tmp;
+        if(primeiro==ultimo){
+            ultimo=tmp;
         }
         tmp=null;
-    
+        n++;
     }
-    public void InserirFim(int x){//Adição de Inteiros no fim do vetor
+    public void inserirFim(int x){//Adição de Inteiros no fim do vetor
         
-        if(n==0){
-            InserirInicio(x);
+        if(primeiro==ultimo){
+            inserirInicio(x);
         }
         else{
-            Celula tmp=new Celula(x);
-            tmp.prox=null;
-            ultimo.prox=tmp;
-            ultimo=tmp;
+            
+            ultimo.prox=new Celula(x);
+            ultimo=ultimo.prox;
             n++;
-            tmp=null;
+            
         }
     }
-    public void InserirPos(int x, int pos){//Inserção de Inteiros na posição designada do vetor
+    public void inserirPos(int x, int pos){//Inserção de Inteiros na posição designada do vetor
     	
         if(pos<=0){
+            if(pos<0){
+                System.out.println("===Parametro Invalido, adaptando ....=======\n");
+            }
             System.out.println("==========Adicionando no Inicio ============\n");
-            InserirInicio(x);
+            inserirInicio(x);
         }else if(pos>=n){
+            if(pos>n){
+                System.out.println("===Parametro Invalido, adaptando ....=======\n");
+            }
             System.out.println("==========Adicionando no Fim ===============\n");
-            InserirFim(x);
+            inserirFim(x);
         }else{//senao....
             
             Celula i=this.primeiro;
-            for(int j=0;j<pos;j++){
-                
-                
-                if(j==pos-1){
-                    
-                    Celula tmp=new Celula(x);
-                    tmp.prox=i.prox;
-                    i.prox=tmp;
-                    n++;
-                    tmp=i=null;
-                    break;
-                }
-                
-                i=i.prox;
-                
-            } 
-
-            
+            for(int j=0;j<pos;j++,i=i.prox);
+            Celula tmp=new Celula(x);
+            tmp.prox=i.prox;
+            i.prox=tmp;
+            tmp=i=null;
+            n++;
         }
     
     }
     public int removerInicio(){
-        if (n==0){
+        if (primeiro==ultimo){
             //Informa ao Usuario
             System.out.println("\n=============Nao e possivel ================");
             System.out.println("==============Inserir dados,================");
@@ -81,18 +72,18 @@ public class Lista_Simples {
             return -1;
         }
         else{
-            
-            int elemento = primeiro.elemento1;
+            Celula tmp=primeiro;
             primeiro=primeiro.prox;
-            
+            int elemento = primeiro.elemento1;
+            tmp.prox=null;
+            tmp=null;
             n--;
             return elemento;
         }
     }
     public int removerPos(int pos) {
     	//Remoção de inteiros na posição designada do vetor
-    	
-    	if(n==0||pos<0||pos>=n){
+    	if(primeiro==ultimo||pos<0||pos>=n){
             //Se n igual a 0....
             //Ou também se pos menor que 0.... 
             //Ou pos maior ou igual a n..... 
@@ -103,62 +94,52 @@ public class Lista_Simples {
             System.out.println("==========Parametros Invalidos !!===========\n");
                                   
             return -1;
+        }else if(pos==0){
+            return removerInicio();
+        }
+        else if(pos==n-1){
+            return removerFim();
         }else{//senao....
-            int resp=0;
+           
             Celula i=this.primeiro;
-            
-            
-            for(int k=0;k<n-1;k++){
-
-                if(k==pos-1){
-                    resp=i.elemento1;
-                    i.elemento1=i.prox.elemento1;
-                    i=i.prox;
-                    while(i.prox!=null){
-                        i.elemento1=i.prox.elemento1;
-                        i=i.prox;
-                    }
-                    n--;
-                    
-                    break;
-                    
-                }i=i.prox;
-                  
-                }
-                
-                return resp;//Retorna a resp ao procedimento    
-                
-            }
+            for(int j=0;j<pos;j++,i=i.prox);
+            Celula tmp=i.prox;
+            int resp=tmp.elemento1;
+            i.prox=tmp.prox;
+            tmp.prox=null;
+            i=tmp=null;
+            n--;
+            return resp;
+        }
             
      
     }
     public int removerFim(){
-        if (n==0){
+        if(primeiro==ultimo){
             //Informa ao Usuario
             System.out.println("\n=============Nao e possivel ================");
             System.out.println("==============Inserir dados,================");
             System.out.println("============== Lista Vazia !!===========\n");
             return -1;
-        }
-        Celula i;
-        for(i = primeiro; i.prox != ultimo; i = i.prox);
-            int elemento = ultimo.elemento1;
-            ultimo = i;
-            i = ultimo.prox = null;
+        }else{
+                       
+           Celula i = this.primeiro;
+        
+            for(;i.prox!=ultimo;i=i.prox);
+            int y=ultimo.elemento1;
+            
+            ultimo=i;
+            i=ultimo.prox=null;
             n--;
-            return elemento;
-        
-        
+            return y;
+        }
     }
     public void mostrar(){
-            
-            //ponteiro para mover a Inferior
-            Celula rPtr = this.primeiro;
-            //loop será executado emquanto Celula.Dir não for null
-            for(int i=0;i<n;i++){
-                System.out.print(rPtr.elemento1+" ");
-                rPtr = rPtr.prox;
-            }
+        Celula i = this.primeiro;
+        
+        for(i=i.prox;i!=null;i=i.prox){
+            System.out.print(i.elemento1+" ");
+        }
     
     }
     

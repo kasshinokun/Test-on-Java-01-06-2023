@@ -8,20 +8,20 @@ import TAF.*;//Carrega as classes do outro package
 import Sort.*;//Carrega as classes do outro package
 
 public class Exercises {
-	public static void gestao_lista(){//Operações com lista simples
+    public static void gestao_lista(){//Operações com lista simples
         System.out.println("\n==Lista Simples Encadeada - Teste=============");//Enunciado
         int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
         Lista_Simples lista=new Lista_Simples();
         for(int i=0;i<arr.length;i++){
-            lista.InserirFim(arr[i]);
+            lista.inserirFim(arr[i]);
         }
         System.out.println("\n==Insercao===================================");//Enunciado
         lista.mostrar();
         System.out.println("\n==No Inicio==================================");//Enunciado
-        lista.InserirInicio(arr[4]);
+        lista.inserirInicio(arr[4]);
         lista.mostrar();
         System.out.println("\n==Na Posicao=================================");//Enunciado
-        lista.InserirPos(arr[4], 4);
+        lista.inserirPos(arr[4], 4);
         lista.mostrar();
         System.out.println("\n==Remocao====================================");//Enunciado
         int x=lista.removerInicio();
@@ -35,6 +35,37 @@ public class Exercises {
         int z=lista.removerPos(4);
         System.out.println("Deletado na Posicao: "+z);
         lista.mostrar();
+        System.out.println("\n=============================================");//Enunciado
+    }
+    public static void gestao_lista_dupla(){//Operações com lista simples
+        System.out.println("\n==Lista Dupla Encadeada - Teste===============");//Enunciado
+        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
+        Lista_Dupla lista=new Lista_Dupla();
+        for(int i=0;i<arr.length;i++){
+            lista.inserirFim(arr[i]);
+        }
+        System.out.println("\n==Insercao===================================");//Enunciado
+        lista.mostrar();
+        
+        System.out.println("\n==No Inicio==================================");//Enunciado
+        lista.inserirInicio(arr[4]);
+        lista.mostrar();
+        System.out.println("\n==Na Posicao=================================");//Enunciado
+        lista.inserirPos(arr[4], 4);
+        lista.mostrar();
+        System.out.println("\n==Remocao====================================");//Enunciado
+        int x=lista.removerInicio();
+        System.out.println("Deletado no Inicio: "+x);
+        lista.mostrar();
+        System.out.println("\n=============================================");//Enunciado
+        int y=lista.removerFim();
+        System.out.println("Deletado no Fim: "+y);
+        lista.mostrar();
+        System.out.println("\n=============================================");//Enunciado
+        int z=lista.removerPos(4);
+        System.out.println("Deletado na Posicao: "+z);
+        lista.mostrar();
+        
         System.out.println("\n=============================================");//Enunciado
     }
 	public static void gestao_matriz(){

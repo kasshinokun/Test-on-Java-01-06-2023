@@ -3,8 +3,8 @@ package TAF;
 import java.util.*;//simplificação de Bibliotecas
 public class Matriz {
 	
-    Celula inicio, fim;//Variavel para indica inicio e fim da matriz
-    int l, c;//Variaveis de dimensões da matriz
+    private Celula inicio, fim;//Variavel para indica inicio e fim da matriz
+    private int l, c;//Variaveis de dimensões da matriz
 
     public Matriz() {//construtor default
 
