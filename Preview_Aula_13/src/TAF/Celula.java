@@ -1,5 +1,4 @@
-package preview_aula_13;
-
+package TAF;
 
 import java.util.*;//simplificação de Bibliotecas 
 public class Celula{
@@ -9,14 +8,14 @@ public class Celula{
     char elemento3;//variavel para inserção de caracteres
 
     //Ponteiros
-    Celula Esq;//variavel para Esquerda
-    Celula Dir;//variavel para Direita
+    Celula esq;//variavel para Esquerda
+    Celula dir;//variavel para Direita
 
-    Celula Sup;//variavel para Superior
-    Celula Inf;//variavel para Inferior
+    Celula sup;//variavel para Superior
+    Celula inf;//variavel para Inferior
     
-    Celula Prox;//variavel para Proximo
-    Celula Ant;//variavel para Anterior
+    Celula prox;//variavel para Proximo
+    Celula ant;//variavel para Anterior
     
     public Celula(){//Construtor default
         
@@ -25,13 +24,13 @@ public class Celula{
         this.elemento3=0;//caracteres
         this.contato=new Contato();//Contato
         
-        this.Dir = null;
-        this.Esq = null;
-        this.Sup = null;
-        this.Inf = null;
+        this.dir = null;
+        this.esq = null;
+        this.sup = null;
+        this.inf = null;
         
-        this.Prox=null;
-        this.Ant=null;
+        this.prox=null;
+        this.ant=null;
     }
     //Sobrecarga da classe
     public Celula(int x) {

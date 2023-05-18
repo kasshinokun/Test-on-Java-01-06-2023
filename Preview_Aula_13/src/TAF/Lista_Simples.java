@@ -1,7 +1,6 @@
-package preview_aula_13;
+package TAF;
 
-import java.util.*;//simplificação de Bibliotecas 
-
+import java.util.*;//simplificação de Bibliotecas
 public class Lista_Simples {
     
     private Celula primeiro,ultimo;
@@ -17,7 +16,7 @@ public class Lista_Simples {
     public void InserirInicio(int x){
         
         Celula tmp=new Celula(x);
-        tmp.Prox=primeiro;
+        tmp.prox=primeiro;
         primeiro=tmp;
         
         n++;
@@ -34,8 +33,8 @@ public class Lista_Simples {
         }
         else{
             Celula tmp=new Celula(x);
-            tmp.Prox=null;
-            ultimo.Prox=tmp;
+            tmp.prox=null;
+            ultimo.prox=tmp;
             ultimo=tmp;
             n++;
             tmp=null;
@@ -43,18 +42,11 @@ public class Lista_Simples {
     }
     public void InserirPos(int x, int pos){//Inserção de Inteiros na posição designada do vetor
     	
-        if(pos<0||pos>n){
-            //Se n igual ou maior que o tamanho da lista....
-            //Ou também se pos menor que 0.... 
-            //Ou pos maior que n..... 
-
-            //Informa ao Usuario
-            System.out.println("\n=============Nao e possivel ================");
-            System.out.println("==============Inserir dados,================");
-            System.out.println("==========Parametros Invalidos !!===========\n");
-        }else if(pos==0){
+        if(pos<=0){
+            System.out.println("==========Adicionando no Inicio ============\n");
             InserirInicio(x);
-        }else if(pos==n){
+        }else if(pos>=n){
+            System.out.println("==========Adicionando no Fim ===============\n");
             InserirFim(x);
         }else{//senao....
             
@@ -65,14 +57,14 @@ public class Lista_Simples {
                 if(j==pos-1){
                     
                     Celula tmp=new Celula(x);
-                    tmp.Prox=i.Prox;
-                    i.Prox=tmp;
+                    tmp.prox=i.prox;
+                    i.prox=tmp;
                     n++;
                     tmp=i=null;
                     break;
                 }
                 
-                i=i.Prox;
+                i=i.prox;
                 
             } 
 
@@ -91,7 +83,7 @@ public class Lista_Simples {
         else{
             
             int elemento = primeiro.elemento1;
-            primeiro=primeiro.Prox;
+            primeiro=primeiro.prox;
             
             n--;
             return elemento;
@@ -120,17 +112,17 @@ public class Lista_Simples {
 
                 if(k==pos-1){
                     resp=i.elemento1;
-                    i.elemento1=i.Prox.elemento1;
-                    i=i.Prox;
-                    while(i.Prox!=null){
-                        i.elemento1=i.Prox.elemento1;
-                        i=i.Prox;
+                    i.elemento1=i.prox.elemento1;
+                    i=i.prox;
+                    while(i.prox!=null){
+                        i.elemento1=i.prox.elemento1;
+                        i=i.prox;
                     }
                     n--;
                     
                     break;
                     
-                }i=i.Prox;
+                }i=i.prox;
                   
                 }
                 
@@ -149,10 +141,10 @@ public class Lista_Simples {
             return -1;
         }
         Celula i;
-        for(i = primeiro; i.Prox != ultimo; i = i.Prox);
+        for(i = primeiro; i.prox != ultimo; i = i.prox);
             int elemento = ultimo.elemento1;
             ultimo = i;
-            i = ultimo.Prox = null;
+            i = ultimo.prox = null;
             n--;
             return elemento;
         
@@ -165,7 +157,7 @@ public class Lista_Simples {
             //loop será executado emquanto Celula.Dir não for null
             for(int i=0;i<n;i++){
                 System.out.print(rPtr.elemento1+" ");
-                rPtr = rPtr.Prox;
+                rPtr = rPtr.prox;
             }
     
     }

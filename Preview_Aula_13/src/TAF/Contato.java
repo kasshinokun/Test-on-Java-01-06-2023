@@ -1,5 +1,6 @@
-package preview_aula_13;
+package TAF;
 
+import java.util.*;//simplificação de Bibliotecas
 public class Contato {
     String nome;
     String telefone;

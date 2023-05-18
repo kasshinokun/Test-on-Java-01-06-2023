@@ -1,17 +1,15 @@
-
-package preview_aula_13;
+package Main;
 
 import java.util.*;
 
-public class Preview_Aula_13 {
-
+public class Main {
     
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
     do{
-            System.out.println("\n=Atividade Teorica TADs, TAFs e Testes=====\n");//Enunciado
+            System.out.println("\n===Atividade Teorica TADs, TAFs e Testes=====\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
@@ -19,7 +17,7 @@ public class Preview_Aula_13 {
             System.out.println("===02 - Gestao de Lista Flexivel Simples=====");//Enunciado
             System.out.println("===03 - Gestao de Lista Flexivel Dupla=======");//Enunciado
             System.out.println("===04 - Gestao de Fila Flexivel Simples======");//Enunciado
-            System.out.println("===05 - Gestao de Fila Flexivel Dupla=======");//Enunciado
+            System.out.println("===05 - Gestao de Fila Flexivel Dupla========");//Enunciado
             System.out.println("===06 - Gestao de Pilha Flexivel Simples=====");//Enunciado
             System.out.println("===07 - Gestao de Pilha Flexivel Dupla=======");//Enunciado
             System.out.println("===08 - Gestao de Arvore Binaria=============");//Enunciado

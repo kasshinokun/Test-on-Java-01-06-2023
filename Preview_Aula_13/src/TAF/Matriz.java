@@ -1,9 +1,9 @@
-package preview_aula_13;
+package TAF;
 
-import java.util.*;//simplificação de Bibliotecas 
+import java.util.*;//simplificação de Bibliotecas
 public class Matriz {
 	
-    Celula Inicio, Fim;//Variavel para indica inicio e fim da matriz
+    Celula inicio, fim;//Variavel para indica inicio e fim da matriz
     int l, c;//Variaveis de dimensões da matriz
 
     public Matriz() {//construtor default
@@ -29,8 +29,8 @@ public class Matriz {
 
             Celula i, j;
             int cont=1;
-            this.Inicio=new Celula(V[0]);
-            j=this.Inicio;
+            this.inicio=new Celula(V[0]);
+            j=this.inicio;
 
             for(int k1=0;k1<l;k1++) {
 
@@ -40,28 +40,28 @@ public class Matriz {
 
                     Celula tmp=new Celula(V[cont]);
                     cont++;
-                    i.Dir=tmp;
-                    tmp.Esq=i;
-                    this.Fim=i.Dir;//Marcação para o Final
+                    i.dir=tmp;
+                    tmp.esq=i;
+                    this.fim=i.dir;//Marcação para o Final
                     
                     if(k1>0) {
 
-                        tmp.Sup=tmp.Esq.Sup.Dir;
-                        tmp.Esq.Sup.Dir.Inf=tmp;
+                        tmp.sup=tmp.esq.sup.dir;
+                        tmp.esq.sup.dir.inf=tmp;
 
                     }
 
-                    i.Dir=tmp;
-                    i=i.Dir;
+                    i.dir=tmp;
+                    i=i.dir;
                     
                 }
                 if(k1<l-1) {
 
                     Celula tmp=new Celula(V[cont]);
                     cont++;
-                    j.Inf=tmp;
-                    tmp.Sup=j;
-                    j=j.Inf;
+                    j.inf=tmp;
+                    tmp.sup=j;
+                    j=j.inf;
                     i=j;
                     tmp=null;
 
@@ -76,7 +76,7 @@ public class Matriz {
         Celula rPtr;
 
         //ponteiro para mover a Inferior
-        Celula dPtr = this.Inicio;
+        Celula dPtr = this.inicio;
 
         //loop será executado emquanto Celula.Inf não for null
         while (dPtr != null) {
@@ -86,11 +86,11 @@ public class Matriz {
             //loop será executado emquanto Celula.Dir não for null
             while (rPtr!=null) {
                 System.out.print(rPtr.elemento1+" ");
-                rPtr = rPtr.Dir;
+                rPtr = rPtr.dir;
             }
 
             System.out.print("\n");
-            dPtr = dPtr.Inf;
+            dPtr = dPtr.inf;
         }
     }
     public int DiagonalPrincipal( ){  
@@ -101,7 +101,7 @@ public class Matriz {
         Celula rPtr;
 
         //ponteiro para mover a Inferior
-        Celula dPtr = this.Inicio;
+        Celula dPtr = this.inicio;
 
         //loop será executado emquanto Celula.Inf não for null
         for(int i=0;i<l;i++) {
@@ -114,11 +114,11 @@ public class Matriz {
                     System.out.print(rPtr.elemento1+" ");
                     k+=rPtr.elemento1;
                 }
-                rPtr = rPtr.Dir;
+                rPtr = rPtr.dir;
             }
 
             System.out.print("\n");
-            dPtr = dPtr.Inf;
+            dPtr = dPtr.inf;
         }
 
         return k;
@@ -131,7 +131,7 @@ public class Matriz {
         Celula rPtr;
 
         //ponteiro para mover a Inferior
-        Celula dPtr = this.Inicio;
+        Celula dPtr = this.inicio;
 
         //loop será executado emquanto Celula.Inf não for null
         for(int i=0;i<l;i++) {
@@ -145,11 +145,11 @@ public class Matriz {
                     System.out.print(rPtr.elemento1+" ");
                     k+=rPtr.elemento1;
                 }
-                rPtr = rPtr.Dir;
+                rPtr = rPtr.dir;
             }
 
             System.out.print("\n");
-            dPtr = dPtr.Inf;
+            dPtr = dPtr.inf;
         }
 
         
@@ -166,8 +166,8 @@ public class Matriz {
         Celula rPtr2;
         
         //ponteiro para mover a Inferior
-        Celula dPtr = this.Inicio;
-        Celula dPtr2 = B.Inicio;
+        Celula dPtr = this.inicio;
+        Celula dPtr2 = B.inicio;
         
         
         int i=0;
@@ -184,14 +184,14 @@ public class Matriz {
                 
                 arr[i]=rPtr.elemento1+rPtr2.elemento1;
                 
-                rPtr = rPtr.Dir;
-                rPtr2 = rPtr2.Dir;
+                rPtr = rPtr.dir;
+                rPtr2 = rPtr2.dir;
                 i++;
             }
 
             
-            dPtr = dPtr.Inf;
-            dPtr2 = dPtr2.Inf;
+            dPtr = dPtr.inf;
+            dPtr2 = dPtr2.inf;
             
         }
         
@@ -209,8 +209,8 @@ public class Matriz {
         Celula rPtr2;
         
         //ponteiro para mover a Inferior
-        Celula dPtr = this.Inicio;
-        Celula dPtr2 = B.Inicio;
+        Celula dPtr = this.inicio;
+        Celula dPtr2 = B.inicio;
         
         
         int i=0;
@@ -227,14 +227,14 @@ public class Matriz {
                 
                 arr[i]=rPtr.elemento1*rPtr2.elemento1;
                 
-                rPtr = rPtr.Dir;
-                rPtr2 = rPtr2.Dir;
+                rPtr = rPtr.dir;
+                rPtr2 = rPtr2.dir;
                 i++;
             }
 
             
-            dPtr = dPtr.Inf;
-            dPtr2 = dPtr2.Inf;
+            dPtr = dPtr.inf;
+            dPtr2 = dPtr2.inf;
             
         }
         

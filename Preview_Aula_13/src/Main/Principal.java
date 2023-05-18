@@ -1,4 +1,5 @@
-package preview_aula_13;
+package Main;
+
 
 import java.util.*;//simplificação de Bibliotecas 
 
@@ -85,6 +86,6 @@ public static void main(String[] args) {//Main da classe
                     } 
             }      
         }while( opcao!=0);//Se repetira enquanto não for zero
-        Preview_Aula_13.main(args);//retorna ao main
+        Main.main(args);//retorna ao main
     }
 }

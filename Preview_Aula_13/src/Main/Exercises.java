@@ -1,12 +1,15 @@
-package preview_aula_13;
+package Main;
+
 import java.util.*;//Simplificação de Bibliotecas necessárias
 
 //Importação deoutros projetos
 import TAD.*;//Carrega as classes do outro package
+import TAF.*;//Carrega as classes do outro package
 import Sort.*;//Carrega as classes do outro package
 
 public class Exercises {
 	public static void gestao_lista(){//Operações com lista simples
+        System.out.println("\n==Lista Simples Encadeada - Teste=============");//Enunciado
         int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
         Lista_Simples lista=new Lista_Simples();
         for(int i=0;i<arr.length;i++){
@@ -39,25 +42,25 @@ public class Exercises {
         int v[]={1,2,3,4,5,6,7,8,9};//Vetor base
         
         Matriz m=new Matriz(3,3);//Dimensionando e Instanciando Matriz
-        
-        System.out.println("\n====Adicionando itens na Matriz====");
+        System.out.println("\n=Aula 12 - Gestao de Matriz Flexivel=========");//Enunciado
+        System.out.println("====Adicionando itens na Matriz==============");//Enunciado
         m.Preencher(v);//Preencher
         
-        System.out.print("\n========Impressao da Matriz========\n\n");
+        System.out.print("\n========Impressao da Matriz==================\n");//Enunciado
         m.Imprimir();//Imprimir
         
-        System.out.print("\n==========Soma de Matrizes=========\n\n");
+        System.out.print("\n==========Soma de Matrizes===================\n");//Enunciado
         m=m.soma(m);//Soma de Matrizes
         m.Imprimir();//Imprimir
         
-        System.out.print("\n=====Multiplicacao de Matrizes=====\n\n");
+        System.out.print("\n=====Multiplicacao de Matrizes===============\n");//Enunciado
         m=m.Multiplicação(m);//Multiplicação de matrizes
         m.Imprimir();//Imprimir
-        System.out.print("\n====Diagonal Pricipal da Matriz====\n\n");
+        System.out.print("\n====Diagonal Pricipal da Matriz==============\n");//Enunciado
         int k=m.DiagonalPrincipal();
         
         System.out.println("\nSoma da Diagonal Pricipal: "+k);
-        System.out.print("\n====Diagonal Secundaria da Matriz==\n\n");
+        System.out.print("\n====Diagonal Secundaria da Matriz============\n");//Enunciado
         int l=m.DiagonalSecundaria();
         System.out.println("\nSoma da Diagonal Secundaria: "+l);
         System.out.print("\n");
@@ -90,13 +93,23 @@ public class Exercises {
             System.out.println("\n=No Merge Sort===============================");//Enunciado
             MergeSort vector3 =new MergeSort(arr3);
             System.out.println("Pior Caso");
-            vector3.Merge_sort();//Exceuta o Merge Sort e Mostra as Movimentações
+            vector3.Merge_sort();//Executa o Merge Sort e Mostra as Movimentações
             System.out.println("Melhor Caso");
-            vector3.Merge_sort();//Exceuta o Merge Sort e Mostra as Movimentações
+            vector3.Merge_sort();//Executa o Merge Sort e Mostra as Movimentações
             
             System.out.println("\n=No Quick Sort===============================");//Enunciado
+            QuickSort vector4=new QuickSort(arr);
+            System.out.println("Pior Caso");
+            //vector4.quicksort(0, arr.length);
+            System.out.println("Melhor Caso");
+            //vector4.quicksort(0, arr.length);
             
             System.out.println("\n=No Heap Sort================================");//Enunciado
+            System.out.println("Pior Caso");
+            HeapSort vector5=new HeapSort(arr);
+            //vector5.Heap_Sort();
+            System.out.println("Melhor Caso");
+            //vector5.Heap_Sort();
             
             System.out.println("=============================================");//Enunciado
             System.out.println("=============================================");//Enunciado
