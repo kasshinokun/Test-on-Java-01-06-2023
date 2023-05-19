@@ -8,6 +8,7 @@ import TAF.*;//Carrega as classes do outro package
 import Sort.*;//Carrega as classes do outro package
 
 public class Exercises {
+    public static Scanner reader=new Scanner(System.in);
     public static void gestao_lista(){//Operações com lista simples
         System.out.println("\n==Lista Simples Encadeada - Teste=============");//Enunciado
         int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
@@ -100,7 +101,7 @@ public class Exercises {
     }
 	//Exercicios Atividade teorica 2 TAF
 	public static void Exercise_1() {
-            System.out.println("Analise Lexicografica de metodos de Ordenacao");//Enunciado
+            System.out.println("\nAnalise Lexicografica de metodos de Ordenacao");//Enunciado
             int []arr= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
             int []arr2= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
             int []arr3= {15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
@@ -125,31 +126,66 @@ public class Exercises {
             MergeSort vector3 =new MergeSort(arr3);
             System.out.println("Pior Caso");
             vector3.Merge_sort();//Executa o Merge Sort e Mostra as Movimentações
+            System.out.println("Movimentacoes: "+vector3.cont+"\tComparacoes: "+vector3.cont);
             System.out.println("Melhor Caso");
             vector3.Merge_sort();//Executa o Merge Sort e Mostra as Movimentações
-            
+            System.out.println("Movimentacoes: "+vector3.cont+"\tComparacoes: "+vector3.cont);
+
             System.out.println("\n=No Quick Sort===============================");//Enunciado
             QuickSort vector4=new QuickSort(arr);
             System.out.println("Pior Caso");
-            //vector4.quicksort(0, arr.length);
+            vector4.quicksort();
+            vector4.print();
             System.out.println("Melhor Caso");
-            //vector4.quicksort(0, arr.length);
+            vector4.quicksort();
+            vector4.print();
             
             System.out.println("\n=No Heap Sort================================");//Enunciado
             System.out.println("Pior Caso");
             HeapSort vector5=new HeapSort(arr);
-            //vector5.Heap_Sort();
+            vector5.Heap_Sort();
+            System.out.println("Movimentacoes: "+vector5.contM+"\tComparacoes: "+vector5.contC);
             System.out.println("Melhor Caso");
-            //vector5.Heap_Sort();
-            
-            System.out.println("=============================================");//Enunciado
-            System.out.println("=============================================");//Enunciado
+            vector5.Heap_Sort();
+            System.out.println("Movimentacoes: "+vector5.contM+"\tComparacoes: "+vector5.contC);
             System.out.println("=============================================\n");//Enunciado
+            
 	}
-	public static void Exercise_2() {}
+	public static void Exercise_2() {
+            System.out.println("\n===02 - Comparacao MergeSort, QuickSort e====");//Enunciado
+            System.out.println("================== HeapSort =================");//Enunciado
+            int []arr= {3,4,9,2,5,8,2,1,7,4,6,2,9,8,5,1};
+            System.out.println("=Impressao do Vetor Base=====================");//Enunciado
+            MergeSort vector2 =new MergeSort(arr);
+            vector2.ImprimirArray2();
+            
+            System.out.println("\n=No Merge Sort===============================");//Enunciado
+            
+            vector2.Merge_sort();//Executa o Merge Sort e Mostra as Movimentações
+            vector2.ImprimirArray2();
+            System.out.println("\n=No Quick Sort===============================");//Enunciado
+            QuickSort vector3=new QuickSort(arr);
+            vector3.quicksort();
+            vector3.ImprimirArray2();
+            System.out.println("\n=No Heap Sort================================");//Enunciado
+            HeapSort vector4=new HeapSort(arr);
+            vector4.Heap_Sort();
+            vector4.ImprimirArray2();
+            System.out.println("=============================================\n");//Enunciado
+            
+	}
 	public static void Exercise_3() {}
 	public static void Exercise_4() {}
-	public static void Exercise_5() {}
+	public static void Exercise_5() {
+        
+        System.out.print("\nDigite um numero desejado:  ");
+        int n=Integer.parseInt(reader.nextLine());//armazena o valor
+        create(n);
+        
+        
+        
+        
+        }
 	public static void Exercise_6() {}
 	public static void Exercise_7() {}
 	public static void Exercise_8() {}
@@ -158,7 +194,20 @@ public class Exercises {
 	public static void Exercise_11() {}
 	public static void Exercise_12() {}
 	
+        
+        
+        public static void create(int n){
+            int[] arr=new int[n];
+            MergeSort m=new MergeSort(arr);
+            m.GerarArray(n);
+            m.print3();
+            System.out.print("=Impressao do Vetor Base=====================");//Enunciado
+            m.ImprimirArray2();
+            System.out.println();
+    
+        }
 	//Exercicios Aula 13
 	public static void Exercise_Tree() {}
+        
 }
 

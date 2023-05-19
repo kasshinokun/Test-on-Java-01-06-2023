@@ -118,4 +118,5 @@ public class Another {
                 System.out.println("Posicao "+i+": "+a.Array[i]+"\t"+b.Array[i]);//executa a impressão do Array
         }
     }
+    
 }

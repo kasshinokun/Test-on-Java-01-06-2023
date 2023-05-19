@@ -1,5 +1,6 @@
 package Main;
 
+import Sort.HeapSort;
 import java.util.*;
 
 public class Main {
@@ -16,7 +17,7 @@ public static void main(String[] args) {
             System.out.println("===01 - Gestao de Matriz Flexivel============");//Enunciado
             System.out.println("===02 - Gestao de Lista Flexivel Simples=====");//Enunciado
             System.out.println("===03 - Gestao de Lista Flexivel Dupla=======");//Enunciado
-            System.out.println("===04 - =====================================");//Enunciado
+            System.out.println("===04 - HeapSort - Main======================");//Enunciado
             System.out.println("===05 - =====================================");//Enunciado
             System.out.println("===06 - =====================================");//Enunciado
             System.out.println("===07 - =====================================");//Enunciado
@@ -34,13 +35,13 @@ public static void main(String[] args) {
                     Exercises.gestao_matriz();
                     break;//Condição de parada
                 case 2://Chama o procedimento
-                	Exercises.gestao_lista();
+                    Exercises.gestao_lista();
                     break;//Condição de parada2
                 case 3://Chama o procedimento
                     Exercises.gestao_lista_dupla();
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    
+                    HeapSort.main();
                     break;//Condição de parada
                 case 5://Chama o procedimento
                     

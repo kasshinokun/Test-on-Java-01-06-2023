@@ -16,34 +16,53 @@ public class QuickSort{
         N=Array.length;//Variavel para análise de tamanho
     }
     public void ImprimirArray() {//Impressão dos componentes do Array
-        for(int i=0;i<N;i++) {//laço para percorrer o Array
-            System.out.println("Posicao "+i+": "+Array[i]);//executa a impressão do Array
-        }
+            for(int i=0;i<N;i++) {//laço para percorrer o Array
+                System.out.println("Posicao "+i+": "+Array[i]);//executa a impressão do Array
+            }
     }
-    public void quicksort(int esq, int dir){
+    public void ImprimirArray2() {//Impressão dos componentes do Array
+        System.out.println();       
+        for(int i=0;i<N;i++) {//laço para percorrer o Array
+            System.out.print(Array[i]+" ");//executa a impressão do Array
+        }System.out.println(); 
+    }
+    public void quicksort(){
+       Quicksort(0, N-1);
+       
+    }
+    public void print(){
+        System.out.println("Movimentacoes: "+contM+"\tComparacoes: "+contC);
+    }
+    private void Quicksort(int esq, int dir){
         int i=esq;
         int j=dir;
         int pivo=Array[(esq+dir)/2];
         while(i<=j){
+            contC++;
             while(Array[i]<pivo){
+                contC++;
                 i++;
             }
             while(Array[j]>pivo){
+                contC++;
                 j--;
             }
+            contC++;
             if(i<=j){
+                
                 swap(i,j);
+                contM+=3;
                 i++;
                 j--;
             }
         }
         if(esq<j){
-            quicksort(esq,j);
+            Quicksort(esq,j);
         }
         if(i<dir){
-            quicksort(i,dir);
+            Quicksort(i,dir);
         }
-    
+        
     }
     public void swap(int a, int b) {//declaração do procedimento de troca de posições
         int temp = Array[a];//Atribuição de valor de Array[a] a temp

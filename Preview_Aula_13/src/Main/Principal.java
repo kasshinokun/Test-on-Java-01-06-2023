@@ -17,8 +17,9 @@ public static void main(String[] args) {//Main da classe
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("===01 - =Comparacao de Metodos de Ordenacao==");//Enunciado
-            System.out.println("===02 - =====================================");//Enunciado
+            System.out.println("===01 - Comparacao de Metodos de Ordenacao ==");//Enunciado
+            System.out.println("===02 - Comparacao MergeSort, QuickSort e====");//Enunciado
+            System.out.println("================== HeapSort =================");//Enunciado
             System.out.println("===03 - =====================================");//Enunciado
             System.out.println("===04 - =====================================");//Enunciado
             System.out.println("===05 - =====================================");//Enunciado
