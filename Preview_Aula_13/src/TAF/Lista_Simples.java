@@ -166,13 +166,19 @@ public class Lista_Simples {
         return B;
     }
     public Lista_Simples add_LC(Lista_Simples B){
-        Celula i = this.primeiro;
-        Celula j = this.primeiro;
-        int cont=this.n-1;
+        Celula i = this.primeiro.prox;
+        Celula j=i;
+        
         if(this.n+1%2==0){
-            System.out.println("PAR ");
+            for(int k=0;k!=n/2;i=i.prox,k++) {
+                System.out.print("I: "+i.elemento1);
+                j=i;
+                for(int l=0;l!=n/2-k;j=j.prox,l++){
+                    System.out.print("J: "+j.elemento1);
+                }
+            }
         }else{
-            System.out.println("IMPAR ");
+            
         }
         i=null;
         j=null;

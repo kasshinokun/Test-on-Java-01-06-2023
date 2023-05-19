@@ -81,12 +81,14 @@ public class Act_6 {
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_C(){
-        System.out.println("\n=3) - C)Lista Simples Encadeada -Soma de Item");//Enunciado
-        
-        int arr[]={1,2,3,4,5,6,7,8,9,10};//Vetor base
+        System.out.println("\n===2) - B)Lista Simples Encadeada - Ln ao L1=");//Enunciado
+        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
         Lista_Simples lista=new Lista_Simples();
         Lista_Simples lista2=new Lista_Simples();
-        lista2=lista.add_LC(lista2);
+        for(int i=0;i<arr.length;i++){
+            lista.inserirFim(arr[i]);
+        }
+        lista2=lista.add_LB(lista2);
         System.out.println("\n==Insercao===================================");//Enunciado
         System.out.print("Lista B: ");
         lista2.mostrar();
