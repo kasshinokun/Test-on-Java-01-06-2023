@@ -144,9 +144,9 @@ public class Lista_Simples {
     
     }
     public Lista_Simples add_LA(Lista_Simples B){
-        Celula i = this.primeiro.prox;
+        Celula i = this.primeiro.prox.prox;
         int elemento=0;
-        for(i=i.prox;i!=null;i=i.prox){
+        for(;i!=null;i=i.prox){
             B.inserirFim(i.elemento1);
         }
         B.inserirFim(this.primeiro.prox.elemento1);
@@ -160,7 +160,6 @@ public class Lista_Simples {
         while (i.prox!= null) {
             i=i.prox;
             B.inserirInicio(i.elemento1);
-            
         }
         i=null;
         return B;
