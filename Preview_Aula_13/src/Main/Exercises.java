@@ -96,10 +96,10 @@ public class Exercises {
         create(n);//envia ao procedimento
 
     }
- //==========Exercicio 6 precisou do proprio main======================
-    public static void Exercise_7() {}
+//==========Exercicio 6 precisou do proprio main======================
+//==========Exercicio 7 precisou do proprio main======================
     public static void Exercise_8() {}
-    public static void Exercise_9() {}
+//==========Exercicio 9 precisou do proprio main======================
     public static void Exercise_10() {}
     public static void Exercise_11() {}
     public static void Exercise_12() {}

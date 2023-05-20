@@ -25,7 +25,7 @@ public class Principal {
             System.out.println("===05 - Analise de Itens que se repetem =====");//Enunciado
             System.out.println("============por multiplo de 3 vezes==========\n");//Enunciado
             System.out.println("06 - Manipulacao de Listas Encadeadas Simples\n");//Enunciado
-            System.out.println("===07 - =====================================");//Enunciado
+            System.out.println("07 - Manipulacao de Listas Encadeadas Simples\n");//Enunciado
             System.out.println("===08 - =====================================");//Enunciado
             System.out.println("===09 - =====================================");//Enunciado
             System.out.println("===10 - =====================================");//Enunciado
@@ -57,13 +57,13 @@ public class Principal {
                     Act_6.main(args);
                     break;//Condição de parada
                 case 7://Chama o procedimento
-                    Exercises.Exercise_7();
+                    Act_7.main(args);
                     break;//Condição de parada
                 case 8://Chama o procedimento
                     Exercises.Exercise_8();
                     break;//Condição de parada
                 case 9://Chama o procedimento
-                    Exercises.Exercise_9();
+                    Act_9.main(args);
                     break;//Condição de parada
                 case 10://Chama o procedimento
                     Exercises.Exercise_10();
