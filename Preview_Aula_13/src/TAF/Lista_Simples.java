@@ -167,38 +167,19 @@ public class Lista_Simples {
     }
     public Lista_Simples add_LC(Lista_Simples B){
         Celula i = this.primeiro.prox;
-        Celula j=i;
-        
-        if(this.n+1%2==0){
-            for(int k=0;k!=n/2;i=i.prox,k++) {
-                System.out.print("I: "+i.elemento1);
-                j=i;
-                for(int l=0;l!=n/2-k;j=j.prox,l++){
-                    System.out.print("J: "+j.elemento1);
+        Celula j;
+        for(int k=0;k<=n/2;k++,i=i.prox){
+            j=i;
+            for(int l=k;j!=null;j=j.prox,l++){
+                if(l+1==n-k){
+                    //System.out.println(j.elemento1+" "+i.elemento1);
+                    B.inserirFim(j.elemento1+i.elemento1);
                 }
+                
             }
-        }else{
-            
         }
         i=null;
         j=null;
-        /*
-        if(this.n%2==0){
-            for(int i=0, j=arr.length-1;i<arr.length/2;i++,j--){
-                System.out.println(i+" "+j);
-            }
-        }else{
-            for(int i=0, j=arr.length-1;i<=arr.length/2;i++,j--){
-                
-                if(i==arr.length/2){
-                    System.out.println(i+" "+j);
-                }else{
-                    System.out.println(i+" "+j);
-                }
-            }
-            
-        }
-        */
         return B;
     }
 }
