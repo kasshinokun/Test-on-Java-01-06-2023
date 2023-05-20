@@ -1,11 +1,11 @@
-package Main;
+package Main;//Nome do Sub-Projeto
 
 
 import java.util.*;//simplificação de Bibliotecas 
 
 public class Principal {
 
-public static void main(String[] args) {//Main da classe
+    public static void main(String[] args) {//Main da classe
         
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
@@ -23,7 +23,7 @@ public static void main(String[] args) {//Main da classe
             System.out.println("===03 - =====================================");//Enunciado
             System.out.println("===04 - =====================================");//Enunciado
             System.out.println("===05 - =====================================");//Enunciado
-            System.out.println("===06 - =====================================");//Enunciado
+            System.out.println("06 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("===07 - =====================================");//Enunciado
             System.out.println("===08 - =====================================");//Enunciado
             System.out.println("===09 - =====================================");//Enunciado
@@ -53,7 +53,7 @@ public static void main(String[] args) {//Main da classe
                     Exercises.Exercise_5();
                     break;//Condição de parada
                 case 6://Chama o procedimento
-                    Exercises.Exercise_6();
+                    Act_6.main(args);
                     break;//Condição de parada
                 case 7://Chama o procedimento
                     Exercises.Exercise_7();

@@ -5,7 +5,7 @@ public class Lista_Simples {
     
     private Celula primeiro,ultimo;
     
-    private int n=0;//Variavel auxiliar de analise de tamanho
+    public int n=0;//Variavel auxiliar de analise de tamanho
     
     public Lista_Simples(){
         
@@ -139,8 +139,60 @@ public class Lista_Simples {
         
         for(i=i.prox;i!=null;i=i.prox){
             System.out.print(i.elemento1+" ");
+            
         }
     
     }
-    
+    public Lista_Simples add_LA(Lista_Simples B){
+        Celula i = this.primeiro.prox;
+        int elemento=0;
+        for(i=i.prox;i!=null;i=i.prox){
+            B.inserirFim(i.elemento1);
+        }
+        B.inserirFim(this.primeiro.prox.elemento1);
+        i=null;
+        
+        return B;
+    }
+    public Lista_Simples add_LB(Lista_Simples B){
+        Celula i = this.primeiro;
+        
+        while (i.prox!= null) {
+            i=i.prox;
+            B.inserirInicio(i.elemento1);
+            
+        }
+        i=null;
+        return B;
+    }
+    public Lista_Simples add_LC(Lista_Simples B){
+        Celula i = this.primeiro;
+        Celula j = this.primeiro;
+        int cont=this.n-1;
+        if(this.n+1%2==0){
+            System.out.println("PAR ");
+        }else{
+            System.out.println("IMPAR ");
+        }
+        i=null;
+        j=null;
+        /*
+        if(this.n%2==0){
+            for(int i=0, j=arr.length-1;i<arr.length/2;i++,j--){
+                System.out.println(i+" "+j);
+            }
+        }else{
+            for(int i=0, j=arr.length-1;i<=arr.length/2;i++,j--){
+                
+                if(i==arr.length/2){
+                    System.out.println(i+" "+j);
+                }else{
+                    System.out.println(i+" "+j);
+                }
+            }
+            
+        }
+        */
+        return B;
+    }
 }

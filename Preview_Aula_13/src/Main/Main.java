@@ -1,7 +1,7 @@
-package Main;
+package Main;//Nome do Subprojeto
 
-import Sort.HeapSort;
-import java.util.*;
+import Sort.*;//Package contendo HeapSort e outros metodos de Ordenação
+import java.util.*;//Simplificação de Bibliotecas necessárias
 
 public class Main {
     
