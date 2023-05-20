@@ -89,7 +89,8 @@ public class Exercises {
     public static void Exercise_3() {}//Em analise
     public static void Exercise_4() {}//Em analise
     public static void Exercise_5() {
-
+        System.out.println("\n===05 - Analise de Itens que se repetem =====");//Enunciado
+        System.out.println("============por multiplo de 3 vezes==========");//Enunciado
         System.out.print("\nDigite um numero desejado:  ");
         int n=Integer.parseInt(reader.nextLine());//armazena o valor
         create(n);//envia ao procedimento

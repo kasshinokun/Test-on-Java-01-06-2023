@@ -17,13 +17,14 @@ public class Principal {
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("===01 - Comparacao de Metodos de Ordenacao ==");//Enunciado
+            System.out.println("===01 - Comparacao de Metodos de Ordenacao ==\n");//Enunciado
             System.out.println("===02 - Comparacao MergeSort, QuickSort e====");//Enunciado
-            System.out.println("================== HeapSort =================");//Enunciado
+            System.out.println("================== HeapSort =================\n");//Enunciado
             System.out.println("===03 - =====================================");//Enunciado
-            System.out.println("===04 - =====================================");//Enunciado
-            System.out.println("===05 - =====================================");//Enunciado
-            System.out.println("06 - Manipulacao de Listas Encadeadas Simples");//Enunciado
+            System.out.println("===04 - =====================================\n");//Enunciado
+            System.out.println("===05 - Analise de Itens que se repetem =====");//Enunciado
+            System.out.println("============por multiplo de 3 vezes==========\n");//Enunciado
+            System.out.println("06 - Manipulacao de Listas Encadeadas Simples\n");//Enunciado
             System.out.println("===07 - =====================================");//Enunciado
             System.out.println("===08 - =====================================");//Enunciado
             System.out.println("===09 - =====================================");//Enunciado
