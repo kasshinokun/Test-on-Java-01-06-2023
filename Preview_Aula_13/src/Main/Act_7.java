@@ -52,7 +52,7 @@ public class Act_7 {
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento
                         System.out.println("\n===============Muito obrigado================");
-                        System.out.println("\n==========Saindo da Atividade 06=============");//Enunciado
+                        System.out.println("\n==========Saindo da Atividade 07=============");//Enunciado
                         System.out.println("=====E voltando para Menu de Exercicios======\n");//Enunciado
                     }
                     else{//Se não estiver no intervalo, informa ao usuario

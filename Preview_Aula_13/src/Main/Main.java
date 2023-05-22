@@ -6,9 +6,9 @@ import java.util.*;//Simplificação de Bibliotecas necessárias
 public class Main {
     
 public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        //Variavel para entrada do teclado
-        int opcao;//Variavel de escolha
+    Scanner reader = new Scanner(System.in);
+    //Variavel para entrada do teclado
+    int opcao;//Variavel de escolha
     do{
             System.out.println("\n===Atividade Teorica TADs, TAFs e Testes=====\n");//Enunciado
 

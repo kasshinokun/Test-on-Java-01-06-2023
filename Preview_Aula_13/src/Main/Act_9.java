@@ -12,7 +12,7 @@ public class Act_9 {
         int opcao;//Variavel de escolha
 
         do{
-            System.out.println("07 - Manipulacao de Listas Encadeadas Simples");//Enunciado
+            System.out.println("09 - Manipulacao de Listas Encadeadas Simples");//Enunciado
 
             System.out.println("===========Menu de Sub-exercicos=============");//Enunciado
             System.out.println("=1) - A)=====================================");//Enunciado
@@ -52,7 +52,7 @@ public class Act_9 {
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento
                         System.out.println("\n===============Muito obrigado================");
-                        System.out.println("\n==========Saindo da Atividade 06=============");//Enunciado
+                        System.out.println("\n==========Saindo da Atividade 09=============");//Enunciado
                         System.out.println("=====E voltando para Menu de Exercicios======\n");//Enunciado
                     }
                     else{//Se não estiver no intervalo, informa ao usuario

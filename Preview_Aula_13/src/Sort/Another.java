@@ -118,5 +118,55 @@ public class Another {
                 System.out.println("Posicao "+i+": "+a.Array[i]+"\t"+b.Array[i]);//executa a impressão do Array
         }
     }
+    //=========================================================================================
+    //Adaptação para Counting Sort Apostila e site:https://www.javatpoint.com/counting-sort
+    public int getMaior() {  
+           int max = Array[0];  
+           for(int i = 1; i<Array.length; i++) {  
+              if(Array[i] > max)  
+                 max = Array[i];  
+           }  
+           return max; //maximum element from the array  
+        }  
     
+    public void countingsort(int k) {//declaração do procedimento de Counting Sort 
+        //Array para contar o numero de ocorrencias de cada elemento
+
+        int[] count = new int[getMaior() + 1];
+        int[] ordenado = new int[N];
+        //Inicializar cada posicao do array de contagem
+        for(int i = 0; i < count.length;i++){
+            count[i] = 0;
+        }
+        //Agora, o count[i] contem o numero de elemento iguais a i
+        for(int i = 0; i < N;  i++){
+            count[Array[i]]++;
+        }
+        //Agora, o count[i] contem o numero de elemento menores ou iguais a i
+        for(int i = 1; i < count.length;i++){
+            count[i]+= count[i- 1];
+        }
+        //Ordenando
+        for(int i = N-1; i >=0;i--){
+            ordenado[count[Array[i]]-1] = Array[i]; 
+            count[Array[i]]--;
+        }
+        System.out.println("==Vetor apos ordenar com Counting Sort:");//Enunciado
+        Array=ordenado;
+        for(int i=0;i<10;i++){
+            
+            System.out.print(Array[i]+" ");
+            
+        }
+        System.out.println("\n==Termos menores que K:");//Enunciado
+        menor_k(k);
+        
+    }  
+    public void menor_k(int k){
+        for(int i=0;i<N;i++){
+            if(Array[i]<k){
+                System.out.print(Array[i]+" ");
+            }
+        }
+    }
 }

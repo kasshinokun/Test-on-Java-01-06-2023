@@ -17,15 +17,15 @@ public class Principal {
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("===01 - Comparacao de Metodos de Ordenacao ==\n");//Enunciado
+            System.out.println("===01 - Comparacao de Metodos de Ordenacao ==");//Enunciado
             System.out.println("===02 - Comparacao MergeSort, QuickSort e====");//Enunciado
-            System.out.println("================== HeapSort =================\n");//Enunciado
-            System.out.println("===03 - =====================================");//Enunciado
-            System.out.println("===04 - =====================================\n");//Enunciado
+            System.out.println("================== HeapSort =================");//Enunciado
+            System.out.println("==03 - Analise via grafico em PDF (Sem Codigo)");//Enunciado
+            System.out.println("04 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("===05 - Analise de Itens que se repetem =====");//Enunciado
-            System.out.println("============por multiplo de 3 vezes==========\n");//Enunciado
-            System.out.println("06 - Manipulacao de Listas Encadeadas Simples\n");//Enunciado
-            System.out.println("07 - Manipulacao de Listas Encadeadas Simples\n");//Enunciado
+            System.out.println("============por multiplo de 3 vezes==========");//Enunciado
+            System.out.println("06 - Manipulacao de Listas Encadeadas Simples");//Enunciado
+            System.out.println("07 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("===08 - =====================================");//Enunciado
             System.out.println("===09 - =====================================");//Enunciado
             System.out.println("===10 - =====================================");//Enunciado
@@ -48,7 +48,7 @@ public class Principal {
                     Exercises.Exercise_3();
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    Exercises.Exercise_4();
+                    Act_4.main(args);
                     break;//Condição de parada
                 case 5://Chama o procedimento
                     Exercises.Exercise_5();
