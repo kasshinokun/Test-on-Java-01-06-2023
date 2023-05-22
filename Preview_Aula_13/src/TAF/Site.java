@@ -1,5 +1,6 @@
 package TAF;
 //Classe para Exercicio 8
+import java.util.*;
 public class Site {
     String nome;
     String link;
@@ -13,16 +14,9 @@ public class Site {
         this.nome=nome;
         this.link=link;
     }
-    public class Lista{
-        Site inicio;
-        Site ultimo;
-        
-        public int n=0;//Variavel auxiliar de analise de tamanho
-    
-        public Lista(){
-            this.inicio=new Site();
-            this.ultimo=this.inicio;
-        }
-    
+    public String toString(){
+        return"Nome:-------------"+this.nome
+            +"\nLink:-------------"+this.link;    
     }
+    
 }

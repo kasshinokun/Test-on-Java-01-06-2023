@@ -7,6 +7,7 @@ import TAD.*;//Package contendo os TADs
 import TAF.*;//Package contendo os TAFs
 import Sort.*;//Package contendo os metodos de Ordenação
 
+
 public class Exercises {
     public static Scanner reader=new Scanner(System.in);
     //Objeto Scanner para Entrada global do teclado
@@ -100,7 +101,24 @@ public class Exercises {
     }
 //==========Exercicio 6 precisou do proprio main======================
 //==========Exercicio 7 precisou do proprio main======================
-    public static void Exercise_8() {}
+    public static void Exercise_8() {
+        System.out.println("\n===08 - Gestao de Lista de Sites=============");//Enunciado
+        Lista_Site Historico=new Lista_Site();
+        System.out.println("\n==Insercao e Exibir Lista de Sites===========");//Enunciado
+        Historico.inserirFim("Google", "www.google.com");
+        Historico.inserirFim("Yahoo", "www.yahoo.com");
+        Historico.inserirFim("Gmail", "www.gmail.com");
+        Historico.inserirFim("Outlook", "www.outlook.com");
+        Historico.inserirFim("Youtube", "www.youtube.com");
+        Historico.mostrar();
+        System.out.println("\n==Busca por (Yahoo) e Exibir Lista de Sites==");//Enunciado
+        Historico.buscar("Yahoo");
+        System.out.println("\n==Exibir Lista de Sites apos Busca===========");//Enunciado
+        Historico.mostrar();
+        System.out.println("\n==Busca por (GDrive)========================="); 
+        Historico.buscar("GDrive");
+        System.out.println("\n=============================================\n");//Enunciado
+    }
 //==========Exercicio 9 precisou do proprio main======================
     public static void Exercise_10() {}
     public static void Exercise_11() {}

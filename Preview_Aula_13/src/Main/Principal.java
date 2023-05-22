@@ -26,7 +26,7 @@ public class Principal {
             System.out.println("============por multiplo de 3 vezes==========");//Enunciado
             System.out.println("06 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("07 - Manipulacao de Listas Encadeadas Simples");//Enunciado
-            System.out.println("===08 - =====================================");//Enunciado
+            System.out.println("===08 - Gestao de Lista de Sites=============");//Enunciado
             System.out.println("===09 - =====================================");//Enunciado
             System.out.println("===10 - =====================================");//Enunciado
             System.out.println("===11 - =====================================");//Enunciado
