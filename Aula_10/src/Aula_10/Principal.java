@@ -5,7 +5,7 @@ public class Principal {//declaração da classe Main
     
     public static void main(String[] args) {
         
-        int M=100;//Variavel para tamanho
+        int M=15;//Variavel para tamanho
         
         int[] Teste = new int[M];//Instancia vetor de inteiros de tamanho M
         

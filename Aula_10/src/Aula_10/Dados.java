@@ -99,11 +99,11 @@ public class Dados {//declaração da classe Dados
       
       for(int i=0;i<Soma.length;i++) {//laço até 500
 
-          GerarArray(100);//gera os array's
+          GerarArray(15);//gera os array's
 
           cont=0;//Zera o contador
 
-          sendArray(0, 99);//Envia com valores predefinidos
+          sendArray(0, 15);//Envia com valores predefinidos
 
           Soma[i]=cont;//Armazena  valor do contador na posição.
 
