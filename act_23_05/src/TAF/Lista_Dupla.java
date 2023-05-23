@@ -4,11 +4,14 @@ import java.util.*;//simplificação de Bibliotecas
 public class Lista_Dupla {
     
     private Celula primeiro, ultimo;
+    //String Nome;
     int n=0;
     
     public Lista_Dupla(){
-        primeiro=new Celula();
-        ultimo=primeiro;
+        this.primeiro=new Celula();
+        this.ultimo=this.primeiro;
+        //this.Nome=primeiro.elemento2;
+        
     }
     public void inserirInicio(int x){
         
@@ -31,6 +34,28 @@ public class Lista_Dupla {
         else{
             
             ultimo.prox=new Celula(x);
+            ultimo.prox.ant=ultimo;
+            ultimo=ultimo.prox;
+            n++;
+            
+        }
+    
+    }
+    public void inserirFim2(Celula x){
+        if(primeiro==ultimo){
+            x.ant=primeiro;
+            x.prox=primeiro.prox;
+            primeiro.prox=x;
+
+            if(primeiro==ultimo){
+                ultimo=x;
+            }
+            x=null;
+            n++;
+        }
+        else{
+            
+            ultimo.prox=x;
             ultimo.prox.ant=ultimo;
             ultimo=ultimo.prox;
             n++;
@@ -140,36 +165,61 @@ public class Lista_Dupla {
             System.out.print(i.elemento1+" ");
         }
     }
+    public void mostrar2(){
+        Celula i = this.primeiro;
+        
+        while(i!=null){
+            System.out.println(i.toString());
+            i=i.prox;
+        }
+        
+    }
 //=================================================================================
 //Exercicio 09
-    public void buscarNumero(String x){
+    public Lista_Dupla criarLista(){
+        Lista_Dupla lista=new Lista_Dupla();
+        String[] arr={"Arroz","Batata","Couve","Doce","Erva-doce","Flor","Goiaba","Hortelã","Iogurte"};//Vetor base
+        for(int i=0;i<arr.length;i++){
+            Celula tmp=new Celula(arr[i],(i+1));
+            //System.out.println(tmp.toString());
+            lista.inserirFim2(tmp);
+        }
+        return lista;
+        
+    }
+    public void buscarNome(int x){
         Celula i = this.primeiro.prox;
         boolean resp=false;
         while(i!=null){
-            if(i.elemento2==x){
+            if(i.elemento1==x){
                 resp=true;
                 break;
             }
             i=i.prox;
         }
-        i=null;
+        
         if(resp==false){
             System.out.println("\nO numero: "+x+" nao foi localizado");
+            i=null;
         }else{
-            System.out.println("\nO numero: "+x+" foi localizado na lista");
+            System.out.println("\nO numero: "+i.elemento1+" foi localizado na lista");
+            System.out.println(i.toString());
+            i=null;
         }
+        
     }
-    public void inserirOrdenado(String x){
+    /*//Precisa de Conversão para Lista Dupla
+    public void inserirOrdenado(int x){
         Celula i = this.primeiro.prox;
         int cont=0;
         while(i!=null){
-            
-            if(i.elemento2.compareToIgnoreCase(x) > 0){
+            if(i.elemento1>=x){
                 break;
             }
             i=i.prox;
             cont++;
         }
+               
         Celula tmp=new Celula(x);
         tmp.prox=i.prox;
         i.prox=tmp;
@@ -177,12 +227,12 @@ public class Lista_Dupla {
         n++;
     
     }
-    public String removerElemento(String x){
+    public int removerElemento(int x){
         Celula i = this.primeiro.prox;
         boolean resp=false;
         int cont=0;
         while(i!=null){
-            if(i.elemento2==x){
+            if(i.elemento1==x){
                 resp=true;
                 break;
             }
@@ -191,9 +241,9 @@ public class Lista_Dupla {
         }
         if(resp==false){
             System.out.println("O numero: "+x+" nao foi localizado");
-            return "";
+            return -1;
         }else{
-            String elemento=i.elemento2;
+            int elemento=i.elemento1;
             System.out.println("O numero: "+elemento+" foi removido da lista");
             removerPos(cont);
             i=null;
@@ -202,18 +252,18 @@ public class Lista_Dupla {
     
     }
   
-    public Lista_Dupla copiarLista(Lista_Dupla lista){
+    public Lista_Simples copiarLista(Lista_Simples lista){
         Celula i = this.primeiro.prox;
-        
         while(i!=null){
-            lista.ultimo.prox=new Celula(i.elemento2);
+            lista.ultimo.prox=new Celula(i.elemento1);
+            lista.ultimo=lista.ultimo.prox;
             i=i.prox;
         }
         i=null;
         
         return lista;
     }
-    public Lista_Dupla concatenarLista(Lista_Dupla lista){
+    public Lista_Simples concatenarLista(Lista_Simples lista){
         Celula i = this.ultimo;
         Celula j = lista.primeiro.prox;
         i.prox=j;
@@ -222,15 +272,15 @@ public class Lista_Dupla {
         j=null;
         return this;
     }
-    public Lista_Dupla intercalarLista(Lista_Dupla lista){
+    public Lista_Simples intercalarLista(Lista_Simples lista){
         Celula i = this.primeiro.prox;
         Celula j = lista.primeiro.prox;
-        Lista_Dupla lista2=new Lista_Dupla();
+        Lista_Simples lista2=new Lista_Simples();
         if(this.n==lista.n){
             while(j!=null){
-                lista2.ultimo.prox=new Celula(i.elemento2);
+                lista2.ultimo.prox=new Celula(i.elemento1);
                 lista2.ultimo=lista2.ultimo.prox;
-                lista2.ultimo.prox=new Celula(j.elemento2);
+                lista2.ultimo.prox=new Celula(j.elemento1);
                 lista2.ultimo=lista2.ultimo.prox;
                 lista2.n+=2;
                 i=i.prox; 
@@ -246,4 +296,7 @@ public class Lista_Dupla {
             return null;
         }
     }
+    
+    
+    */
 }

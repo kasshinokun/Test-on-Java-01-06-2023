@@ -143,6 +143,15 @@ public class Lista_Simples {
         }
     
     }
+    public void mostrar2(){
+        Celula i = this.primeiro.prox;
+        
+        for(;i!=null;i=i.prox){
+            System.out.print(i.elemento2+" ");
+            
+        }
+    
+    }
 //=========================================================================================
 //Exercicio 06    
     public Lista_Simples add_LA(Lista_Simples B){
@@ -195,12 +204,15 @@ public class Lista_Simples {
             }
             i=i.prox;
         }
-        i=null;
+        
         if(resp==false){
             System.out.println("\nO numero: "+x+" nao foi localizado");
+            i=null;
         }else{
             System.out.println("\nO numero: "+x+" foi localizado na lista");
+            i=null;
         }
+       
     }
     public void inserirOrdenado(int x){
         Celula i = this.primeiro.prox;

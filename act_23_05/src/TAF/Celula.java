@@ -22,7 +22,7 @@ public class Celula{
         this.elemento1=0;//inteiros
         this.elemento2=" ";//Strings
         this.elemento3=0;//caracteres
-        
+      
         
         this.dir = null;
         this.esq = null;
@@ -36,11 +36,15 @@ public class Celula{
     public Celula(int x) {
         this.elemento1=x;//inteiros
     }
-    public Celula(String x) {
+    public Celula(String x,int z) {
         this.elemento2=x;//Strings
+        this.elemento1=z;
     }
     public Celula(char x) {
         this.elemento3=x;//caracteres
     }
-    
+    public String toString(){
+        return"Chave:-------------"+this.elemento1
+            +"\nNome:-------------"+this.elemento2;    
+    } 
 }
