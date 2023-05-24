@@ -117,9 +117,34 @@ public class Exercises {
         System.out.println("\n=============================================\n");//Enunciado
     }
 //==========Exercicio 9 precisou do proprio main======================
-    public static void Exercise_10() {}
-    public static void Exercise_11() {}
-    public static void Exercise_12() {}
+//==========Exercicio 10 precisou do proprio main======================}
+    public static void Exercise_11() {
+        System.out.println("\n===11 - Remocao de Chaves Pares==============");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        lista=lista.criarLista();     
+        lista.mostrar();
+        System.out.println("\n=============================================\n");//Enunciado
+        lista.removerKey();
+        lista.mostrar();
+        System.out.println("\n=============================================\n");//Enunciado
+    }
+    public static void Exercise_12() {
+    System.out.println("===12 - Manipulacao de Caracteres em Listas==");//Enunciado
+    Lista_Simples lista=new Lista_Simples();
+    lista=lista.criarLista();     
+    //lista.mostrar3();
+    System.out.println("\n=============================================\n");//Enunciado
+    lista.organizar_Letras_Numeros();
+    //lista.mostrar3();
+    System.out.println("\n=============================================\n");//Enunciado
+    Lista_Dupla lista2=new Lista_Dupla();
+    lista2=lista2.criarLista();     
+    //lista2.mostrar3();
+    System.out.println("\n=============================================\n");//Enunciado
+    lista2.organizar_Letras_Numeros();
+    //lista2.mostrar3();
+    System.out.println("\n=============================================\n");//Enunciado
+    }
 //======Procedimento do Exercicio 05 =============================================================
     private static void create(int n){//Vetor proposta do exxercicio
 

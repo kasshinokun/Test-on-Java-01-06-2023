@@ -67,7 +67,7 @@ public class Act_7 {
     private static void letra_A(){
         System.out.println("\n=1) - A)Verificacao de numero em Lista=======");//Enunciado
         Lista_Simples lista=new Lista_Simples();
-        lista=criarLista();
+        lista=lista.criarLista();
         System.out.print("Digite um numero por favor:-------------");//Enunciado
         int value=Integer.parseInt(reader.nextLine());//armazena o valor
         lista.buscarNumero(value);
@@ -76,7 +76,7 @@ public class Act_7 {
     private static void letra_B(){
         System.out.println("\n=2) - B)Insercao mantendo a ordenacao========");//Enunciado
         Lista_Simples lista=new Lista_Simples();
-        lista=criarLista();
+        lista=lista.criarLista();
         System.out.print("Digite um numero por favor:-------------");//Enunciado
         int value=Integer.parseInt(reader.nextLine());//armazena o valor
         lista.inserirOrdenado(value);
@@ -87,7 +87,7 @@ public class Act_7 {
     private static void letra_C(){
         System.out.println("\n=3) - C)Remocao de elemento==================");//Enunciado
         Lista_Simples lista=new Lista_Simples();
-        lista=criarLista();       
+        lista=lista.criarLista();     
         lista.mostrar();
         System.out.print("\nDigite um numero para remover:-------------");//Enunciado
         int value=Integer.parseInt(reader.nextLine());//armazena o valor
@@ -99,7 +99,7 @@ public class Act_7 {
     private static void letra_D(){
         System.out.println("\n=4) - D)Impressão da Lista===================");//Enunciado
         Lista_Simples lista=new Lista_Simples();
-        lista=criarLista();
+        lista=lista.criarLista();
         lista.mostrar();
         System.out.println("\n=============================================");//Enunciado
         System.out.println("\nExecutando letra: B-Inserir 12; e C-remover 5\n");
@@ -113,7 +113,7 @@ public class Act_7 {
         System.out.println("\n=5) - E)Copiar Lista para outra Lista========");//Enunciado
         Lista_Simples lista=new Lista_Simples();
         System.out.print("\nLista 1: ");
-        lista=criarLista();
+        lista=lista.criarLista();
         lista.mostrar();
         System.out.print("\nLista 2: ");
         Lista_Simples lista2=new Lista_Simples();
@@ -126,8 +126,8 @@ public class Act_7 {
         Lista_Simples lista=new Lista_Simples();
         Lista_Simples lista2=new Lista_Simples();
         System.out.print("\nLista 1: ");
-        lista=criarLista();
-        lista2=criarLista();
+        lista=lista.criarLista();
+        lista2=lista2.criarLista();
         lista.mostrar();
         System.out.print("\nLista 2: ");
         lista2.mostrar();
@@ -141,8 +141,8 @@ public class Act_7 {
         Lista_Simples lista=new Lista_Simples();
         Lista_Simples lista2=new Lista_Simples();
         System.out.print("\nLista 1: ");
-        lista=criarLista();
-        lista2=criarLista();
+        lista=lista.criarLista();
+        lista2=lista2.criarLista();
         lista.mostrar();
         System.out.print("\nLista 2: ");
         lista2.mostrar();
@@ -152,14 +152,6 @@ public class Act_7 {
         lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
-    private static Lista_Simples criarLista(){
-        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
-        Lista_Simples lista=new Lista_Simples();
-        for(int i=0;i<arr.length;i++){
-            lista.inserirFim(arr[i]);
-        }
-        
-        return lista;
-    }
+    
     
 }

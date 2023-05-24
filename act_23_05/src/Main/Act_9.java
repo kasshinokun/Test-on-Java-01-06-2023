@@ -14,7 +14,7 @@ public class Act_9 {
         do{
             System.out.println("09 - Manipulacao de Listas Encadeadas Dupla===");//Enunciado
 
-             System.out.println("===========Menu de Sub-exercicos=============");//Enunciado
+            System.out.println("===========Menu de Sub-exercicos=============");//Enunciado
             System.out.println("=1) - A)Verificacao de nome em Lista=========");//Enunciado
             System.out.println("=2) - B)Insercao mantendo a ordenacao========");//Enunciado
             System.out.println("=3) - C)Remocao de elemento==================");//Enunciado

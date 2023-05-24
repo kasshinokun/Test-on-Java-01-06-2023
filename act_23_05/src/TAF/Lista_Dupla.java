@@ -342,7 +342,18 @@ public class Lista_Dupla {
             return null;
         }
     }
+    //exercicio 08
+    public void removerKey(){
+    //remover chaves pares
     
     
+    }
+    //Exercicio 12
+    public void organizar_Letras_Numeros(){
+    /*
+    Entrada: A 1 E 5 T 7 W 8 G → Saída: A E T W G 8 7 5 1
+    Entrada: 3 C 9 H 4 Q 6 → Saída: C H Q 6 4 9 3    
+    */
     
+    }
 }

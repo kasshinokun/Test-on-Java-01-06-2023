@@ -192,6 +192,15 @@ public class Lista_Simples {
     }
 //=================================================================================
 //Exercicio 07
+    public Lista_Simples criarLista(){
+        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
+        Lista_Simples lista=new Lista_Simples();
+        for(int i=0;i<arr.length;i++){
+            lista.inserirFim(arr[i]);
+        }
+        
+        return lista;
+    }
     public void buscarNumero(int x){
         Celula i = this.primeiro.prox;
         boolean resp=false;
@@ -295,5 +304,20 @@ public class Lista_Simples {
             System.out.println("não foi possivel unir as listas");
             return null;
         }
+    }
+    
+    //exercicio 08
+    public void removerKey(){
+    //remover chaves pares
+    
+    
+    }
+    //Exercicio 12
+    public void organizar_Letras_Numeros(){
+    /*
+    Entrada: A 1 E 5 T 7 W 8 G → Saída: A E T W G 8 7 5 1
+    Entrada: 3 C 9 H 4 Q 6 → Saída: C H Q 6 4 9 3    
+    */
+    
     }
 }
