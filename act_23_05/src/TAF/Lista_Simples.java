@@ -148,9 +148,7 @@ public class Lista_Simples {
         
         for(;i!=null;i=i.prox){
             System.out.print(i.elemento2+" ");
-            
         }
-    
     }
 //=========================================================================================
 //Exercicio 06    
@@ -217,20 +215,18 @@ public class Lista_Simples {
     public void inserirOrdenado(int x){
         Celula i = this.primeiro.prox;
         int cont=0;
-        while(i!=null){
-            if(i.elemento1>=x){
-                break;
-            }
-            i=i.prox;
-            cont++;
+        for(;i!=null&&i.elemento1<x;cont++,i=i.prox); 
+        if(cont==0||n==0){
+            inserirInicio(x);
         }
-               
-        Celula tmp=new Celula(x);
-        tmp.prox=i.prox;
-        i.prox=tmp;
-        tmp=i=null;
-        n++;
-    
+        else if(cont==n&&n!=0){
+            inserirFim(x);
+        }
+        else if(cont<n){
+            System.out.println("O numero: "+cont);
+            inserirPos(x,cont);
+        }
+        
     }
     public int removerElemento(int x){
         Celula i = this.primeiro.prox;
@@ -283,11 +279,10 @@ public class Lista_Simples {
         Lista_Simples lista2=new Lista_Simples();
         if(this.n==lista.n){
             while(j!=null){
-                lista2.ultimo.prox=new Celula(i.elemento1);
-                lista2.ultimo=lista2.ultimo.prox;
-                lista2.ultimo.prox=new Celula(j.elemento1);
-                lista2.ultimo=lista2.ultimo.prox;
-                lista2.n+=2;
+                lista2.inserirFim(i.elemento1);
+                
+                lista2.inserirFim(j.elemento1);
+                
                 i=i.prox; 
                 j=j.prox; 
             }

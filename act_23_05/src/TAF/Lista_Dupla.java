@@ -27,6 +27,19 @@ public class Lista_Dupla {
         n++;
     
     }
+    public void inserirInicio2(Celula x){
+        
+        x.ant=primeiro;
+        x.prox=primeiro.prox;
+        primeiro.prox=x;
+        
+        if(primeiro==ultimo){
+            ultimo=x;
+        }
+        x=null;
+        n++;
+    
+    }
     public void inserirFim(int x){
         if(primeiro==ultimo){
             inserirInicio(x);
@@ -90,7 +103,34 @@ public class Lista_Dupla {
         }
     
     }
+    public void inserirPos2(String x, int z, int pos){
+        Celula tmp=new Celula(x,z);
+        if(pos<=0){
+            if(pos<0){
+                System.out.println("===Parametro Invalido, adaptando ....=======\n");
+            }
+            System.out.println("==========Adicionando no Inicio ============\n");
+            inserirInicio2(tmp);
+        }else if(pos>=n){
+            if(pos>n){
+                System.out.println("===Parametro Invalido, adaptando ....=======\n");
+            }
+            System.out.println("==========Adicionando no Fim ===============\n");
+            inserirFim2(tmp);
+        }else{//senao....
+            
+            Celula i=this.primeiro;
+            for(int j=0;j<pos;j++,i=i.prox);
+            
+            tmp.ant=i;
+            tmp.prox=i.prox;
+            tmp.ant.prox=tmp.prox.ant=tmp;
+            tmp=i=null;
+            n++;
+            
+        }
     
+    }
     public int removerInicio(){
         if(primeiro==ultimo){
             //Informa ao Usuario
@@ -166,7 +206,7 @@ public class Lista_Dupla {
         }
     }
     public void mostrar2(){
-        Celula i = this.primeiro;
+        Celula i = this.primeiro.prox;
         
         while(i!=null){
             System.out.println(i.toString());
@@ -208,24 +248,21 @@ public class Lista_Dupla {
         }
         
     }
-    /*//Precisa de Conversão para Lista Dupla
-    public void inserirOrdenado(int x){
+    public void inserirOrdenado(String x,int z){
         Celula i = this.primeiro.prox;
         int cont=0;
-        while(i!=null){
-            if(i.elemento1>=x){
-                break;
-            }
-            i=i.prox;
-            cont++;
+        for(;i!=null&&i.elemento1<z;cont++,i=i.prox);
+        Celula tmp=new Celula(x,z);
+        //System.out.println(tmp.toString());
+        if(cont==0||n==0){
+            inserirInicio2(tmp);
         }
-               
-        Celula tmp=new Celula(x);
-        tmp.prox=i.prox;
-        i.prox=tmp;
-        tmp=i=null;
-        n++;
-    
+        else if(cont==n&&n!=0){
+            inserirFim2(tmp);
+        }
+        else if(cont<n){
+            inserirPos2(x,z,cont);
+        }
     }
     public int removerElemento(int x){
         Celula i = this.primeiro.prox;
@@ -240,49 +277,58 @@ public class Lista_Dupla {
             i=i.prox;
         }
         if(resp==false){
-            System.out.println("O numero: "+x+" nao foi localizado");
+            System.out.println("A chave: "+x+" nao foi localizada");
             return -1;
         }else{
             int elemento=i.elemento1;
-            System.out.println("O numero: "+elemento+" foi removido da lista");
+            String elemento2=i.elemento2;
+            System.out.println("A chave:----"+elemento+" foi removida da lista");
+            System.out.println("E o nome:---"+elemento2+" foi removido da lista");
             removerPos(cont);
             i=null;
             return elemento;
         }
     
     }
-  
-    public Lista_Simples copiarLista(Lista_Simples lista){
+    
+    public Lista_Dupla copiarLista(Lista_Dupla lista){
         Celula i = this.primeiro.prox;
         while(i!=null){
-            lista.ultimo.prox=new Celula(i.elemento1);
-            lista.ultimo=lista.ultimo.prox;
+            Celula tmp=new Celula(i.elemento2,i.elemento1);
+            lista.inserirFim2(tmp);
+            
             i=i.prox;
+            tmp=null;
         }
         i=null;
         
         return lista;
     }
-    public Lista_Simples concatenarLista(Lista_Simples lista){
-        Celula i = this.ultimo;
+    
+    public Lista_Dupla concatenarLista(Lista_Dupla lista){
+        
         Celula j = lista.primeiro.prox;
-        i.prox=j;
+        
+        this.ultimo.prox=j;
+        this.ultimo.prox.ant=this.ultimo;
+        this.ultimo=this.ultimo.prox;
         this.n+=lista.n;
-        i=null;
         j=null;
         return this;
     }
-    public Lista_Simples intercalarLista(Lista_Simples lista){
+    
+    public Lista_Dupla intercalarLista(Lista_Dupla lista){
         Celula i = this.primeiro.prox;
         Celula j = lista.primeiro.prox;
-        Lista_Simples lista2=new Lista_Simples();
+        Lista_Dupla lista2=new Lista_Dupla();
         if(this.n==lista.n){
             while(j!=null){
-                lista2.ultimo.prox=new Celula(i.elemento1);
-                lista2.ultimo=lista2.ultimo.prox;
-                lista2.ultimo.prox=new Celula(j.elemento1);
-                lista2.ultimo=lista2.ultimo.prox;
-                lista2.n+=2;
+                Celula tmp=new Celula(i.elemento2,i.elemento1);
+                lista2.inserirFim2(tmp);
+                
+                Celula tmp2=new Celula(j.elemento2,j.elemento1);
+                lista2.inserirFim2(tmp2);
+                
                 i=i.prox; 
                 j=j.prox; 
             }
@@ -298,5 +344,5 @@ public class Lista_Dupla {
     }
     
     
-    */
+    
 }
