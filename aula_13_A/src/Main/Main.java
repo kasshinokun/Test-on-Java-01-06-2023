@@ -1,51 +1,55 @@
 
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import TAF.*;//Package com as TAD Flexiveis
-import BST.*;
+
 public class Main {
-    static Scanner reader = new Scanner(System.in);
-    //Variavel global para entrada do teclado na classe
-    public static void main(String[] args){
-        System.out.println("\n===13 - Gestao de Lista de Contatos==========");//Enunciado
-        /*
-        Lista_Simples Agenda=new Lista_Simples();
-        System.out.println("\n==Insercao e Exibir Lista de Contatos========");//Enunciado
-        
-        *//*
-        //Inserção de Strings conforme desejo do usuario
-        
-        //Solicitação ao usuario das Strings
-        System.out.print("Digite um nome por favor:---------------");//Nome
-        String nome=reader.nextLine();//armazena o valor
-        System.out.print("Digite um telefone por favor:---------------");//Telefone
-        String telefone=reader.nextLine();//armazena o valor
-        System.out.print("Digite um email por favor:---------------");//Email
-        String email=reader.nextLine();//armazena o valor
-        System.out.print("Digite um cpf por favor:---------------");//CPF
-        String cpf=reader.nextLine();//armazena o valor
-        
-        Contato c1=new Contato(nome,telefone,email,cpf);//Envia para a classe
-        *//*
-        ////Envio predefinido para a classe
-        Contato c1=new Contato("Aroldo","(31)3674-7642","aroldo@gatonet.com","123.456.789-00");
-        Contato c2=new Contato("Joao","(31)3674-7642","joao@gatonet.com","123.456.789-00");
-        Contato c3=new Contato("Maria","(31)3674-7642","maria@gatonet.com","123.456.789-00");
-        Contato c4=new Contato("Pedro","(31)3674-7642","pedro@gatonet.com","123.456.789-00");
-        System.out.println(c1.toString());//Exibe o objeto do tipo contato
-        System.out.println(c2.toString());//Exibe o objeto do tipo contato
-        System.out.println(c3.toString());//Exibe o objeto do tipo contato
-        System.out.println(c4.toString());//Exibe o objeto do tipo contato
-        *//*
-        //inserção na lista
-        Agenda.inserirFim2(new Celula(c1));//Instancia Celula e envia a lista
-        Agenda.inserirFim2(new Celula(c2));//Instancia Celula e envia a lista
-        Agenda.inserirFim2(new Celula(c3));//Instancia Celula e envia a lista
-        Agenda.inserirFim2(new Celula(c4));//Instancia Celula e envia a lista
-        Agenda.mostrar();//Exibe a lista
-        */
-        
-        System.out.println("\n=============================================\n");//Enunciado
-    
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        //Variavel para entrada do teclado
+        int opcao;//Variavel de escolha
+        do{
+            System.out.println("\n===Atividade Pratica TAFs Hibridas===========\n");//Enunciado
+
+            System.out.println("=============Menu de Exercicos===============");//Enunciado
+
+            System.out.println("===01 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("===02 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("===03 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("===04 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("===05 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
+
+            System.out.println("\n======Por favor escolha uma opcao: ==========");//Enunciado
+            opcao = Integer.parseInt(reader.nextLine());//armazena o valor
+            switch(opcao){//Analise do que foi digitado
+
+                case 1://Chama o procedimento
+                    Exercises.Exercise_1();
+                    break;//Condição de parada
+                case 2://Chama o procedimento
+                    Exercises.Exercise_2();
+                    break;//Condição de parada
+                case 3://Chama o procedimento
+                    Exercises.Exercise_3();
+                    break;//Condição de parada
+                case 4://Chama o procedimento
+                    Exercises.Exercise_4();
+                    break;//Condição de parada
+                case 5://Chama o procedimento
+                    Exercises.Exercise_5();
+                    break;//Condição de parada
+                default:
+                    if(opcao==0){//despedida do usuario e agradecimento
+                        System.out.println("\n===============Muito obrigado================");
+                        System.out.println("===Atividade Pratica TAFs Hibridas===========\n");//Enunciado
+                        System.exit(0);//Encerra o programa
+                    }
+                    else{//Se não estiver no intervalo, informa ao usuario
+                        //e reapresenta o menu
+                        System.out.println("\n============Opcao Invalida.==================");
+                        System.out.println("======Tente novamente por gentileza!=========\n");
+                    } 
+            }      
+        }while(opcao!=0);//Se repetira enquanto não for zero
     }
 }

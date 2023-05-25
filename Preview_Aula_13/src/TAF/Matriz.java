@@ -30,6 +30,7 @@ public class Matriz {
             Celula i, j;
             int cont=1;
             this.inicio=new Celula(V[0]);
+ 
             j=this.inicio;
 
             for(int k1=0;k1<l;k1++) {
