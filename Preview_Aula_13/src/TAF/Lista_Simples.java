@@ -135,14 +135,23 @@ public class Lista_Simples {
         }
     }
     public void mostrar(){
-        Celula i = this.primeiro;
+        Celula i = this.primeiro.prox;
         
-        for(i=i.prox;i!=null;i=i.prox){
+        for(;i!=null;i=i.prox){
             System.out.print(i.elemento1+" ");
             
         }
     
     }
+    public void mostrar2(){
+        Celula i = this.primeiro.prox;
+        
+        for(;i!=null;i=i.prox){
+            System.out.print(i.elemento2+" ");
+        }
+    }
+//=========================================================================================
+//Exercicio 06    
     public Lista_Simples add_LA(Lista_Simples B){
         Celula i = this.primeiro.prox.prox;
         int elemento=0;
@@ -180,5 +189,135 @@ public class Lista_Simples {
         i=null;
         j=null;
         return B;
+    }
+//=================================================================================
+//Exercicio 07
+    public Lista_Simples criarLista(){
+        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
+        Lista_Simples lista=new Lista_Simples();
+        for(int i=0;i<arr.length;i++){
+            lista.inserirFim(arr[i]);
+        }
+        
+        return lista;
+    }
+    public void buscarNumero(int x){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        while(i!=null){
+            if(i.elemento1==x){
+                resp=true;
+                break;
+            }
+            i=i.prox;
+        }
+        
+        if(resp==false){
+            System.out.println("\nO numero: "+x+" nao foi localizado");
+            i=null;
+        }else{
+            System.out.println("\nO numero: "+x+" foi localizado na lista");
+            i=null;
+        }
+       
+    }
+    public void inserirOrdenado(int x){
+        Celula i = this.primeiro.prox;
+        int cont=0;
+        for(;i!=null&&i.elemento1<x;cont++,i=i.prox); 
+        if(cont==0||n==0){
+            inserirInicio(x);
+        }
+        else if(cont==n&&n!=0){
+            inserirFim(x);
+        }
+        else if(cont<n){
+            System.out.println("O numero: "+cont);
+            inserirPos(x,cont);
+        }
+        
+    }
+    public int removerElemento(int x){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        int cont=0;
+        while(i!=null){
+            if(i.elemento1==x){
+                resp=true;
+                break;
+            }
+            cont++;
+            i=i.prox;
+        }
+        if(resp==false){
+            System.out.println("O numero: "+x+" nao foi localizado");
+            return -1;
+        }else{
+            int elemento=i.elemento1;
+            System.out.println("O numero: "+elemento+" foi removido da lista");
+            removerPos(cont);
+            i=null;
+            return elemento;
+        }
+    
+    }
+  
+    public Lista_Simples copiarLista(Lista_Simples lista){
+        Celula i = this.primeiro.prox;
+        while(i!=null){
+            lista.ultimo.prox=new Celula(i.elemento1);
+            lista.ultimo=lista.ultimo.prox;
+            i=i.prox;
+        }
+        i=null;
+        
+        return lista;
+    }
+    public Lista_Simples concatenarLista(Lista_Simples lista){
+        Celula i = this.ultimo;
+        Celula j = lista.primeiro.prox;
+        i.prox=j;
+        this.n+=lista.n;
+        i=null;
+        j=null;
+        return this;
+    }
+    public Lista_Simples intercalarLista(Lista_Simples lista){
+        Celula i = this.primeiro.prox;
+        Celula j = lista.primeiro.prox;
+        Lista_Simples lista2=new Lista_Simples();
+        if(this.n==lista.n){
+            while(j!=null){
+                lista2.inserirFim(i.elemento1);
+                
+                lista2.inserirFim(j.elemento1);
+                
+                i=i.prox; 
+                j=j.prox; 
+            }
+            i=null;
+            j=null;
+
+            return lista2;
+        }else{
+            System.out.println("Tamanhos diferentes,");
+            System.out.println("não foi possivel unir as listas");
+            return null;
+        }
+    }
+    
+    //exercicio 08
+    public void removerKey(){
+    //remover chaves pares
+    
+    
+    }
+    //Exercicio 12
+    public void organizar_Letras_Numeros(){
+    /*
+    Entrada: A 1 E 5 T 7 W 8 G → Saída: A E T W G 8 7 5 1
+    Entrada: 3 C 9 H 4 Q 6 → Saída: C H Q 6 4 9 3    
+    */
+    
     }
 }

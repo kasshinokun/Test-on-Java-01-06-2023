@@ -1,4 +1,5 @@
 package Sort;
+//Adequar para versão final de act_23_05
 import java.util.*;
 public class QuickSort{
     

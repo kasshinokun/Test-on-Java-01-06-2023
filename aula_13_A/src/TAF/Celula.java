@@ -53,4 +53,7 @@ public class Celula{
     public Celula(Contato C) {
 	this.contato=C;//Contato
     }
+    public String mostrarContato(){
+        return this.contato.toString();
+    }
 }

@@ -27,10 +27,10 @@ public class Principal {
             System.out.println("06 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("07 - Manipulacao de Listas Encadeadas Simples");//Enunciado
             System.out.println("===08 - Gestao de Lista de Sites=============");//Enunciado
-            System.out.println("===09 - =====================================");//Enunciado
-            System.out.println("===10 - =====================================");//Enunciado
-            System.out.println("===11 - =====================================");//Enunciado
-            System.out.println("===12 - =====================================");//Enunciado
+            System.out.println("09 - Manipulacao de Listas Encadeadas Dupla==");//Enunciado
+            System.out.println("===10 - Manipulacao de Conjuntos com Listas==");//Enunciado
+            System.out.println("===11 - Remocao de Chaves Pares==============");//Enunciado
+            System.out.println("===12 - Manipulacao de Caracteres em Listas==");//Enunciado
 
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
@@ -66,7 +66,7 @@ public class Principal {
                     Act_9.main(args);
                     break;//Condição de parada
                 case 10://Chama o procedimento
-                    Exercises.Exercise_10();
+                    Act_10.main(args);
                     break;//Condição de parada
                 case 11://Chama o procedimento
                     Exercises.Exercise_11();
@@ -80,6 +80,7 @@ public class Principal {
                         System.out.println("\n=Saindo de Atividade Teorica TAFs Flexiveis =");//Enunciado
                         System.out.println("====E voltando para Atividade Teorica TADs,==");
                         System.out.println("===============TAFs e Testes=================\n");//Enunciado
+                        
                     }
                     else{//Se não estiver no intervalo, informa ao usuario
                         //e reapresenta o menu
@@ -88,6 +89,6 @@ public class Principal {
                     } 
             }      
         }while( opcao!=0);//Se repetira enquanto não for zero
-        Main.main(args);//retorna ao main
+        Main.main(args);
     }
 }

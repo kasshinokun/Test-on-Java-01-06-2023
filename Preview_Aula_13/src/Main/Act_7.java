@@ -4,10 +4,10 @@ import java.util.*;//Simplificação de Bibliotecas necessárias
 import TAF.*;//Package para Lista Simples Encadeada e outros TAFs
 
 public class Act_7 {
-    public static void main(String[] args) {//Main da classe
+    static Scanner reader = new Scanner(System.in);
+    //Variavel global para entrada do teclado na classe
         
-        Scanner reader = new Scanner(System.in);
-        //Variavel para entrada do teclado
+    public static void main(String[] args) {//Main da classe
         
         int opcao;//Variavel de escolha
 
@@ -15,13 +15,13 @@ public class Act_7 {
             System.out.println("07 - Manipulacao de Listas Encadeadas Simples");//Enunciado
 
             System.out.println("===========Menu de Sub-exercicos=============");//Enunciado
-            System.out.println("=1) - A)=====================================");//Enunciado
-            System.out.println("=2) - B)=====================================");//Enunciado
-            System.out.println("=3) - C)=====================================");//Enunciado
-            System.out.println("=4) - D)=====================================");//Enunciado
-            System.out.println("=5) - E)=====================================");//Enunciado
-            System.out.println("=6) - F)=====================================");//Enunciado
-            System.out.println("=7) - G)=====================================");//Enunciado
+            System.out.println("=1) - A)Verificacao de numero em Lista=======");//Enunciado
+            System.out.println("=2) - B)Insercao mantendo a ordenacao========");//Enunciado
+            System.out.println("=3) - C)Remocao de elemento==================");//Enunciado
+            System.out.println("=4) - D)Impressão da Lista===================");//Enunciado
+            System.out.println("=5) - E)Copiar Lista para outra Lista========");//Enunciado
+            System.out.println("=6) - F)Concatenar Duas Listas===============");//Enunciado
+            System.out.println("=7) - G)Intercalar Duas Listas===============");//Enunciado
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
             System.out.println("\n======Por favor escolha uma opcao: ==========");//Enunciado
@@ -38,7 +38,7 @@ public class Act_7 {
                     letra_C();
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    letra_E();
+                    letra_D();
                     break;//Condição de parada
                 case 5://Chama o procedimento
                     letra_E();
@@ -65,37 +65,95 @@ public class Act_7 {
         Principal.main(args);//retorna ao main do subprojeto
     }
     private static void letra_A(){
-        System.out.println("\n=1) - A)=====================================");//Enunciado
-        
+        System.out.println("\n=1) - A)Verificacao de numero em Lista=======");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        lista=lista.criarLista();
+        System.out.print("Digite um numero por favor:-------------");//Enunciado
+        int value=Integer.parseInt(reader.nextLine());//armazena o valor
+        lista.buscarNumero(value);
+        System.out.println("\n=============================================");//Enunciado
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_B(){
-        System.out.println("\n=2) - B)=====================================");//Enunciado
-        
+        System.out.println("\n=2) - B)Insercao mantendo a ordenacao========");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        lista=lista.criarLista();
+        System.out.print("Digite um numero por favor:-------------");//Enunciado
+        int value=Integer.parseInt(reader.nextLine());//armazena o valor
+        lista.inserirOrdenado(value);
+        System.out.println("=============================================\n");//Enunciado
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_C(){
-        System.out.println("\n=3) - C)=====================================");//Enunciado
-        
+        System.out.println("\n=3) - C)Remocao de elemento==================");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        lista=lista.criarLista();     
+        lista.mostrar();
+        System.out.print("\nDigite um numero para remover:-------------");//Enunciado
+        int value=Integer.parseInt(reader.nextLine());//armazena o valor
+        value=lista.removerElemento(value);
+        System.out.println("Apos a remocao do numero "+value+" da Lista:");//Enunciado
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_D(){
-        System.out.println("\n=4) - D)=====================================");//Enunciado
-        
+        System.out.println("\n=4) - D)Impressão da Lista===================");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        lista=lista.criarLista();
+        lista.mostrar();
+        System.out.println("\n=============================================");//Enunciado
+        System.out.println("\nExecutando letra: B-Inserir 12; e C-remover 5\n");
+        lista.inserirOrdenado(12);
+        lista.removerElemento(5);
+        System.out.println("\nApos procedimentos===========================");//Enunciado
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_E(){
-        System.out.println("\n=5) - E)=====================================");//Enunciado
-        
+        System.out.println("\n=5) - E)Copiar Lista para outra Lista========");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        System.out.print("\nLista 1: ");
+        lista=lista.criarLista();
+        lista.mostrar();
+        System.out.print("\nLista 2: ");
+        Lista_Simples lista2=new Lista_Simples();
+        lista2=lista.copiarLista(lista2);
+        lista2.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
     private static void letra_F(){
-        System.out.println("\n=6) - F)=====================================");//Enunciado
-        
+        System.out.println("\n=6) - F)Concatenar Duas Listas===============");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        Lista_Simples lista2=new Lista_Simples();
+        System.out.print("\nLista 1: ");
+        lista=lista.criarLista();
+        lista2=lista2.criarLista();
+        lista.mostrar();
+        System.out.print("\nLista 2: ");
+        lista2.mostrar();
+        System.out.println("\nApos Concatenar as Listas:");//Enunciado
+        lista=lista.concatenarLista(lista2);
+        System.out.print("Lista 1: ");
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }private static void letra_G(){
-        System.out.println("\n=7) - G)=====================================");//Enunciado
-        
+        System.out.println("\n=7) - G)Intercalar Duas Listas===============");//Enunciado
+        Lista_Simples lista=new Lista_Simples();
+        Lista_Simples lista2=new Lista_Simples();
+        System.out.print("\nLista 1: ");
+        lista=lista.criarLista();
+        lista2=lista2.criarLista();
+        lista.mostrar();
+        System.out.print("\nLista 2: ");
+        lista2.mostrar();
+        System.out.println("\nApos Intercalar as Listas:");//Enunciado
+        lista=lista.intercalarLista(lista2);
+        System.out.print("Lista 1: ");
+        lista.mostrar();
         System.out.println("\n=============================================\n");//Enunciado
     }
+    
+    
 }
