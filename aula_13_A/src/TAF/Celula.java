@@ -52,6 +52,10 @@ public class Celula{
     } 
     public Celula(Contato C) {
 	this.contato=C;//Contato
+    }//outra opção para instanciar objeto do tipo Contato
+    public Celula(String nome,String telefone,String email,String cpf) {
+	//Instancia com as strings direto na classe
+        this.contato=new Contato(nome,telefone,email,cpf);
     }
     public String mostrarContato(){
         return this.contato.toString();

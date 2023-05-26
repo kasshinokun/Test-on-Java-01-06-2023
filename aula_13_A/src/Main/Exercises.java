@@ -52,6 +52,8 @@ public class Exercises {
         Agenda.inserirFim2(new Celula(c2));//Instancia Celula e envia a lista
         Agenda.inserirFim2(new Celula(c3));//Instancia Celula e envia a lista
         Agenda.inserirFim2(new Celula(c4));//Instancia Celula e envia a lista
+        //Instancia contato direto na celula e envia a lista
+        Agenda.inserirFim2(new Celula("Joana","(31)3674-7642","joana@gatonet.com","123.456.789-00"));
         Agenda.mostrar();//Exibe a lista
         
         
