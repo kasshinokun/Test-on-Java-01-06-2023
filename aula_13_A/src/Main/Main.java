@@ -1,6 +1,6 @@
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-
+import Main.Exercise.*;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
@@ -23,19 +23,19 @@ public class Main {
             switch(opcao){//Analise do que foi digitado
 
                 case 1://Chama o procedimento
-                    Exercises.Exercise_1();
+                    Exercise_1.main(args);
                     break;//Condição de parada
                 case 2://Chama o procedimento
-                    Exercises.Exercise_2();
+                    Exercise_2.main(args);
                     break;//Condição de parada
                 case 3://Chama o procedimento
-                    Exercises.Exercise_3();
+                    Exercise_3.main(args);
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    Exercises.Exercise_4();
+                    Exercise_4.main(args);
                     break;//Condição de parada
                 case 5://Chama o procedimento
-                    Exercises.Exercise_5();
+                    Exercise_5.main(args);
                     break;//Condição de parada
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento

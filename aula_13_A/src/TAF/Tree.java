@@ -1,10 +1,11 @@
 package TAF;
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis
-public class Tree {
-    No raiz;
+public class Tree {//Arvore de Inteiros
+    public No raiz;
     public Tree(){
         raiz=null;
+        
     }
     public void inserir(int x) {
         raiz = inserir(x, raiz);
@@ -65,18 +66,22 @@ public class Tree {
     }
 
     public void caminharCentral(No n) {
+        
         if (n != null) {
             caminharCentral(n.esq);
-            System.out.print(n.i + "");
+            System.out.print(n.i + " ");
             caminharCentral(n.dir);
         }
+        
     }
     public void caminharPre(No n) {
+        
         if (n != null) {
-            System.out.print(n.i + "");
+            System.out.print(n.i + " ");
             caminharCentral(n.esq);
             caminharCentral(n.dir);
         }
+        
     }
     public void caminharPos(No n) {
         if (n != null) {

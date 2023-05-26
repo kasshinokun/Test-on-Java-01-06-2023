@@ -222,4 +222,18 @@ public class Lista_Simples {
         i=null;
         return resp;
     }
+    public void pesquisar(String x){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        while(i!=null){
+            if(i.contato.nome==x){
+                resp=true;
+                break;
+            }
+            i=i.prox;
+        }
+        i.mostrarContato();
+        i=null;
+        
+    }
 }

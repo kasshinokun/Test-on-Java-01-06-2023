@@ -1,19 +1,60 @@
-package Main;//Nome do Subprojeto
+package Main.Exercise;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis
 
-public class Exercises {
+public class Exercise_1 {
     public static Scanner reader=new Scanner(System.in);
     //Objeto Scanner para Entrada global do teclado
-    
-    public static void Exercise_1(){
+    public static void main(String[] args){
         System.out.println("\n===01 - Gestao de Lista de Contatos==========");//Enunciado
+        letra_A();
+        //letra_B();
+        System.out.println("Retornando ao Menu Inicial");//Enunciado
+        System.out.println("=============================================\n");//Enunciado
+    
+    
+    }
+    private static void letra_A(){//Teste Arvore de Listas de Contato
+        
+        Agenda Arvore=new Agenda();
+        
+        System.out.println("\n===A) - Insercao e Exibir Lista de Contatos==");//Enunciado
+        /*
+        System.out.println("Caminho 1====================================");//Enunciado
+        Arvore.caminharPre(Arvore.raiz);
+        System.out.println("Caminho 2====================================");//Enunciado
+        Arvore.caminharCentral(Arvore.raiz);
+        System.out.println("Caminho 3====================================");//Enunciado
+        Arvore.caminharPos(Arvore.raiz);
+        System.out.println("=============================================");//Enunciado
+        */
+        
+        
+        System.out.println("=============================================\n");//Enunciado
+    }
+    private static void letra_B(){ //Teste Arvore de Inteiros
+        int []arr={9,8,7,6,5,4,3,2,1};
+        Tree Arvore=new Tree();
+        for(int i=0;i<arr.length;i++){
+            Arvore.inserir(arr[i]);
+        }
+        System.out.println();
+        Arvore.caminharPre(Arvore.raiz);
+        System.out.println();
+        Arvore.caminharCentral(Arvore.raiz);
+        System.out.println();
+        Arvore.caminharPos(Arvore.raiz);
+        System.out.println("\n");
+    }
+    private static void letra_C(){}
+    private static void letra_D(){}
+    
+    private static void esboco(){
+        //Esboço Exercicio 01
+        
         //instancia os objetos
         No n=new No('A');
         Lista_Simples Agenda=new Lista_Simples();
-        
-        System.out.println("\n==Insercao e Exibir Lista de Contatos========");//Enunciado
-        
         //Inserção de Strings conforme desejo do usuario
         //Solicitação ao usuario das Strings
         int op=1;
@@ -82,24 +123,7 @@ public class Exercises {
         
         Agenda.mostrar();//Exibe a lista
         n.view();//Exibe a lista presente no 
-        
-        System.out.println("\n=============================================\n");//Enunciado
-    
+        System.out.println("Retornando ao Menu do Exercicio 01");//Enunciado   
     
     }
-    public static void Exercise_2(){
-        
-    }
-    public static void Exercise_3(){}
-    public static void Exercise_4(){}
-    public static void Exercise_5(){
-        System.out.println("\n===05 - Gestao de Matriz de Inteiros=========");//Enunciado
-        Matriz Matriz=new Matriz();//Instancia e Prepara a Matriz com listas
-        Matriz.inserir(0, 0, 5);//Adiciona  o numero desejado na posição
-        Matriz.mostrar();//Exibe a Matriz
-        System.out.println(Matriz.pesquisar(5));//Pesquisa até a 1ª ocoreencia do numero desejado
-        System.out.println(Matriz.pesquisar(0, 0, 5));//Pesquisa o numero desejado na posição
-        System.out.println("\n=============================================\n");//Enunciado
-    }
-    
 }
