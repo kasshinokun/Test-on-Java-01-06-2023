@@ -184,7 +184,7 @@ public class Lista_Simples {
     
     public void mostrar(){
         Celula i = this.primeiro.prox;
-        System.out.println("\n=============================================");//Enunciado
+        System.out.println("\nContatos\n=============================================");//Enunciado
         for(;i!=null;i=i.prox){
             System.out.println(i.mostrarContato());
             System.out.println("=============================================");//Enunciado
@@ -208,5 +208,18 @@ public class Lista_Simples {
         }
     }
 //=========================================================================================
-
+    public boolean pesquisar(int x){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        while(i!=null){
+            if(i.elemento1==x){
+                resp=true;
+                break;
+            }
+            i=i.prox;
+        }
+        
+        i=null;
+        return resp;
+    }
 }

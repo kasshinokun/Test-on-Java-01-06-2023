@@ -3,11 +3,11 @@ package TAF;
 import java.util.*;//simplificação de Bibliotecas
 public class Matriz {
 	
-    private Celula inicio, fim;//Variavel para indica inicio e fim da matriz
+    private Celula inicio;//Variavel para indica inicio  da matriz
     private int l, c;//Variaveis de dimensões da matriz
 
     public Matriz() {//construtor default
-
+        //this.inicio=new Celula();
         this.l=3;//para linhas
         this.c=3;//para colunas
 
@@ -43,7 +43,7 @@ public class Matriz {
                     cont++;
                     i.dir=tmp;
                     tmp.esq=i;
-                    this.fim=i.dir;//Marcação para o Final
+                    
                     
                     if(k1>0) {
 

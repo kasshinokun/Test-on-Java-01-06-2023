@@ -1,4 +1,4 @@
-package BST;
+package TAF;
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis
 public class Tree {

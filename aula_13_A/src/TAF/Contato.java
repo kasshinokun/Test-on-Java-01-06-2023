@@ -2,7 +2,7 @@ package TAF;
 
 import java.util.*;//simplificação de Bibliotecas
 public class Contato {
-    String nome;
+    public String nome;
     String telefone;
     String email;
     String cpf;

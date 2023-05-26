@@ -1,4 +1,4 @@
-package BST;//Nome do subprojeto
+package TAF;//Nome do subprojeto
 
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis

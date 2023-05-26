@@ -1,4 +1,3 @@
-
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
 
@@ -16,7 +15,7 @@ public class Main {
             System.out.println("===02 - Gestao de Lista de Contatos==========");//Enunciado
             System.out.println("===03 - Gestao de Lista de Contatos==========");//Enunciado
             System.out.println("===04 - Gestao de Lista de Contatos==========");//Enunciado
-            System.out.println("===05 - Gestao de Lista de Contatos==========");//Enunciado
+            System.out.println("===05 - Gestao de Matriz de Inteiros=========");//Enunciado
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
             System.out.println("\n======Por favor escolha uma opcao: ==========");//Enunciado
