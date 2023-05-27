@@ -52,11 +52,6 @@ public class Agenda {//Arvore de Listas de Contato
         }
             return n;
     }
-    public void inserir(Contato c){ }
-    public void pesquisar_Nome(){}
-    public void Exibir_Letra(char c){
-    
-    }
     public void caminharCentral(No n) {
         
         if (n != null) {
@@ -82,13 +77,30 @@ public class Agenda {//Arvore de Listas de Contato
             n.view();
         }
     }
-    public boolean pesquisar(String x) {
+    public void inserir(Celula x) {//Inserção de Contato
+        No n=raiz;
+        inserir(x,x.contato.nome.charAt(0), n);
+    }
+    public void inserir(Celula y, char x, No n) {//Inserção de Contato
+        
+        if (n == null) {
+            
+        } else if(x==n.c){
+            System.out.println("Inserindo : "+y.contato.nome+" na Lista "+x+"\n");
+            n.Add(y);
+        } else if(x < n.c) {
+            inserir(y,x, n.esq);
+        } else {
+            inserir(y,x, n.dir);
+        }       
+    }
+    public boolean pesquisar(String x) {//Pesquisa de Nome
       
         No n=raiz;
         boolean resp=pesquisar(x,x.charAt(0), n);
         return resp;
     }
-    public boolean pesquisar(String y, char x, No n) {
+    public boolean pesquisar(String y, char x, No n) {//Pesquisa de Nome
         boolean resp;
         if (n == null) {
             resp = false;
@@ -105,7 +117,22 @@ public class Agenda {//Arvore de Listas de Contato
         }
         return resp;
     }
+    //Em desenvolvimento
+    public void pesquisarCPF(String cpf) {//Busca pelo CPF
+        No n=raiz;
+        pesquisarCPF(cpf, n.c, n);
+        //Analisar ao final e comparar com Pesquisar nome    
+        
+        
+    }
+    public void pesquisarCPF(String y, char x, No n){//Busca pelo CPF
+        
+    //Analisar ao final e comparar com Pesquisar nome    
+    
+        
+    }
 //===============================================================================
+    //Codigos-padrao da arvore baseados na arvore de inteiros
     public void inserirPai(char x){
         if(raiz == null) {
             raiz = new No(x);
@@ -132,7 +159,6 @@ public class Agenda {//Arvore de Listas de Contato
             System.out.println("Erro!");
         }
     }
-//===============================================================================
     public void remover(char x){
         raiz = remover(x, raiz);
     }
@@ -161,29 +187,42 @@ public class Agenda {//Arvore de Listas de Contato
        return j;
    }
 //========================================================================
-    public void remover2(char x){
+    public void remover2(char x){//Teste
         
     }
-    public No remover2(char x, No n){
+    public No remover2(char x, No n){//Teste
         
         return n;
     }
 //========================================================================
-    public void inserir(Celula x) {
-        No n=raiz;
-        inserir(x,x.contato.nome.charAt(0), n);
-    }
-    public void inserir(Celula y, char x, No n) {
-        
-        if (n == null) {
-            
-        } else if(x==n.c){
-            System.out.println("Inserindo : "+y.contato.nome+" na Lista "+x+"\n");
-            n.Add(y);
-        } else if(x < n.c) {
-            inserir(y,x, n.esq);
-        } else {
-            inserir(y,x, n.dir);
-        }       
-    }
+    //Erro de Lógica
 }
+    
+    /*
+    //Analisar codigo Pesquisar
+    public void pesquisarCPF(String x) {
+        No n=raiz;
+        boolean resp=pesquisarCPF(x,n);
+        if(resp==false){
+            System.out.print("O CPF :"+x+" nao foi encontrado nas Listas");
+        }
+        return resp;
+    }
+    public boolean pesquisarCPF(String x, No n){
+        boolean resp=false;
+        while(n != null) {
+            resp=n.Lista.pesquisarCPF(x,n.c);
+            if(resp==false){
+                resp=pesquisarCPF(x,n.esq);
+            }
+            if(resp==false){
+                resp=pesquisarCPF(x,n.dir);
+            }else{
+                break;
+            }
+        }
+        //Analise do codigo comentado
+        return resp;
+        
+    }    
+    */

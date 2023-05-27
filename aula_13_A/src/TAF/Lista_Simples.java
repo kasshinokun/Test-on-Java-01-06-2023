@@ -181,7 +181,77 @@ public class Lista_Simples {
             n++;
         }
     }
-    
+    public Celula removerInicio2(){
+        if (primeiro==ultimo){
+            //Informa ao Usuario
+            System.out.println("\n=============Nao e possivel ================");
+            System.out.println("==============Inserir dados,================");
+            System.out.println("============== Lista Vazia !!===========\n");
+            return null;
+        }
+        else{
+            Celula tmp=primeiro;
+            primeiro=primeiro.prox;
+            Celula elemento = new Celula(primeiro.contato);
+            tmp.prox=null;
+            tmp=null;
+            n--;
+            return elemento;
+        }
+    }
+    public Celula removerPos2(int pos) {
+    	//Remoção de inteiros na posição designada do vetor
+    	if(primeiro==ultimo||pos<0||pos>=n){
+            //Se n igual a 0....
+            //Ou também se pos menor que 0.... 
+            //Ou pos maior ou igual a n..... 
+
+            //Informa ao Usuario
+            System.out.println("\n=============Nao e possivel ================");
+            System.out.println("==============Remover dados,================");
+            System.out.println("==========Parametros Invalidos !!===========\n");
+                                  
+            return null;
+        }else if(pos==0){
+            return removerInicio2();
+        }
+        else if(pos==n-1){
+            return removerFim2();
+        }else{//senao....
+           
+            Celula i=this.primeiro;
+            for(int j=0;j<pos;j++,i=i.prox);
+            Celula tmp=i.prox;
+            Celula resp=new Celula(tmp.contato);
+            i.prox=tmp.prox;
+            tmp.prox=null;
+            i=tmp=null;
+            n--;
+            return resp;
+        }
+            
+     
+    }
+    public Celula removerFim2(){
+        if(primeiro==ultimo){
+            //Informa ao Usuario
+            System.out.println("\n=============Nao e possivel ================");
+            System.out.println("==============Inserir dados,================");
+            System.out.println("============== Lista Vazia !!===========\n");
+            return null;
+        }else{
+                       
+           Celula i = this.primeiro;
+        
+            for(;i.prox!=ultimo;i=i.prox);
+            Celula y=new Celula(ultimo.contato);
+            
+            ultimo=i;
+            i=ultimo.prox=null;
+            n--;
+            return y;
+        }
+    }
     public void mostrar(){
         Celula i = this.primeiro.prox;
         System.out.println("\nContatos\n=============================================");//Enunciado
@@ -239,7 +309,35 @@ public class Lista_Simples {
         }
         
         i=null;
-        return resp;
+        return resp; 
+    }
+    public void pesquisarCPF(String x, char c){
         
+        
+        
+    }
+    public boolean removerContato(String x, char c){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        int cont=0;
+        while(i!=null){
+            if(i.contato.nome.equalsIgnoreCase(x)){
+                resp=true;
+                break;
+            }
+            i=i.prox;
+            cont++;
+        }
+        if(resp==true){
+            i=removerPos2(cont);
+            System.out.print("O nome :"+i.contato.nome+" foi removido da Lista "+c);
+            System.out.println(i.mostrarContato());
+            
+            
+        }else{
+            System.out.print("O nome :"+x+" nao foi encontrado na Lista "+c);
+        }
+        i=null;
+        return resp;
     }
 }
