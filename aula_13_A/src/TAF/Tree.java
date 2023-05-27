@@ -49,7 +49,9 @@ public class Tree {//Arvore de Inteiros
         }
     }
     public boolean pesquisar(int x) {
-        return pesquisar(x, raiz);
+        No n=raiz;
+        boolean resp=pesquisar(x, n);
+        return resp;
     }
     public boolean pesquisar(int x, No n) {
         boolean resp;
@@ -61,6 +63,9 @@ public class Tree {//Arvore de Inteiros
             resp = pesquisar(x, n.esq);
         } else {
             resp = pesquisar(x, n.dir);
+        }
+        if(resp==true&&n.i==x){
+            System.out.println(n.i);
         }
         return resp;
     }

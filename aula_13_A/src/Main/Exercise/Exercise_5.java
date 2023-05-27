@@ -12,10 +12,11 @@ public class Exercise_5 {
         letra_B(Matriz);//Exibe a Matriz
         letra_C(Matriz);//Pesquisa pela 1ª ocorrencia
         letra_D(Matriz);//Pesquisa na posição desejada
-        System.out.println("=============================================");//Enunciado
+        System.out.println("\n=============================================");//Enunciado
     }
     private static void letra_A(Matriz Matriz){
         //Adiciona  o numero desejado na posição
+        System.out.println("Inserindo dados na Matriz");
         Matriz.inserir(0, 0, 5);
     }
     private static void letra_B(Matriz Matriz){
@@ -24,11 +25,11 @@ public class Exercise_5 {
     }
     private static void letra_C(Matriz Matriz){
         //Pesquisa até a 1ª ocorrencia do numero desejado
-        System.out.println(Matriz.pesquisar(5));
+        Matriz.pesquisar(5);
     }
     private static void letra_D(Matriz Matriz){
         //Pesquisa o numero desejado na posição
-        System.out.println(Matriz.pesquisar(0, 0, 5));
+        Matriz.pesquisar(0, 0, 5);
     
     }
 }

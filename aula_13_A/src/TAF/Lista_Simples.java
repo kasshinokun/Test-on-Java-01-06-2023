@@ -218,22 +218,28 @@ public class Lista_Simples {
             }
             i=i.prox;
         }
-        
+        if(resp==true){
+            System.out.print("\no numero: "+i.elemento1+" foi encontrado");
+        }
         i=null;
         return resp;
     }
-    public void pesquisar(String x){
+    public boolean pesquisar(String x){
         Celula i = this.primeiro.prox;
         boolean resp=false;
         while(i!=null){
-            if(i.contato.nome==x){
+            if(i.contato.nome.equalsIgnoreCase(x)){
                 resp=true;
                 break;
             }
             i=i.prox;
         }
-        i.mostrarContato();
+        if(resp==true){
+            System.out.println(i.mostrarContato());
+        }
+        
         i=null;
+        return resp;
         
     }
 }

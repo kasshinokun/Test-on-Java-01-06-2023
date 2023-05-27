@@ -83,23 +83,25 @@ public class Agenda {//Arvore de Listas de Contato
         }
     }
     public boolean pesquisar(String x) {
-        boolean resp=pesquisar(x.charAt(0), raiz);
-        if(resp==true){
-            raiz.view();
-            //raiz.Lista.pesquisar(x);
-        }
+      
+        No n=raiz;
+        boolean resp=pesquisar(x,x.charAt(0), n);
         return resp;
     }
-    public boolean pesquisar(char x, No n) {
+    public boolean pesquisar(String y, char x, No n) {
         boolean resp;
         if (n == null) {
             resp = false;
         } else if(x == n.c) {
             resp = true;
         } else if(x < n.c) {
-            resp = pesquisar(x, n.esq);
+            resp = pesquisar(y,x, n.esq);
         } else {
-            resp = pesquisar(x, n.dir);
+            resp = pesquisar(y,x, n.dir);
+        }
+        if(resp==true&&x==n.c){
+            System.out.println("Buscando : "+y+" na Lista "+x+"\n");
+            resp=n.Lista.pesquisar(y);
         }
         return resp;
     }
@@ -165,5 +167,23 @@ public class Agenda {//Arvore de Listas de Contato
     public No remover2(char x, No n){
         
         return n;
+    }
+//========================================================================
+    public void inserir(Celula x) {
+        No n=raiz;
+        inserir(x,x.contato.nome.charAt(0), n);
+    }
+    public void inserir(Celula y, char x, No n) {
+        
+        if (n == null) {
+            
+        } else if(x==n.c){
+            System.out.println("Inserindo : "+y.contato.nome+" na Lista "+x+"\n");
+            n.Add(y);
+        } else if(x < n.c) {
+            inserir(y,x, n.esq);
+        } else {
+            inserir(y,x, n.dir);
+        }       
     }
 }
