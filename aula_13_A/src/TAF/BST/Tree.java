@@ -1,4 +1,4 @@
-package TAF;
+package TAF.BST;
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis
 public class Tree {//Arvore de Inteiros
@@ -130,4 +130,5 @@ public class Tree {//Arvore de Inteiros
         
         return n;
     }
+    
 }

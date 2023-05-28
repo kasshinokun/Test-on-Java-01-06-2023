@@ -1,4 +1,4 @@
-package TAF;//Nome do subprojeto
+package TAF.BST;//Nome do subprojeto
 
 import java.util.*;//Simplificação de bibliotecas necessarias 
 import TAF.*;//Package com as TAD Flexiveis
@@ -22,7 +22,7 @@ public class Agenda {//Arvore de Listas de Contato
             inserir(V[i]);
         }
     }
-    /*
+    /*//Apesentou erro
     private void inserir(char x) {
         raiz = inserir(x, raiz);
     }
@@ -50,7 +50,7 @@ public class Agenda {//Arvore de Listas de Contato
         } else {
             System.out.println("Erro!");
         }
-            return n;
+        return n;
     }
     public void caminharCentral(No n) {
         
@@ -77,17 +77,17 @@ public class Agenda {//Arvore de Listas de Contato
             n.view();
         }
     }
-    public void inserir(Celula x) {//Inserção de Contato
+    public void inserir(Contato x) {//Inserção de Contato
         No n=raiz;
-        inserir(x,x.contato.nome.charAt(0), n);
+        inserir(x,x.nome.charAt(0), n);
     }
-    public void inserir(Celula y, char x, No n) {//Inserção de Contato
+    public void inserir(Contato y, char x, No n) {//Inserção de Contato
         
         if (n == null) {
             
         } else if(x==n.c){
-            System.out.println("Inserindo : "+y.contato.nome+" na Lista "+x+"\n");
-            n.Add(y);
+            System.out.println("Inserindo : "+y.nome+" na Lista "+x+"\n");
+            n.Add(new Celula (y));//Conversão para Simplificar codigo(Exercicio 2 usa o mesmo codigo)
         } else if(x < n.c) {
             inserir(y,x, n.esq);
         } else {
@@ -121,25 +121,43 @@ public class Agenda {//Arvore de Listas de Contato
     public boolean pesquisarCPF(String cpf) {//Busca pelo CPF
         No n=raiz;
         boolean resp=pesquisarCPF(cpf, n);
-        if(resp==false){
-            System.out.println("\nO CPF: "+cpf+" foi encontrado nas Listas");
-        }
-        return resp;
+        return resp;        
     }
     public boolean pesquisarCPF(String y, No n){//Busca pelo CPF
-        
-        
         boolean resp=false;
         if (n != null) {
             pesquisarCPF(y,n.esq);
-            resp=n.buscarCPF(y);
+            resp=n.Lista.ListarCPF(y,n.c);
             if(resp==true){
-                return resp;
+                return true;
             }
             pesquisarCPF(y,n.dir);
-        }return resp;
-        
+        }        
+        return resp;
     
+    }
+    public boolean remover(String x) {//Pesquisa de Nome
+      
+        No n=raiz;
+        boolean resp=remover(x,x.charAt(0), n);
+        return resp;
+    }
+    public boolean remover(String y, char x, No n) {//Pesquisa de Nome
+        boolean resp;
+        if (n == null) {
+            resp = false;
+        } else if(x == n.c) {
+            resp = true;
+        } else if(x < n.c) {
+            resp = remover(y,x, n.esq);
+        } else {
+            resp = remover(y,x, n.dir);
+        }
+        if(resp==true&&x==n.c){
+            System.out.println("Buscando : "+y+" na Lista "+x+"\n");
+            resp=n.Lista.removerPessoa(y,n.c);
+        }
+        return resp;
     }
 //===============================================================================
     //Codigos-padrao da arvore baseados na arvore de inteiros

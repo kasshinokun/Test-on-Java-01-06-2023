@@ -5,13 +5,15 @@ import TAF.BST.*;//Package com as Arvores Binarias
 public class Exercise_2 {
     public static Scanner reader=new Scanner(System.in);
     //Objeto Scanner para Entrada global do teclado
-    public static void main(String[] args){
+    public static void main(String[] args){//Em desenvolvimento
+        System.out.println("===02 - Gestao de Arvore de Arvore de Listas=");//Enunciado
         T_Strings Arvore=new T_Strings();
-        //Não foi possivel concluir a logiga
+        
         Arvore.inserir("Manoel");
-        Arvore.inserir("Manoel");
-        Arvore.inserir("Manoel");
-        Arvore.mostrar();
+        Arvore.inserir("Maria");
+        Arvore.inserir("Marcos");
+        
+        Arvore.mostrar();//Analisar codigo na classe
     
     }
     private static void letra_A(){}
