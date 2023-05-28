@@ -63,4 +63,7 @@ public class No{
         System.out.println("No :"+this.c);//Enunciado
         Lista.mostrar3();
     }
+    public boolean buscarCPF(String x){
+        return Lista.ListarCPF(x,c);
+    }
 }

@@ -311,10 +311,19 @@ public class Lista_Simples {
         i=null;
         return resp; 
     }
-    public void pesquisarCPF(String x, char c){
-        
-        
-        
+    public boolean ListarCPF(String x, char c){
+        Celula i = this.primeiro.prox;
+        boolean resp=false;
+        for(;i!=null;i=i.prox){
+            if(i.contato.cpf.equalsIgnoreCase(x)){
+                System.out.println("\nO CPF: "+x+" foi encontrado na Lista "+c);
+                System.out.println(i.mostrarContato());
+                resp=true;
+                break;
+            }
+        }
+        i=null;
+        return resp;
     }
     public boolean removerContato(String x, char c){
         Celula i = this.primeiro.prox;

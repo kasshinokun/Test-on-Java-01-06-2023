@@ -118,18 +118,28 @@ public class Agenda {//Arvore de Listas de Contato
         return resp;
     }
     //Em desenvolvimento
-    public void pesquisarCPF(String cpf) {//Busca pelo CPF
+    public boolean pesquisarCPF(String cpf) {//Busca pelo CPF
         No n=raiz;
-        pesquisarCPF(cpf, n.c, n);
-        //Analisar ao final e comparar com Pesquisar nome    
-        
-        
+        boolean resp=pesquisarCPF(cpf, n);
+        if(resp==false){
+            System.out.println("\nO CPF: "+cpf+" foi encontrado nas Listas");
+        }
+        return resp;
     }
-    public void pesquisarCPF(String y, char x, No n){//Busca pelo CPF
+    public boolean pesquisarCPF(String y, No n){//Busca pelo CPF
         
-    //Analisar ao final e comparar com Pesquisar nome    
+        
+        boolean resp=false;
+        if (n != null) {
+            pesquisarCPF(y,n.esq);
+            resp=n.buscarCPF(y);
+            if(resp==true){
+                return resp;
+            }
+            pesquisarCPF(y,n.dir);
+        }return resp;
+        
     
-        
     }
 //===============================================================================
     //Codigos-padrao da arvore baseados na arvore de inteiros
@@ -195,34 +205,4 @@ public class Agenda {//Arvore de Listas de Contato
         return n;
     }
 //========================================================================
-    //Erro de Lógica
 }
-    
-    /*
-    //Analisar codigo Pesquisar
-    public void pesquisarCPF(String x) {
-        No n=raiz;
-        boolean resp=pesquisarCPF(x,n);
-        if(resp==false){
-            System.out.print("O CPF :"+x+" nao foi encontrado nas Listas");
-        }
-        return resp;
-    }
-    public boolean pesquisarCPF(String x, No n){
-        boolean resp=false;
-        while(n != null) {
-            resp=n.Lista.pesquisarCPF(x,n.c);
-            if(resp==false){
-                resp=pesquisarCPF(x,n.esq);
-            }
-            if(resp==false){
-                resp=pesquisarCPF(x,n.dir);
-            }else{
-                break;
-            }
-        }
-        //Analise do codigo comentado
-        return resp;
-        
-    }    
-    */

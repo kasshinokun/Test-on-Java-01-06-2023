@@ -10,7 +10,7 @@ public class Exercise_1 {
         Agenda Arvore=new Agenda();
         letra_A(Arvore);
         letra_B(Arvore);
-        //letra_C(Arvore);//Em desenvolvimento
+        letra_C(Arvore);//Em desenvolvimento
         //letra_D(Arvore);//Em desenvolvimento
         letra_E(Arvore);
         System.out.println("Retornando ao Menu Inicial");//Enunciado
@@ -28,6 +28,7 @@ public class Exercise_1 {
         Arvore.inserir(new Celula("Beatriz","(12)3456-7890","beatriz@gatonet.com","789.123.456-00"));
         Arvore.inserir(new Celula("Carlos","(12)3456-7890","carlos@gatonet.com","321.456.789-00"));
         Arvore.inserir(new Celula("Celson","(12)3456-7890","celson@gatonet.com","231.456.789-00"));
+        Arvore.inserir(new Celula("Zoroastro","(12)3456-7890","zoroastro@gatonet.com","111.111.111-11"));
         
         int op;
         //Inserção de Strings conforme desejo do usuario
@@ -60,19 +61,22 @@ public class Exercise_1 {
         System.out.println(Arvore.pesquisar("Beatriz"));
         System.out.println(Arvore.pesquisar("Carlos"));
         System.out.println(Arvore.pesquisar("Celson"));
+        System.out.println(Arvore.pesquisar("Zoroastro"));
         System.out.print("Digite um nome para pesquisar:--");
         System.out.println(Arvore.pesquisar(reader.nextLine()));//armazena o valor
         System.out.println("=============================================");//Enunciado
     
     }
     private static void letra_C(Agenda Arvore){
-        System.out.println("===C) - Pesquisa por cpf na Arvore===========");//Enunciado
-        System.out.print("Digite um cpf para pesquisar:--");
+        System.out.println("\n===C) - Pesquisa por cpf na Arvore===========");//Enunciado
+        Arvore.pesquisarCPF("111.111.111-11");//Predefinido
+        /*
+        System.out.print("\nDigite um cpf para pesquisar:--");//Solicitação ao usuario
         String cpf=reader.nextLine();//armazena o valor
-        
-        Arvore.pesquisarCPF(cpf);//Recriar para sair do loop infinito do System.out.println();
-        //Arvore.pesquisarCPF("231.456.789-00");//Predefinido
-        System.out.println("=============================================");//Enunciado
+        //Envia ao procedimento
+        System.out.println(Arvore.pesquisarCPF(cpf));
+        */
+        System.out.println("\n=============================================");//Enunciado
     }
     private static void letra_D(Agenda Arvore){
         System.out.println("\n===D) - Remocao na Arvore Binaria============");//Enunciado
