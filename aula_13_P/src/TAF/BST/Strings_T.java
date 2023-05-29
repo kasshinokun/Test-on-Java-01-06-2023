@@ -3,12 +3,10 @@ import java.util.*;//Simplificação de bibliotecas necessarias
 import TAF.*;//Package com as TAD Flexiveis
 import TAF.BST.*;//Package com as Arvores Binarias
 
-public class T_Strings {//Arvore de Arvore
-    public No raiz;
-    
-    public T_Strings(){
-        this.raiz=null;
-    
+public class Strings_T {//Arvore de Lista de Strings
+    No raiz;
+    public Strings_T(String s){
+        No raiz=new No(s);
     }
     public void criarNo(String nome) {
         No n=raiz;
@@ -17,6 +15,7 @@ public class T_Strings {//Arvore de Arvore
         
     }
     public No criarNo(String x, No n){
+        
         if (n == null) {
             n = new No(x);
             
@@ -31,16 +30,16 @@ public class T_Strings {//Arvore de Arvore
     }
     public void inserir(String nome) {//Inserção de Contato
         No n=raiz;
-        inserir(nome,nome.substring(0,1), n);
+        inserir(nome,nome.substring(0,3), n);
     }
     public void inserir(String nome, String x, No n) {//Inserção de Contato
         
         if (n == null) {
            criarNo(nome);
         } else if (x.compareToIgnoreCase(n.s)==0) {
-            System.out.println("\nInserindo : "+nome+" na Arvore "+x+"\n");
-            n=new No(nome,nome.charAt(0));
-            n.Tree.inserir(nome);//envia para subArvore
+            System.out.println("\nInserindo : "+nome+" na Lista "+x+"\n");
+            n.Add(new Celula (nome));//Conversão para Simplificar codigo(Exercicio 2 usa o mesmo codigo)
+            n.view3();
         } else if (x.compareToIgnoreCase(n.s)<0) {
             inserir(nome,x, n.esq);
         } else {
@@ -96,7 +95,8 @@ public class T_Strings {//Arvore de Arvore
         if (n != null) {
             caminharCentral(n.esq);
             caminharCentral(n.dir);
-            n.view4();
+            n.view3();
         }
     }
+
 }

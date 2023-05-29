@@ -1,12 +1,14 @@
 package TAF;
 
 import java.util.*;//simplificação de Bibliotecas
+import TAF.BST.*;
+
 public class No{
     public char c;//Variavel para caracteres
     public int i;//Variavel para inteiros
     public String s;//Variavel para Strings
     public Lista_Simples Lista;
-    
+    public Strings_T Tree;
     //Adaptação para Matriz
     //Ponteiros
     public No esq;//variavel para Esquerda
@@ -40,6 +42,13 @@ public class No{
         this.esq=null;
         this.dir=null;  
         this.Lista=new Lista_Simples();
+    }
+    public No(String s, char c){
+        this.c=s.charAt(0);
+        this.esq=null;
+        this.dir=null;  
+        this.Tree=new Strings_T(s.substring(0, 3));
+    
     }
     //Nós Pai com Nós Filhos
     public No(int x,No esq,No dir){
@@ -81,5 +90,10 @@ public class No{
         System.out.println("\n=============================================");//Enunciado
         System.out.println("No :"+this.s);//Enunciado
         Lista.mostrar2();
+    }
+    public void view4(){//Contatos
+        System.out.println("\n=============================================");//Enunciado
+        System.out.println("No :"+this.s);//Enunciado
+        Tree.mostrar();
     }
 }
