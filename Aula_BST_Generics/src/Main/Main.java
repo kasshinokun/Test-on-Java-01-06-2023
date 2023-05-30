@@ -7,7 +7,7 @@ public class Main {
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
         do{
-            Tree Arvore=new Tree;
+            Tree Arvore=new Tree();
             System.out.println("\n=======Atividade Pratica BST e Generics======\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
