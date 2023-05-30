@@ -1,0 +1,24 @@
+package TAF;
+
+import java.util.*;//simplificação de Bibliotecas
+public class Matriz {
+	
+    private Celula inicio, fim;//Variavel para indica inicio e fim da matriz
+    private int l, c;//Variaveis de dimensões da matriz
+    
+    Lista_Simples lista;
+    
+    public Matriz() {//construtor default
+    	
+        this.l=3;//para linhas
+        this.c=3;//para colunas
+
+    }
+    public Matriz(int a, int b) {//sobrecarga
+
+        this.l=a;
+        this.c=b;
+
+    }
+    
+}

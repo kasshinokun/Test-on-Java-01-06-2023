@@ -1,0 +1,27 @@
+
+package TAF;
+
+import java.util.*;
+public class Agenda {
+    No raiz;
+    public Agenda() {
+
+
+    }
+    private void criar_tree(){
+        char arr[]=new char[26];
+        char k='A';
+        for(int i=0;i<arr.length;i++){
+            arr[i]=k++;
+            System.out.println((i+1)+" "+arr[i]);
+        }
+        montar(arr,0,25);
+    }
+	private void montar(char[]v,int inicio,int fim) {
+		if(inicio<=fim) {
+			
+		}
+		
+	}	
+	
+}
