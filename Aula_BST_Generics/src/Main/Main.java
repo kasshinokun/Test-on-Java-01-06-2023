@@ -1,22 +1,23 @@
 package Main;//Nome do Subprojeto
-//==========================================Projeto enviado ao Professor
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import Main.Exercise.*;
+import BST.Tree;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
         do{
-            System.out.println("\n=======Atividade Pratica TAFs Hibridas=======\n");//Enunciado
+            Tree Arvore=new Tree;
+            System.out.println("\n=======Atividade Pratica BST e Generics======\n");//Enunciado
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("===01 - Gestao de Lista de Contatos==========");//Enunciado
-            System.out.println("===02 - Gestao de Arvore de Arvore de Listas=");//Enunciado
-            System.out.println("===03 - Gestao de Arvore de Arvore de Listas=");//Enunciado
-            System.out.println("===04 - Gestao de Arvore de Arvore de Listas=");//Enunciado
-            System.out.println("===05 - Gestao de Matriz de Inteiros=========");//Enunciado
+            System.out.println("===A) - Inserir Inteiros=====================");//Enunciado
+            System.out.println("===B) - Pesquisar Inteiros===================");//Enunciado
+            System.out.println("===C) - Remover Inteiros=====================");//Enunciado
+            System.out.println("===D) - Caminhar Pre-Order===================");//Enunciado
+            System.out.println("===E) - Caminhar Central=====================");//Enunciado
+            System.out.println("===F) - Caminhar Pos-Order===================");//Enunciado
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
             System.out.println("\n======Por favor escolha uma opcao: ==========");//Enunciado
@@ -24,19 +25,22 @@ public class Main {
             switch(opcao){//Analise do que foi digitado
 
                 case 1://Chama o procedimento
-                    Exercise_1.main(args);
+                	letra_A();//Inserir
                     break;//Condição de parada
                 case 2://Chama o procedimento
-                    Exercise_2.main(args);
+                	letra_B();//pesquisar 
                     break;//Condição de parada
                 case 3://Chama o procedimento
-                    Exercise_3.main(args);
+                	letra_C();//remover 
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    Exercise_4.main(args);
+                	letra_D();//caminharPre() 
                     break;//Condição de parada
                 case 5://Chama o procedimento
-                    Exercise_5.main(args);
+                	letra_E();//void caminharCentral()
+                    break;//Condição de parada
+                case 6://Chama o procedimento
+                	letra_F();//caminharPos() 
                     break;//Condição de parada
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento
@@ -52,4 +56,10 @@ public class Main {
             }      
         }while(opcao!=0);//Se repetira enquanto não for zero
     }
+    public static void letra_A() {}
+    public static void letra_B() {}
+    public static void letra_C() {}
+    public static void letra_D() {}
+    public static void letra_E() {}
+    public static void letra_F() {}
 }
