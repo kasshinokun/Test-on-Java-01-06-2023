@@ -58,7 +58,7 @@ public class G_Main {
     }
     public static void letra_A(BST_Tree<Integer> Tree) {
         System.out.println("===A) - Inserir Generics=====================");//Enunciado
-            int arr[]={9,8,7,6,5,4,3,2,1};//Vetor base
+            int arr[]={19,17,15,13,11,9,7,5,3,1};//Vetor base
 
             for(int i=0;i<arr.length;i++){
                 Tree.inserir(arr[i]);

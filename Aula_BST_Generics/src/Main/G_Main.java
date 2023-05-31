@@ -1,13 +1,13 @@
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import Generics.BST_Tree;
+import Generics.Tree;
 public class G_Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
         int opcao;//Variavel de escolha
         do{
-            BST_Tree<Integer> Tree=new BST_Tree<>();
+            Tree<Integer> Tree=new Tree<>();
             System.out.println("\n=======Atividade Pratica BST e Generics======\n");//Enunciado
 
             System.out.println("=====Generics - Menu de Exercicos============");//Enunciado
@@ -56,9 +56,9 @@ public class G_Main {
             }      
         }while(opcao!=0);//Se repetira enquanto não for zero
     }
-    public static void letra_A(BST_Tree<Integer> Tree) {
+    public static void letra_A(Tree<Integer> Tree) {
         System.out.println("===A) - Inserir Generics=====================");//Enunciado
-            int arr[]={9,8,7,6,5,4,3,2,1};//Vetor base
+            int arr[]={19,17,15,13,11,9,7,5,3,1};//Vetor base
 
             for(int i=0;i<arr.length;i++){
                 Tree.inserir(arr[i]);

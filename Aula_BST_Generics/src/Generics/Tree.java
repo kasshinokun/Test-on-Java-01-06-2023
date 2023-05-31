@@ -5,7 +5,7 @@ import java.lang.*;//Simplificação de bibliotecas necessarias
 import java.io.*;//Simplificação de bibliotecas necessarias 
 import java.util.*;//Simplificação de bibliotecas necessarias 
 
-public class BST_Tree<T extends Comparable<T>>{//Arvore de Inteiros
+public class Tree<T extends Comparable<T>>{//Arvore de Inteiros
     public Node<T> raiz;
     public void inserir(T obj) {
             this.raiz=inserir(obj,raiz);
