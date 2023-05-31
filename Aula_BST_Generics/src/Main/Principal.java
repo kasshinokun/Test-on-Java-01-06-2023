@@ -1,7 +1,7 @@
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import BST.Tree;
-public class Main {
+import Generics.*;
+public class Principal {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
@@ -10,11 +10,11 @@ public class Main {
             Tree Arvore=new Tree();
             System.out.println("\n=======Atividade Pratica BST e Generics======\n");//Enunciado
 
-            System.out.println("=====Inteiros - Menu de Exercicos============");//Enunciado
+            System.out.println("=====Generics - Menu de Exercicos============");//Enunciado
 
-            System.out.println("===A) - Inserir Inteiros=====================");//Enunciado
-            System.out.println("===B) - Pesquisar Inteiros===================");//Enunciado
-            System.out.println("===C) - Remover Inteiros=====================");//Enunciado
+            System.out.println("===A) - Inserir Generics=====================");//Enunciado
+            System.out.println("===B) - Pesquisar Generics===================");//Enunciado
+            System.out.println("===C) - Remover Generics=====================");//Enunciado
             System.out.println("===D) - Caminhar Pre-Order===================");//Enunciado
             System.out.println("===E) - Caminhar Central=====================");//Enunciado
             System.out.println("===F) - Caminhar Pos-Order===================");//Enunciado
@@ -46,7 +46,6 @@ public class Main {
                     if(opcao==0){//despedida do usuario e agradecimento
                         System.out.println("\n===============Muito obrigado================");
                         System.out.println("=======Atividade Pratica BST e Generics======\n");//Enunciado
-                        
                     }
                     else{//Se não estiver no intervalo, informa ao usuario
                         //e reapresenta o menu

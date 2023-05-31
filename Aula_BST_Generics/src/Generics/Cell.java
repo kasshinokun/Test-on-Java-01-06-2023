@@ -1,6 +1,9 @@
 package Generics;
+import java.lang.*;//Simplificação de bibliotecas necessarias 
+import java.io.*;//Simplificação de bibliotecas necessarias 
 import java.util.*;//Simplificação de bibliotecas necessarias 
-public class Cell<T>{
+
+public class Cell<T extends Comparable<T>> {
     
     T elemento;//variavel para inserção de inteiros
        

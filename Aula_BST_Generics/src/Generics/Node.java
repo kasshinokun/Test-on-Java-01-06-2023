@@ -1,6 +1,9 @@
 package Generics;
+import java.lang.*;//Simplificação de bibliotecas necessarias 
+import java.io.*;//Simplificação de bibliotecas necessarias 
 import java.util.*;//Simplificação de bibliotecas necessarias 
-public class Node<T>{
+
+public class Node<T extends Comparable<T>>{
 
 	T elemento;//variavel para inserção de inteiros
        
