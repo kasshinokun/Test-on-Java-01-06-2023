@@ -1,7 +1,7 @@
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import Generics.*;
-public class Principal {
+import BST.Tree;
+public class I_Main{
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
@@ -10,11 +10,11 @@ public class Principal {
             Tree Arvore=new Tree();
             System.out.println("\n=======Atividade Pratica BST e Generics======\n");//Enunciado
 
-            System.out.println("=====Generics - Menu de Exercicos============");//Enunciado
+            System.out.println("=====Inteiros - Menu de Exercicos============");//Enunciado
 
-            System.out.println("===A) - Inserir Generics=====================");//Enunciado
-            System.out.println("===B) - Pesquisar Generics===================");//Enunciado
-            System.out.println("===C) - Remover Generics=====================");//Enunciado
+            System.out.println("===A) - Inserir Inteiros=====================");//Enunciado
+            System.out.println("===B) - Pesquisar Inteiros===================");//Enunciado
+            System.out.println("===C) - Remover Inteiros=====================");//Enunciado
             System.out.println("===D) - Caminhar Pre-Order===================");//Enunciado
             System.out.println("===E) - Caminhar Central=====================");//Enunciado
             System.out.println("===F) - Caminhar Pos-Order===================");//Enunciado
@@ -25,7 +25,7 @@ public class Principal {
             switch(opcao){//Analise do que foi digitado
 
                 case 1://Chama o procedimento
-                	letra_A();//Inserir
+                	letra_A(Arvore);//Inserir
                     break;//Condição de parada
                 case 2://Chama o procedimento
                 	letra_B();//pesquisar 
@@ -45,7 +45,8 @@ public class Principal {
                 default:
                     if(opcao==0){//despedida do usuario e agradecimento
                         System.out.println("\n===============Muito obrigado================");
-                        System.out.println("=======Atividade Pratica BST e Generics======\n");//Enunciado
+                        System.out.println("=======Retornando ao Menu da Atividade=======\n");//Enunciado
+                        Main.main(args);
                     }
                     else{//Se não estiver no intervalo, informa ao usuario
                         //e reapresenta o menu
@@ -55,10 +56,42 @@ public class Principal {
             }      
         }while(opcao!=0);//Se repetira enquanto não for zero
     }
-    public static void letra_A() {}
-    public static void letra_B() {}
-    public static void letra_C() {}
-    public static void letra_D() {}
-    public static void letra_E() {}
-    public static void letra_F() {}
+    public static void letra_A(Tree Arvore) {
+        System.out.println("===A) - Inserir Inteiros=====================");//Enunciado
+        int arr[]={1,2,3,4,5,6,7,8,9};//Vetor base
+        
+        for(int i=0;i<arr.length;i++){
+            Arvore.inserir(arr[i]);
+        }
+        Arvore.caminharCentral(Arvore.raiz);
+        System.out.println("\n===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
+    public static void letra_B() {
+        System.out.println("===B) - Inserir Inteiros=====================");//Enunciado
+        
+        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
+    public static void letra_C() {
+        System.out.println("===C) - Inserir Inteiros=====================");//Enunciado
+        
+        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
+    public static void letra_D() {
+        System.out.println("===D) - Inserir Inteiros=====================");//Enunciado
+        
+        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
+    public static void letra_E() {
+        System.out.println("===E) - Inserir Inteiros=====================");//Enunciado
+        
+        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
+    public static void letra_F() {
+        System.out.println("===F) - Inserir Inteiros=====================");//Enunciado
+        
+        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+    }
 }
+
+
+
