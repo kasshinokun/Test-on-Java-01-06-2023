@@ -1,7 +1,7 @@
 package BST;
 import java.util.*;//Simplificação de bibliotecas necessarias 
 
-public class Tree{//Arvore de Inteiros
+public class Tree {//Arvore de Inteiros
     public No raiz;
     public Tree(){
         raiz=null;
@@ -49,8 +49,12 @@ public class Tree{//Arvore de Inteiros
         }
     }
     public boolean pesquisar(int x) {
+        System.out.println("\nPesquisando pelo numero "+x+".......");
         No n=raiz;
         boolean resp=pesquisar(x, n);
+        if(resp==false){
+            System.out.println("\nO numero "+x+" nao foi encontrado");
+        }
         return resp;
     }
     private boolean pesquisar(int x, No n) {
@@ -65,7 +69,7 @@ public class Tree{//Arvore de Inteiros
             resp = pesquisar(x, n.dir);
         }
         if(resp==true&&n.i==x){
-            System.out.println(n.i);
+            System.out.println("\nO numero "+n.i+" foi encontrado.");
         }
         return resp;
     }
@@ -96,26 +100,45 @@ public class Tree{//Arvore de Inteiros
         }
     }
     public void remover(int x){
+        System.out.println("\nPesquisando pelo numero "+x+".......");
         raiz = remover(x, raiz);
+        
     }
     private No remover(int x, No n){
-        if (n == null) { System.out.println("Erro!");
+        if (n == null) { 
+            System.out.println("\nErro!");
+            System.out.println("\nO numero "+x+" nao foi encontrado.");
         }else if(x < n.i){ 
             n.esq = remover(x, n.esq);
         }else if(x > n.i){ 
             n.dir = remover(x, n.dir);
         }else if(n.dir == null) { 
+            if(n.i==x){
+                System.out.println("\nO numero "+n.i+" foi encontrado.");
+                System.out.println("Removendo.......");
+            }
             n = n.esq;
         }else if(n.esq == null) { 
+            if(n.i==x){
+                System.out.println("\nO numero "+n.i+" foi encontrado.");
+                System.out.println("Removendo.......");
+            }
             n = n.dir;
         }else{ 
+            if(n.i==x){
+                System.out.println("\nO numero "+n.i+" foi encontrado.");
+                System.out.println("Removendo.......");
+            }
             n.esq = maiorEsq(n, n.esq); 
         }
         return n;
     }
     private No maiorEsq(No n, No j) {
-       if(j.dir == null){ 
-           n.i=j.i; j=j.esq; 
+       if(j.dir == null){
+            System.out.println("\nO numero "+n.i+" foi encontrado.");
+            System.out.println("Removendo.......");
+           
+            n.i=j.i; j=j.esq; 
        }
        else{ 
            j.dir = maiorEsq(n, j.dir); 
@@ -130,56 +153,5 @@ public class Tree{//Arvore de Inteiros
         
         return n;
     }
-    public void balancear(){//Adaptação da apostila
-        if(raiz.esq != null && raiz.dir != null){ 
-            System.out.println("Árvore balanceada");
-        } else if (raiz.dir != null){
-            if (raiz.dir.dir != null){ 
-                raiz = rotacionarEsq(raiz);
-            } else {
-                raiz = swapDirEsq(raiz);
-            }
-        } else { 
-            if (raiz.esq.dir != null){ 
-                raiz = swapEsqDir(raiz);
-            }else{ 
-                raiz = rotacionarDir(raiz);
-            }
-        }
-    }
-
-    public void swapEsq(No no){
-
-        no = rotacionarEsq(no);
-
-    }
-    private No rotacionarEsq(No no) {
-        No noDir = no.dir;
-        No noDirEsq = noDir.esq;
-        noDir.esq = no;
-        no.dir = noDirEsq;
-        return noDir;
-    }
-    public void swapDir(No no){
-
-        no = rotacionarDir(no);
-
-    }
-    private No rotacionarDir(No no) {
-        No noEsq = no.esq;
-        No noEsqDir = noEsq.dir;
-        noEsq.dir = no;
-        no.esq = noEsqDir;
-        return noEsq;
-    }
-    private No swapEsqDir(No no) {
-        no.esq = rotacionarEsq(no.esq);
-        return rotacionarDir(no);
-    }
-    private No swapDirEsq(No no) {
-        no.dir = rotacionarDir(no.dir);
-        return rotacionarEsq(no);
-    }
+    
 }
-
-
