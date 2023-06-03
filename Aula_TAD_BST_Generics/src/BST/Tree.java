@@ -1,7 +1,7 @@
 package BST;
 import java.util.*;//Simplificação de bibliotecas necessarias 
 
-public class Tree {//Arvore de Inteiros
+public class Tree{//Arvore de Inteiros
     public No raiz;
     public Tree(){
         raiz=null;
@@ -10,7 +10,7 @@ public class Tree {//Arvore de Inteiros
     public void inserir(int x) {
         raiz = inserir(x, raiz);
     }
-    public No inserir(int x, No n){
+    private No inserir(int x, No n){
         if (n == null) {
             n = new No(x);
         } else if (x < n.i) {
@@ -33,7 +33,7 @@ public class Tree {//Arvore de Inteiros
             System.out.println("Erro!");
         }
     }
-    public void inserirPai(int x, No n, No pai){
+    private void inserirPai(int x, No n, No pai){
         if(n == null) {
             if(x < pai.i){
                 pai.esq = new No(x);
@@ -53,7 +53,7 @@ public class Tree {//Arvore de Inteiros
         boolean resp=pesquisar(x, n);
         return resp;
     }
-    public boolean pesquisar(int x, No n) {
+    private boolean pesquisar(int x, No n) {
         boolean resp;
         if (n == null) {
             resp = false;
@@ -98,7 +98,7 @@ public class Tree {//Arvore de Inteiros
     public void remover(int x){
         raiz = remover(x, raiz);
     }
-    public No remover(int x, No n){
+    private No remover(int x, No n){
         if (n == null) { System.out.println("Erro!");
         }else if(x < n.i){ 
             n.esq = remover(x, n.esq);
@@ -113,7 +113,7 @@ public class Tree {//Arvore de Inteiros
         }
         return n;
     }
-    public No maiorEsq(No n, No j) {
+    private No maiorEsq(No n, No j) {
        if(j.dir == null){ 
            n.i=j.i; j=j.esq; 
        }
@@ -126,9 +126,60 @@ public class Tree {//Arvore de Inteiros
     public void remover2(int x){
         
     }
-    public No remover2(int x, No n){
+    private No remover2(int x, No n){
         
         return n;
     }
-    
+    public void balancear(){//Adaptação da apostila
+        if(raiz.esq != null && raiz.dir != null){ 
+            System.out.println("Árvore balanceada");
+        } else if (raiz.dir != null){
+            if (raiz.dir.dir != null){ 
+                raiz = rotacionarEsq(raiz);
+            } else {
+                raiz = swapDirEsq(raiz);
+            }
+        } else { 
+            if (raiz.esq.dir != null){ 
+                raiz = swapEsqDir(raiz);
+            }else{ 
+                raiz = rotacionarDir(raiz);
+            }
+        }
+    }
+
+    public void swapEsq(No no){
+
+        no = rotacionarEsq(no);
+
+    }
+    private No rotacionarEsq(No no) {
+        No noDir = no.dir;
+        No noDirEsq = noDir.esq;
+        noDir.esq = no;
+        no.dir = noDirEsq;
+        return noDir;
+    }
+    public void swapDir(No no){
+
+        no = rotacionarDir(no);
+
+    }
+    private No rotacionarDir(No no) {
+        No noEsq = no.esq;
+        No noEsqDir = noEsq.dir;
+        noEsq.dir = no;
+        no.esq = noEsqDir;
+        return noEsq;
+    }
+    private No swapEsqDir(No no) {
+        no.esq = rotacionarEsq(no.esq);
+        return rotacionarDir(no);
+    }
+    private No swapDirEsq(No no) {
+        no.dir = rotacionarDir(no.dir);
+        return rotacionarEsq(no);
+    }
 }
+
+

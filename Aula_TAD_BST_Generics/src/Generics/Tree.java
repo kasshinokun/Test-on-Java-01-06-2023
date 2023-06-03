@@ -1,6 +1,7 @@
 package Generics;//Nome do Subprojeto
 
 //Adaptação da Classe Tree de BST para Generics
+
 import java.lang.*;//Simplificação de bibliotecas necessarias 
 import java.io.*;//Simplificação de bibliotecas necessarias 
 import java.util.*;//Simplificação de bibliotecas necessarias 
@@ -129,5 +130,55 @@ public class Tree<T extends Comparable<T>>{//Arvore de Inteiros
     public Node<T> remover2(T x, Node<T> n){
         
         return n;
+    }
+    public void balancear(){//Adaptação da apostila
+        if(raiz.esq != null && raiz.dir != null){ 
+            System.out.println("Árvore balanceada");
+        } else if (raiz.dir != null){
+            if (raiz.dir.dir != null){ 
+                raiz = rotacionarEsq(raiz);
+            } else {
+                raiz = swapDirEsq(raiz);
+            }
+        } else { 
+            if (raiz.esq.dir != null){ 
+                raiz = swapEsqDir(raiz);
+            }else{ 
+                raiz = rotacionarDir(raiz);
+            }
+        }
+    }
+
+    public void swapEsq(Node<T> no){
+
+        no = rotacionarEsq(no);
+
+    }
+    private Node<T> rotacionarEsq(Node<T> no) {
+        Node<T> noDir = no.dir;
+        Node<T> noDirEsq = noDir.esq;
+        noDir.esq = no;
+        no.dir = noDirEsq;
+        return noDir;
+    }
+    public void swapDir(Node<T> no){
+
+        no = rotacionarDir(no);
+
+    }
+    private Node<T> rotacionarDir(Node<T> no) {
+        Node<T> noEsq = no.esq;
+        Node<T> noEsqDir = noEsq.dir;
+        noEsq.dir = no;
+        no.esq = noEsqDir;
+        return noEsq;
+    }
+    private Node<T> swapEsqDir(Node<T> no) {
+        no.esq = rotacionarEsq(no.esq);
+        return rotacionarDir(no);
+    }
+    private Node<T> swapDirEsq(Node<T> no) {
+        no.dir = rotacionarDir(no.dir);
+        return rotacionarEsq(no);
     }
 }

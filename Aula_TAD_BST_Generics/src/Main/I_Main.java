@@ -1,7 +1,10 @@
 package Main;//Nome do Subprojeto
 import java.util.*;//Simplificação de bibliotecas necessarias 
-import BST.Tree;
-public class I_Main{
+import BST.Tree;//Arvore Binaria
+import BST.AVL.*;//Arvore Binaria AVL(Em desenvolvimento)
+//import BST.A_N.*;//Arvore Binaria Alvi-Negra(Em desenvolvimento)
+import BST.R_B.*;//Arvore Binaria Rubro-Negra(Em desenvolvimento)
+;public class I_Main{
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         //Variavel para entrada do teclado
@@ -68,13 +71,25 @@ public class I_Main{
     }
     public static void letra_B() {
         System.out.println("===B) - Inserir Inteiros=====================");//Enunciado
-        
-        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+        AVL Arvore= new AVL();
+        Arvore.inserir(15);
+        Arvore.inserir(19);
+        Arvore.inserir(21);
+        Arvore.inserir(35);
+        Arvore.inserir(47);
+        Arvore.caminharCentral(Arvore.raiz);
+        System.out.println("\n===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
     }
     public static void letra_C() {
         System.out.println("===C) - Inserir Inteiros=====================");//Enunciado
-        
-        System.out.println("===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
+        R_B Arvore= new R_B();
+        Arvore.inserir(15);
+        Arvore.inserir(19);
+        Arvore.inserir(21);
+        Arvore.inserir(35);
+        Arvore.inserir(47);
+        Arvore.caminharCentral(Arvore.raiz);
+        System.out.println("\n===Retornando ao Menu da Atividade-Inteiros==\n");//Enunciado
     }
     public static void letra_D() {
         System.out.println("===D) - Inserir Inteiros=====================");//Enunciado
