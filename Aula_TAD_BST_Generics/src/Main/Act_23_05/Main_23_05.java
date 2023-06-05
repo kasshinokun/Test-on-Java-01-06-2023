@@ -17,13 +17,14 @@ public class Main_23_05 {
 
             System.out.println("=============Menu de Exercicos===============");//Enunciado
 
-            System.out.println("01 - Manipulacao de Listas Encadeadas Simples");//Enunciado
-            System.out.println("02 - Manipulacao de Listas Encadeadas Simples");//Enunciado
-            System.out.println("03 - Gestao de Lista de Sites================");//Enunciado
-            System.out.println("04 - Manipulacao de Listas Encadeadas Dupla==");//Enunciado
-            System.out.println("05 - Manipulacao de Conjuntos com Listas=====");//Enunciado
-            System.out.println("06 - Remocao de Chaves Pares=================");//Enunciado
-            System.out.println("07 - Manipulacao de Caracteres em Listas=====");//Enunciado
+            System.out.println("01 1)Manipulacao de Listas Encadeadas Simples");//Enunciado
+            System.out.println("02 2)Manipulacao de Listas Encadeadas Simples");//Enunciado
+            System.out.println("03 3)Gestao de Lista de Sites================");//Enunciado
+            System.out.println("04 3-A)Gestao de Lista de Sites-Lista Simples");//Enunciado
+            System.out.println("05 4)Manipulacao de Listas Encadeadas Dupla==");//Enunciado
+            System.out.println("06 5)Manipulacao de Conjuntos com Listas=====");//Enunciado
+            System.out.println("07 6)Remocao de Chaves Pares=================");//Enunciado
+            System.out.println("08 7)Manipulacao de Caracteres em Listas=====");//Enunciado
 
             System.out.println("\n==========Digite 0 para Encerrar=============");//Enunciado
 
@@ -41,15 +42,18 @@ public class Main_23_05 {
                     Exercises.Exercise_3();
                     break;//Condição de parada
                 case 4://Chama o procedimento
-                    Act_4.main(args);
+                    Exercises.Exercise_3_A();
                     break;//Condição de parada
                 case 5://Chama o procedimento
-                    Act_5.main(args);
+                    Act_4.main(args);
                     break;//Condição de parada
                 case 6://Chama o procedimento
-                    Exercises.Exercise_6();
+                    Act_5.main(args);
                     break;//Condição de parada
                 case 7://Chama o procedimento
+                    Exercises.Exercise_6();
+                    break;//Condição de parada
+                case 8://Chama o procedimento
                     Exercises.Exercise_7();
                     break;//Condição de parada
                 default:

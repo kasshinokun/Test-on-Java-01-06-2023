@@ -13,8 +13,9 @@ public class Exercises {
 
 //==========Exercicio 1 precisou do proprio main======================
 //==========Exercicio 2 precisou do proprio main======================
+    
     public static void Exercise_3() {
-        System.out.println("\n===08 - Gestao de Lista de Sites=============");//Enunciado
+        System.out.println("\n===03 - Gestao de Lista de Sites=============");//Enunciado
         Lista_Site Historico=new Lista_Site();
         System.out.println("\n==Insercao e Exibir Lista de Sites===========");//Enunciado
         Historico.inserirFim("Google", "www.google.com");
@@ -23,7 +24,7 @@ public class Exercises {
         Historico.inserirFim("Outlook", "www.outlook.com");
         Historico.inserirFim("Youtube", "www.youtube.com");
         Historico.mostrar();
-        System.out.println("\n==Busca por (Yahoo) e Exibir Lista de Sites==");//Enunciado
+        System.out.println("\n==Busca por (Yahoo)==========================");//Enunciado
         Historico.buscar("Yahoo");
         System.out.println("\n==Exibir Lista de Sites apos Busca===========");//Enunciado
         Historico.mostrar();
@@ -31,10 +32,28 @@ public class Exercises {
         Historico.buscar("GDrive");
         System.out.println("\n=============================================\n");//Enunciado
     }
+    public static void Exercise_3_A() {
+        System.out.println("\n03_A - Gestao de Lista de Sites=Lista Simples");//Enunciado
+        Lista_Simples Historico=new Lista_Simples();
+        System.out.println("\n==Insercao e Exibir Lista de Sites===========");//Enunciado
+        Historico.inserirFim2(new Celula("Google", "www.google.com"));
+        Historico.inserirFim2(new Celula("Yahoo", "www.yahoo.com"));
+        Historico.inserirFim2(new Celula("Gmail", "www.gmail.com"));
+        Historico.inserirFim2(new Celula("Outlook", "www.outlook.com"));
+        Historico.inserirFim2(new Celula("Youtube", "www.youtube.com"));
+        Historico.mostrarSite();
+        System.out.println("\n==Busca por (Yahoo)==========================");//Enunciado
+        Historico.buscar("Yahoo");
+        System.out.println("\n==Exibir Lista de Sites apos Busca===========");//Enunciado
+        Historico.mostrarSite();
+        System.out.println("\n==Busca por (GDrive)========================="); 
+        Historico.buscar("GDrive");
+        System.out.println("\n=============================================\n");//Enunciado
+    }
 //==========Exercicio 4 precisou do proprio main======================
 //==========Exercicio 5 precisou do proprio main======================}
     public static void Exercise_6() {
-        System.out.println("\n===11 - Remocao de Chaves Pares==============");//Enunciado
+        System.out.println("\n===06 - Remocao de Chaves Pares==============");//Enunciado
         Lista_Simples lista=new Lista_Simples();
         lista=lista.criarLista();     
         lista.mostrar();
@@ -44,7 +63,7 @@ public class Exercises {
         System.out.println("\n=============================================\n");//Enunciado
     }
     public static void Exercise_7() {
-    System.out.println("===12 - Manipulacao de Caracteres em Listas==");//Enunciado
+    System.out.println("===07 - Manipulacao de Caracteres em Listas==");//Enunciado
     Lista_Simples lista=new Lista_Simples();
     lista=lista.criarLista();     
     //lista.mostrar3();

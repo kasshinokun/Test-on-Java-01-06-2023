@@ -252,6 +252,32 @@ public class Lista_Simples {
             return y;
         }
     }
+    public void buscar(String x){
+            
+        Celula i=this.primeiro.prox;
+        boolean j=false;
+        int cont=0;
+        while(i.prox!=null){
+            if(i.site.nome==x){
+                System.out.println("Site localizado");
+                System.out.println(i.site.toString());
+                String x1=i.site.nome;
+                String x2=i.site.link;
+                removerPos2(cont);
+                inserirInicio2(new Celula(x1,x2));
+                j=true;
+                break;
+            }
+            i=i.prox;
+            cont++;
+        }
+        if(j==false){
+            System.out.println("Site nao localizado");
+        }
+
+
+    }
+    
     public void mostrar(){
         Celula i = this.primeiro.prox;
         System.out.println("\nContatos\n=============================================");//Enunciado
@@ -277,6 +303,15 @@ public class Lista_Simples {
             
         }
     }
+    public void mostrarSite(){
+            Celula i = this.primeiro.prox;
+
+            for(;i!=null;i=i.prox){
+                System.out.println(i.mostrarSite());
+
+            }
+
+        }
 //=========================================================================================
     public boolean pesquisar(int x){
         Celula i = this.primeiro.prox;
