@@ -10,19 +10,9 @@ public class Lista_Site{
         this.inicio=new Site();
         this.ultimo=this.inicio;
     }
-    public void inserirInicio(String x,String y){
-
-        Site tmp=new Site(x,y);
-        tmp.prox=inicio.prox;
-        inicio.prox=tmp;
-        if(inicio==ultimo){
-            ultimo=tmp;
-        }
-        tmp=null;
-        n++;
-    }
+    
     public void buscar(String x){
-        
+            
         Site i=this.inicio.prox;
         boolean j=false;
         int cont=0;
@@ -32,7 +22,6 @@ public class Lista_Site{
                 System.out.println(i.toString());
                 String x1=i.nome;
                 String x2=i.link;
-                
                 removerPos(cont);
                 inserirInicio(x1,x2);
                 j=true;
@@ -44,19 +33,33 @@ public class Lista_Site{
         if(j==false){
             System.out.println("Site nao localizado");
         }
-       
+
 
     }
-    public void inserirFim(String x,String y){//Adição de Inteiros no fim do vetor
-
+    
+    public void inserirInicio(String y,String z){//inseri a celula completa no inicio
+        Site x=new Site(y,z);
+        x.prox=inicio.prox;
+        inicio.prox=x;
         if(inicio==ultimo){
-            inserirInicio(x,y);
+            ultimo=x;
+        }
+        x=null;
+        n++;
+    }
+    public void inserirFim(String y,String z){//inseri a celula completa no fim
+        Site x=new Site(y,z);
+        if(inicio==ultimo){
+            inserirInicio(y,z);
         }
         else{
-            ultimo.prox=new Site(x,y);
+            
+            ultimo.prox=x;
             ultimo=ultimo.prox;
             n++;
+            
         }
+    
     }
     public void mostrar(){
         Site i = this.inicio.prox;
@@ -76,8 +79,13 @@ public class Lista_Site{
             return null;
         }
         else{
-            
-            
+            Site tmp=inicio;
+            inicio=inicio.prox;
+            Site elemento = new Site(inicio.nome,inicio.link);
+            tmp.prox=null;
+            tmp=null;
+            n--;
+            return elemento;
         }
     }
     public Site removerPos(int pos) {
@@ -100,10 +108,15 @@ public class Lista_Site{
             return removerFim();
         }else{//senao....
            
-            
-            
-            
-            
+            Site i=this.inicio;
+            for(int j=0;j<pos;j++,i=i.prox);
+            Site tmp=i.prox;
+            Site resp=new Site(tmp.nome,tmp.link);
+            i.prox=tmp.prox;
+            tmp.prox=null;
+            i=tmp=null;
+            n--;
+            return resp;
         }
             
      
@@ -117,10 +130,16 @@ public class Lista_Site{
             return null;
         }else{
                        
-           
+           Site i = this.inicio;
+        
+            for(;i.prox!=ultimo;i=i.prox);
+            Site y=new Site(ultimo.nome,ultimo.link);
             
-            
-            
+            ultimo=i;
+            i=ultimo.prox=null;
+            n--;
+            return y;
         }
     }
+    
 }

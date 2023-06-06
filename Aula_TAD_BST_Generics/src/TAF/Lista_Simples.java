@@ -67,8 +67,8 @@ public class Lista_Simples {
         if (primeiro==ultimo){
             //Informa ao Usuario
             System.out.println("\n=============Nao e possivel ================");
-            System.out.println("==============Inserir dados,================");
-            System.out.println("============== Lista Vazia !!===========\n");
+            System.out.println("==============Remover dados,================");
+            System.out.println("============== Lista Vazia !!===============\n");
             return -1;
         }
         else{
@@ -118,8 +118,8 @@ public class Lista_Simples {
         if(primeiro==ultimo){
             //Informa ao Usuario
             System.out.println("\n=============Nao e possivel ================");
-            System.out.println("==============Inserir dados,================");
-            System.out.println("============== Lista Vazia !!===========\n");
+            System.out.println("==============Remover dados,================");
+            System.out.println("============== Lista Vazia !!===============\n");
             return -1;
         }else{
                        
