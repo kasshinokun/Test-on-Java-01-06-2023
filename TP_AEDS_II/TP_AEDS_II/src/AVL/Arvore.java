@@ -1,6 +1,11 @@
 
 package AVL;
 import AVL.*;
+/*
+Developed code by Professor Isidro
+
+http://www.professorisidro.com
+*/
 /*Adequação de código em processamento rev.3 */
 public class Arvore{
     private Elemento ele;
