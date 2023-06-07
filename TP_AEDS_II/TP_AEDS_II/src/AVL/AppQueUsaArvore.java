@@ -1,5 +1,11 @@
 package AVL;
 import AVL.*;
+
+/*
+Developed code by Professor Isidro
+
+http://www.professorisidro.com
+*/
 public class AppQueUsaArvore{
     public static void main(String args[]){
         //Arvore Binaria
