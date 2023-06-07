@@ -1,6 +1,7 @@
 
 package AVL;
 import AVL.*;
+/*Adequação de código em processamento rev.3 */
 public class Arvore{
     private Elemento ele;
     private Arvore dir;
@@ -16,49 +17,49 @@ public class Arvore{
         this.ele = elem;
         this.dir = null;
         this.esq = null;
-    //System.out.println(“Criei a arvore com o elemento “+elem.getValor());
+    /*System.out.println(“Criei a arvore com o elemento “+elem.getValor());*/
     }
 
-    // remocao do no da arvore
+    /* remocao do no da arvore*/
     public Arvore remover(Elemento elem){
-        // primeiro caso – achei o elemento
+        /*primeiro caso – achei o elemento*/
         if (this.ele.getValor() == elem.getValor()){
-        // caso mais simples – o elemento está em um nó folha
+        /*caso mais simples – o elemento está em um nó folha*/
             if (this.dir == null && this.esq == null){
                 return null;
             }
             else{
-                // caso 2 – eu tenho filhos à esquerda, porém não tenho à direita
+                /*caso 2 – eu tenho filhos à esquerda, porém não tenho à direita*/
                 if (this.esq != null && this.dir == null){
                     return this.esq;
                 }
-                // caso 3 – eu tenho filhos à direita, porém não tenho à esquerda
+                /* caso 3 – eu tenho filhos à direita, porém não tenho à esquerda*/
                 else if (this.dir != null && this.esq == null){
                     return this.dir;
                 }
-                // caso 4 – tenho filhos dos dois lados (esquerda e direita)
+                /*caso 4 – tenho filhos dos dois lados (esquerda e direita)*/
                 else{
-                    // vamos adotar a estratégia do maior dentre os menores?
+                    /*vamos adotar a estratégia do maior dentre os menores?*/
                     Arvore aux = this.esq;
-                    while (aux.dir != null){ // enquanto houver filhos à direita
+                    while (aux.dir != null){ /*enquanto houver filhos à direita*/
                         aux = aux.dir;
                     }
-                    // troco os elementos da árvore
-                    this.ele = aux.getElemento(); // o nó atual recebe o elemento do aux
-                    // o maior dentre os menores
-                    aux.setElemento(elem); // insiro no nó folha (lá embaixão) o elmento a ser eliminado
+                    /*troco os elementos da árvore*/
+                    this.ele = aux.getElemento(); /*o nó atual recebe o elemento do aux*/
+                    /*o maior dentre os menores*/
+                    aux.setElemento(elem); /*insiro no nó folha (lá embaixão) o elmento a ser eliminado*/
                     this.esq = esq.remover(elem);
                 }
             }
         }
-        else if (elem.getValor() < this.ele.getValor()){ // delegar a responsabilidade à sub-arvore da esquerda this.esq = this.esq.remover(elem); } else if (elem.getValor() > this.ele.getValor()){
-            // delegar a responsabilidade à sub-arvore da direita
+        else if (elem.getValor() < this.ele.getValor()){ /*delegar a responsabilidade à sub-arvore da esquerda*/ this.esq = this.esq.remover(elem); } else if (elem.getValor() > this.ele.getValor()){
+            /* delegar a responsabilidade à sub-arvore da direita*/
             this.dir = this.dir.remover(elem);
         }
         return this;
     }
 
-    // metodos de controle;
+    /*metodos de controle;*/
     public boolean isEmpty(){
         return (this.ele == null);
     }
@@ -105,11 +106,22 @@ public class Arvore{
         }
         else{
             Arvore novaArvore = new Arvore(novo);
-            if (novo.getValor() < this.ele.getValor()){ // vou inserir na descendencia esquerda if (this.esq == null){ // sou um nó folha? this.esq = novaArvore; //System.out.println("Inseri o elemento "+ novo.getValor()+ " à esquerda de "+this.ele.getValor()); } else{ this.esq.inserir(novo); // repassei a resposnabilidade pra sub-árvore esquerda } } else if (novo.getValor() > this.ele.getValor()){ // vou inserir na descendenia direita
-                if (this.dir == null){
-                    this.dir = novaArvore;
-                    //System.out.println(“Inseri o elemento “+ novo.getValor()+ ” à direita de “+this.ele.getValor());
-                }
+            if (novo.getValor() <this.ele.getValor()){ 
+/*vou inserir na descendencia esquerda*/
+ if (this.esq == null){ 
+  /*ou um nó folha?*/ 
+    this.esq = novaArvore; 
+/*System.out.println("Inseri o elemento "+ novo.getValor()+ " à esquerda de "+this.ele.getValor());*/
+} else{ 
+this.esq.inserir(novo);
+ /*repassei a resposnabilidade pra sub-árvore esquerda*/
+} 
+} else if(novo.getValor()>this.ele.getValor()){ 
+/*vou inserir na descendenia direita*/
+if (this.dir == null){
+      this.dir = novaArvore;
+/*System.out.println(“Inseri o elemento “+ novo.getValor()+ ” à direita de “+this.ele.getValor());*/
+}
                 else{
                     this.dir.inserir(novo);
                 }
@@ -132,8 +144,10 @@ public class Arvore{
                 else if(this.esq != null){  
                     return this.esq.busca(valor);
                 } 
-                // repassei a responsabilidade para a subarvore esquerda 
-                //} } else if (valor > this.ele.getValor()){
+                /*repassei a responsabilidade para a subarvore esquerda 
+                */
+} 
+} else if (valor > this.ele.getValor()){
                 if (this.dir == null){
                     return false;
                 }
@@ -145,7 +159,7 @@ public class Arvore{
         }
     }
 
-    // gets e sets
+    /*gets e sets*/
     public void setElemento(Elemento ele){
         this.ele = ele;
     }
