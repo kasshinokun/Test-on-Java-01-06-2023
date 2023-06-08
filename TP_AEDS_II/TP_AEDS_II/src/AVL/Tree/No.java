@@ -1,4 +1,4 @@
-package Tree;//Nome do Subprojeto
+package AVL.Tree;//Nome do Subprojeto
 
 import java.util.*;//Simplificação de bibliotecas necessarias 
 

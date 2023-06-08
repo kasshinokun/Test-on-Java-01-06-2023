@@ -1,5 +1,5 @@
 
-package AVL;
+package AVL.Isidro;
 import AVL.*;
 /*
 Developed code by Professor Isidro
@@ -71,7 +71,7 @@ public class Arvore{
 
     public void imprimirPreOrdem(){
         if (!isEmpty()){
-            System.out.print(this.ele.getValor() + "");
+            System.out.print(this.ele.getValor() + "   ");
             if (this.esq != null){
                 this.esq.imprimirPreOrdem();
             }
@@ -86,7 +86,7 @@ public class Arvore{
             if (this.esq != null){
                 this.esq.imprimirInOrdem(); 
             }
-            System.out.print(this.ele.getValor() + "");
+            System.out.print(this.ele.getValor() + "   ");
             if (this.dir != null){
                 this.dir.imprimirInOrdem();
             }
@@ -101,7 +101,7 @@ public class Arvore{
             if (this.esq != null){
                 this.esq.imprimirPosOrdem();
             }
-            System.out.print(this.ele.getValor() + "");
+            System.out.print(this.ele.getValor() + "   ");
         }
     }   
 
@@ -112,21 +112,21 @@ public class Arvore{
         else{
             Arvore novaArvore = new Arvore(novo);
             if (novo.getValor() <this.ele.getValor()){ 
-/*vou inserir na descendencia esquerda*/
- if (this.esq == null){ 
-  /*ou um nó folha?*/ 
-    this.esq = novaArvore; 
-/*System.out.println("Inseri o elemento "+ novo.getValor()+ " à esquerda de "+this.ele.getValor());*/
-} else{ 
-this.esq.inserir(novo);
- /*repassei a resposnabilidade pra sub-árvore esquerda*/
-} 
-} else if(novo.getValor()>this.ele.getValor()){ 
-/*vou inserir na descendenia direita*/
-if (this.dir == null){
-      this.dir = novaArvore;
-/*System.out.println(“Inseri o elemento “+ novo.getValor()+ ” à direita de “+this.ele.getValor());*/
-}
+                /*vou inserir na descendencia esquerda*/
+                 if (this.esq == null){ 
+                  /*ou um nó folha?*/ 
+                    this.esq = novaArvore; 
+                /*System.out.println("Inseri o elemento "+ novo.getValor()+ " à esquerda de "+this.ele.getValor());*/
+                } else{ 
+                    this.esq.inserir(novo);
+                 /*repassei a resposnabilidade pra sub-árvore esquerda*/
+                } 
+            } else if(novo.getValor()>this.ele.getValor()){ 
+            /*vou inserir na descendenia direita*/
+                if (this.dir == null){
+                      this.dir = novaArvore;
+                /*System.out.println(“Inseri o elemento “+ novo.getValor()+ ” à direita de “+this.ele.getValor());*/
+                }
                 else{
                     this.dir.inserir(novo);
                 }
@@ -151,8 +151,8 @@ if (this.dir == null){
                 } 
                 /*repassei a responsabilidade para a subarvore esquerda 
                 */
-} 
-} else if (valor > this.ele.getValor()){
+
+            }else if (valor > this.ele.getValor()){
                 if (this.dir == null){
                     return false;
                 }

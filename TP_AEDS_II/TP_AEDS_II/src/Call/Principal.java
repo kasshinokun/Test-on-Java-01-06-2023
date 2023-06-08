@@ -6,13 +6,25 @@ import java.io.*;//Simplificação de bibliotecas necessarias para arquivos
 import List.*;//Pagkage para Lista Duplamente Encadeada de Generics
 import File.*;//Pagkage para File Manager via Terminal
 
+import AVL.Isidro.*;//Arvore Binaria
+import AVL.Programiz.*;//Arvore Binaria AVL
 
 
 public class Principal {//Classe de chamada
     public static void main(String[] args){//declaração do main do trabalho
-        Manager teste=new Manager();
-        System.out.println(teste.buscar());
+        
+        //Arvore Binaria
+        AppQueUsaArvore.main(args);
+        //Arvore Binaria AVL
+        AVLTree.main(args);
+        //teste_Manager();
         //teste_lista();
+        
+    }public static void teste_Manager(){
+        Manager teste=new Manager();
+    
+        System.out.println(teste.buscar());
+        
     
     }
     public static void teste_lista(){
